@@ -1,0 +1,11 @@
+# 53: Admin: validação do formulário de Produto
+
+**Status:** Não iniciado
+**Dia:** Dia 9 (qui 12/11)
+**Estimativa:** 2h
+
+**O que construir:** Regras de validação do formulário de Produto.
+
+**Bloqueado por:** 28, 31, 51
+
+- [ ] Nome de 3 a 80 caracteres e único na Modalidade, preço maior que 0, descrição de 10 a 500, imagem `http`/`https`, estoque inteiro maior ou igual a 0
