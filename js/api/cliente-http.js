@@ -1,0 +1,1 @@
+// Wrapper fetch com async/await e tratamento de erros
