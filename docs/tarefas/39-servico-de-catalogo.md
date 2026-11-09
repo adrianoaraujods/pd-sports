@@ -1,7 +1,7 @@
 # 39: Serviço de catálogo
 
 **Status:** Concluído
-**Dia:** Dia 7 (ter 10/11)
+**Dia:** Dia 6 (ter 09/11)
 **Estimativa:** 2h
 
 **O que construir:** Serviço que carrega as Modalidades da MockAPI, junta os Produtos e mantém o catálogo em cache em memória.
