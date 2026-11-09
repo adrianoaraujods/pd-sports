@@ -1,6 +1,6 @@
 # 33: Script de seed da MockAPI
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 6 (seg 09/11)
 **Estimativa:** 1h30
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31, 32, 35
 
-- [ ] Idempotente: rodar duas vezes dá o mesmo resultado
-- [ ] Roda nas três contas da MockAPI
+- [x] Idempotente: rodar duas vezes dá o mesmo resultado
+- [x] Roda nas três contas da MockAPI
