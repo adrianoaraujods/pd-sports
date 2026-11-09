@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PD Sports</title>
+  </head>
+
+  <body>
+    Veja os dados no console: <code>CTRL+ SHIFT + I</code> ou <code>F12</code>.
+
+    <script type="module">
+      import { carregarCatalogo } from "./js/servicos/catalogo.js";
+
+      try {
+        const { modalidades, produtos } = await carregarCatalogo();
+
+        console.log("Modalidades:", modalidades);
+        console.log(`Produtos (${produtos.length}):`, produtos);
+      } catch (erro) {
+        console.error("Falha ao carregar o catálogo:", erro);
+      }
+    </script>
+  </body>
+</html>

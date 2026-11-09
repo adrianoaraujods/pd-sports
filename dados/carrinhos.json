@@ -1,0 +1,243 @@
+[
+  {
+    "usuario_id": 2,
+    "itens": [
+      {
+        "produto_id": "futebol-8",
+        "modalidade_id": 4,
+        "variante": "Único",
+        "quantidade": 2
+      }
+    ]
+  },
+  {
+    "usuario_id": 3,
+    "itens": [
+      {
+        "produto_id": "futebol-4",
+        "modalidade_id": 4,
+        "variante": "M",
+        "quantidade": 1
+      },
+      {
+        "produto_id": "volei-7",
+        "modalidade_id": 7,
+        "variante": "Único",
+        "quantidade": 3
+      }
+    ]
+  },
+  {
+    "usuario_id": 4,
+    "itens": [
+      {
+        "produto_id": "trilha-e-camping-9",
+        "modalidade_id": 15,
+        "variante": "Único",
+        "quantidade": 2
+      },
+      {
+        "produto_id": "tenis-6",
+        "modalidade_id": 10,
+        "variante": "42",
+        "quantidade": 2
+      },
+      {
+        "produto_id": "caminhada-4",
+        "modalidade_id": 2,
+        "variante": "38",
+        "quantidade": 3
+      }
+    ]
+  },
+  {
+    "usuario_id": 5,
+    "itens": [
+      {
+        "produto_id": "ciclismo-8",
+        "modalidade_id": 14,
+        "variante": "Único",
+        "quantidade": 2
+      },
+      {
+        "produto_id": "musculacao-e-academia-7",
+        "modalidade_id": 3,
+        "variante": "40",
+        "quantidade": 1
+      },
+      {
+        "produto_id": "trilha-e-camping-2",
+        "modalidade_id": 15,
+        "variante": "42",
+        "quantidade": 1
+      },
+      {
+        "produto_id": "boxe-e-artes-marciais-4",
+        "modalidade_id": 13,
+        "variante": "Único",
+        "quantidade": 1
+      }
+    ]
+  },
+  {
+    "usuario_id": 6,
+    "itens": [
+      {
+        "produto_id": "corrida-4",
+        "modalidade_id": 1,
+        "variante": "40",
+        "quantidade": 3
+      },
+      {
+        "produto_id": "boxe-e-artes-marciais-7",
+        "modalidade_id": 13,
+        "variante": "Único",
+        "quantidade": 2
+      },
+      {
+        "produto_id": "basquete-8",
+        "modalidade_id": 9,
+        "variante": "G",
+        "quantidade": 3
+      },
+      {
+        "produto_id": "beach-tennis-8",
+        "modalidade_id": 11,
+        "variante": "Único",
+        "quantidade": 2
+      },
+      {
+        "produto_id": "caminhada-5",
+        "modalidade_id": 2,
+        "variante": "38",
+        "quantidade": 2
+      }
+    ]
+  },
+  {
+    "usuario_id": 7,
+    "itens": [
+      {
+        "produto_id": "caminhada-9",
+        "modalidade_id": 2,
+        "variante": "41",
+        "quantidade": 2
+      }
+    ]
+  },
+  {
+    "usuario_id": 8,
+    "itens": [
+      {
+        "produto_id": "boxe-e-artes-marciais-1",
+        "modalidade_id": 13,
+        "variante": "Único",
+        "quantidade": 1
+      },
+      {
+        "produto_id": "futebol-society-1",
+        "modalidade_id": 5,
+        "variante": "38",
+        "quantidade": 1
+      }
+    ]
+  },
+  {
+    "usuario_id": 9,
+    "itens": [
+      {
+        "produto_id": "futsal-1",
+        "modalidade_id": 6,
+        "variante": "42",
+        "quantidade": 3
+      },
+      {
+        "produto_id": "musculacao-e-academia-9",
+        "modalidade_id": 3,
+        "variante": "42",
+        "quantidade": 2
+      },
+      {
+        "produto_id": "futsal-1",
+        "modalidade_id": 6,
+        "variante": "39",
+        "quantidade": 1
+      }
+    ]
+  },
+  {
+    "usuario_id": 10,
+    "itens": [
+      {
+        "produto_id": "trilha-e-camping-7",
+        "modalidade_id": 15,
+        "variante": "Único",
+        "quantidade": 3
+      },
+      {
+        "produto_id": "boxe-e-artes-marciais-1",
+        "modalidade_id": 13,
+        "variante": "Único",
+        "quantidade": 3
+      },
+      {
+        "produto_id": "futebol-society-6",
+        "modalidade_id": 5,
+        "variante": "38",
+        "quantidade": 2
+      },
+      {
+        "produto_id": "caminhada-7",
+        "modalidade_id": 2,
+        "variante": "39",
+        "quantidade": 2
+      }
+    ]
+  },
+  {
+    "usuario_id": 11,
+    "itens": [
+      {
+        "produto_id": "beach-tennis-5",
+        "modalidade_id": 11,
+        "variante": "Único",
+        "quantidade": 1
+      },
+      {
+        "produto_id": "futebol-4",
+        "modalidade_id": 4,
+        "variante": "G",
+        "quantidade": 3
+      },
+      {
+        "produto_id": "boxe-e-artes-marciais-3",
+        "modalidade_id": 13,
+        "variante": "Único",
+        "quantidade": 3
+      },
+      {
+        "produto_id": "volei-1",
+        "modalidade_id": 7,
+        "variante": "38",
+        "quantidade": 1
+      },
+      {
+        "produto_id": "basquete-1",
+        "modalidade_id": 9,
+        "variante": "41",
+        "quantidade": 3
+      }
+    ]
+  },
+  {
+    "usuario_id": 12,
+    "itens": [
+      {
+        "produto_id": "volei-4",
+        "modalidade_id": 7,
+        "variante": "Único",
+        "quantidade": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,2918 @@
+[
+  {
+    "nome": "Corrida",
+    "produtos": [
+      {
+        "id": "corrida-1",
+        "id_produto": 1,
+        "nome": "Tênis Olympikus Corre 4 - Chumbo+Bege",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 379.99,
+        "marca": "Olympikus",
+        "cor": "Chumbo/Bege",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-olympikus-corre-4-chumbo+bege-2I3-0603-933",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-olympikus-corre-4/33/2I3-0603-933/2I3-0603-933_zoom1.jpg?ts=1784089220&ims=544x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Tênis Olympikus Corre 4 - Chumbo+Bege de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-2",
+        "id_produto": 2,
+        "nome": "Tênis Olympikus Corre 5 - Preto",
+        "genero": "unissex",
+        "tamanho": "41",
+        "preco": 499.99,
+        "marca": "Olympikus",
+        "cor": "Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-olympikus-corre-5-preto-SE7-0803-006",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-olympikus-corre-5/06/SE7-0803-006/SE7-0803-006_zoom1.jpg?ts=1785934606&ims=544x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Tênis Olympikus Corre 5 - Preto de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-3",
+        "id_produto": 3,
+        "nome": "Tênis Olympikus Corre Vento 3 - Chumbo+Vermelho",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 299.99,
+        "marca": "Olympikus",
+        "cor": "Chumbo/Vermelho",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-olympikus-corre-vento-3-chumbo+vermelho-SE7-07ZY-094",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-olympikus-corre-vento-3/94/SE7-07ZY-094/SE7-07ZY-094_zoom1.jpg?ts=1786410411&ims=544x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tênis Olympikus Corre Vento 3 - Chumbo+Vermelho de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-4",
+        "id_produto": 4,
+        "nome": "Tênis Asics Gel-Nagoya 8 Masculino",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 237.49,
+        "marca": "Asics",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/running/tenis",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-asics-gel-nagoya-8-masculino/26/SG4-018O-026/SG4-018O-026_zoom1.jpg?ts=1784605862&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tênis Asics Gel-Nagoya 8 Masculino de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-5",
+        "id_produto": 5,
+        "nome": "Tênis Nike Revolution 8 Feminino",
+        "genero": "fem",
+        "tamanho": "37",
+        "preco": 279.99,
+        "marca": "Nike",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-nike-olympikus",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-8-feminino/26/SGL-0026-026/SGL-0026-026_zoom1.jpg?ts=1784549126&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Tênis Nike Revolution 8 Feminino de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-6",
+        "id_produto": 6,
+        "nome": "Tênis Nike Revolution 8 Masculino",
+        "genero": "masc",
+        "tamanho": "42",
+        "preco": 279.99,
+        "marca": "Nike",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-masculino",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-8-masculino/26/SGL-0036-026/SGL-0036-026_zoom1.jpg?ts=1784082129&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Tênis Nike Revolution 8 Masculino de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-7",
+        "id_produto": 7,
+        "nome": "Tênis Adidas Adizero Drive RC Masculino",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 854.9,
+        "marca": "Adidas",
+        "cor": "Azul/Dourado",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/running",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-adizero-drive-rc-masculino/86/FBA-86EP-086/FBA-86EP-086_zoom1.jpg?ts=1784740388",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tênis Adidas Adizero Drive RC Masculino de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-8",
+        "id_produto": 8,
+        "nome": "Tênis de Corrida Feminino Mizuno Atlantis 2",
+        "genero": "fem",
+        "tamanho": "37",
+        "preco": 249.99,
+        "marca": "Mizuno",
+        "cor": "Roxo",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-corrida-feminino",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-de-corrida-feminino-mizuno-atlantis-2/98/2FV-1378-198/2FV-1378-198_zoom1.jpg?ts=1784118463&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tênis de Corrida Feminino Mizuno Atlantis 2 de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "corrida-9",
+        "id_produto": 9,
+        "nome": "Short Adidas Legging Corrida Adizero Control Feminino",
+        "genero": "fem",
+        "tamanho": "M",
+        "preco": 199.99,
+        "marca": "Adidas",
+        "cor": "Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/busca/short-legging-corrida",
+        "imagem": "https://static.netshoes.com.br/produtos/short-adidas-legging-corrida-adizero-control-feminino/06/FBA-7333-006/FBA-7333-006_zoom1.jpg?ts=1791284050&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Short Adidas Legging Corrida Adizero Control Feminino de alta performance para Corrida, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Caminhada",
+    "produtos": [
+      {
+        "id": "caminhada-1",
+        "id_produto": 10,
+        "nome": "Tênis Olympikus Feminino Ultraleve para Caminhada",
+        "genero": "fem",
+        "tamanho": "36",
+        "preco": 199.99,
+        "marca": "Olympikus",
+        "cor": "Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-olympikus-para-caminhada",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-olympikus-feminino-ultraleve-confortavel-leve-e-respiravel-para-caminhada-e-dia-a-dia-0225/06/SE7-087R-006/SE7-087R-006_zoom1.jpg?ts=1784169564&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Tênis Olympikus Feminino Ultraleve para Caminhada de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-2",
+        "id_produto": 11,
+        "nome": "Tênis Adidas Lite Racer 4.0 Masculino",
+        "genero": "masc",
+        "tamanho": "40",
+        "preco": 169.99,
+        "marca": "Adidas",
+        "cor": "Preto/Cinza",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/running",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-lite-racer-4-0/72/FB9-8532-172/FB9-8532-172_zoom1.jpg?ts=1783941762&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Tênis Adidas Lite Racer 4.0 Masculino de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-3",
+        "id_produto": 12,
+        "nome": "Tênis Adidas Super Masculino - Preto+Branco",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 299.99,
+        "marca": "Adidas",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-adidas-super-masculino-preto+branco-FBA-86F0-026",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-super-masculino/26/FBA-86F0-026/FBA-86F0-026_zoom1.jpg?ts=1788371107&ims=544x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tênis Adidas Super Masculino - Preto+Branco de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-4",
+        "id_produto": 13,
+        "nome": "Tênis Adidas Response Runner 2 - Bege",
+        "genero": "unissex",
+        "tamanho": "39",
+        "preco": 249.99,
+        "marca": "Adidas",
+        "cor": "Bege",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-adidas-response-runner-2-bege-FBA-83CJ-004",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-response-runner-2/04/FBA-83CJ-004/FBA-83CJ-004_zoom1.jpg?ts=1783941820&ims=544x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tênis Adidas Response Runner 2 - Bege de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-5",
+        "id_produto": 14,
+        "nome": "Tênis Adidas Response Runner 2 - Branco+Prata",
+        "genero": "unissex",
+        "tamanho": "38",
+        "preco": 249.99,
+        "marca": "Adidas",
+        "cor": "Branco/Prata",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-adidas-response-runner-2-branco+prata-FBA-86LU-112",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-response-runner-2/12/FBA-86LU-112/FBA-86LU-112_zoom1.jpg?ts=1786636626&ims=544x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Tênis Adidas Response Runner 2 - Branco+Prata de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-6",
+        "id_produto": 15,
+        "nome": "Tênis Adidas Latin Run 3.0 Feminino - Pink+Branco",
+        "genero": "fem",
+        "tamanho": "37",
+        "preco": 299.99,
+        "marca": "Adidas",
+        "cor": "Pink/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-adidas-latin-run-3-0-pink+branco-FBA-86EX-939",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-latin-run-3-0/39/FBA-86EX-939/FBA-86EX-939_zoom1.jpg?ts=1783997698&ims=544x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Tênis Adidas Latin Run 3.0 Feminino - Pink+Branco de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-7",
+        "id_produto": 16,
+        "nome": "Tênis Adidas Latin Run 3.0 Feminino - Amarelo+Roxo",
+        "genero": "fem",
+        "tamanho": "36",
+        "preco": 299.99,
+        "marca": "Adidas",
+        "cor": "Amarelo/Roxo",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-adidas-latin-run-3-0-amarelo+roxo-FBA-86EX-166",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-latin-run-3-0/66/FBA-86EX-166/FBA-86EX-166_zoom1.jpg?ts=1783996300&ims=544x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tênis Adidas Latin Run 3.0 Feminino - Amarelo+Roxo de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-8",
+        "id_produto": 17,
+        "nome": "Tênis Mizuno Victory Masculino - Preto+Branco",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 299.99,
+        "marca": "Mizuno",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-mizuno-victory-masculino-preto+branco-2FU-8274-026",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-mizuno-victory-masculino/26/2FU-8274-026/2FU-8274-026_zoom1.jpg?ts=1783908981&ims=544x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tênis Mizuno Victory Masculino - Preto+Branco de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "caminhada-9",
+        "id_produto": 18,
+        "nome": "Tênis Olympikus Veloz 4 Unissex",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 299.99,
+        "marca": "Olympikus",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.centauro.com.br/nav/categorias/calcados/produto/tenis/promocao/outlet",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/9971DQ02A3.jpg",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Tênis Olympikus Veloz 4 Unissex de alta performance para Caminhada, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Musculação e Academia",
+    "produtos": [
+      {
+        "id": "musculacao-e-academia-1",
+        "id_produto": 19,
+        "nome": "Tênis Asics Ugoki Masculino - Preto+Branco",
+        "genero": "masc",
+        "tamanho": "40",
+        "preco": 279.99,
+        "marca": "Asics",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-asics-ugoki-masculino-preto+branco-SG4-01XQ-026",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-asics-ugoki-masculino/26/SG4-01XQ-026/SG4-01XQ-026_zoom1.jpg?ts=1783999941&ims=544x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Tênis Asics Ugoki Masculino - Preto+Branco de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-2",
+        "id_produto": 20,
+        "nome": "Tênis Asics Ugoki Feminino - Roxo",
+        "genero": "fem",
+        "tamanho": "37",
+        "preco": 279.99,
+        "marca": "Asics",
+        "cor": "Roxo",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-asics-ugoki-feminino-roxo-SG4-01XR-198",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-asics-ugoki-feminino/98/SG4-01XR-198/SG4-01XR-198_zoom1.jpg?ts=1783942900&ims=544x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Tênis Asics Ugoki Feminino - Roxo de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-3",
+        "id_produto": 21,
+        "nome": "Anilha de Ferro Fundido Pintada 3 Kg",
+        "genero": "unissex",
+        "tamanho": "3kg",
+        "preco": 49.9,
+        "marca": "Ibj",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/anilhas-promocao-fitness-e-musculacao",
+        "imagem": "https://static.netshoes.com.br/produtos/anilha-de-ferro-fundido-pintada-3-kg/06/DLV-0007-006/DLV-0007-006_zoom1.jpg?ts=1782940678&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Anilha de Ferro Fundido Pintada 3 Kg de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-4",
+        "id_produto": 22,
+        "nome": "Kit Musculação Completo Barra Anilha Halter Kettlebell 25kg Yangfit",
+        "genero": "unissex",
+        "tamanho": "25kg",
+        "preco": 349.9,
+        "marca": "Yangfit",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/halteres-e-anilhas",
+        "imagem": "https://static.netshoes.com.br/produtos/barra-anilha-halter-kettlebell-kit-musculacao-completo-25kg/06/ISQ-0331-006/ISQ-0331-006_zoom1.jpg?ts=1791450479&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Kit Musculação Completo Barra Anilha Halter Kettlebell 25kg Yangfit de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-5",
+        "id_produto": 23,
+        "nome": "Regata para Treino, Box, Corrida Tecido em Dry Premium - Preto",
+        "genero": "masc",
+        "tamanho": "G",
+        "preco": 59.9,
+        "marca": "Speedo",
+        "cor": "Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/p/regata-para-treino-box-corrida-tecido-em-dry-premium-preto-146-A01B-006",
+        "imagem": "https://static.netshoes.com.br/produtos/regata-para-treino-box-corrida-tecido-em-dry-premium/06/146-A01B-006/146-A01B-006_zoom1.jpg?ts=1788175415&ims=544x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Regata para Treino, Box, Corrida Tecido em Dry Premium - Preto de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-6",
+        "id_produto": 24,
+        "nome": "Tênis Under Armour Tribase Reps - Amarelo+Preto",
+        "genero": "unissex",
+        "tamanho": "41",
+        "preco": 449.99,
+        "marca": "Under Armour",
+        "cor": "Amarelo/Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-under-armour-tribase-reps-amarelo+preto-39W-7383-274",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-under-armour-tribase-reps/74/39W-7383-274/39W-7383-274_zoom1.jpg?ts=1783996057&ims=544x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Tênis Under Armour Tribase Reps - Amarelo+Preto de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-7",
+        "id_produto": 25,
+        "nome": "Tênis Fila Prize Feminino - Cinza",
+        "genero": "fem",
+        "tamanho": "36",
+        "preco": 229.99,
+        "marca": "Fila",
+        "cor": "Cinza",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/fila",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-fila-prize-feminino/10/SFK-07WT-010/SFK-07WT-010_zoom1.jpg?ts=1790613482&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tênis Fila Prize Feminino - Cinza de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-8",
+        "id_produto": 26,
+        "nome": "Tênis Fila Prize Feminino - Bordô",
+        "genero": "fem",
+        "tamanho": "37",
+        "preco": 229.99,
+        "marca": "Fila",
+        "cor": "Bordô",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-fila-prize-feminino-bordo-SFK-07WT-788",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-fila-prize-feminino/88/SFK-07WT-788/SFK-07WT-788_zoom1.jpg?ts=1790614563&ims=544x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tênis Fila Prize Feminino - Bordô de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "musculacao-e-academia-9",
+        "id_produto": 27,
+        "nome": "Tênis Fila Prize Masculino - Azul+Marinho",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 229.99,
+        "marca": "Fila",
+        "cor": "Azul/Marinho",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/tenis-fila-prize-masculino-azul+marinho-SFK-07WU-852",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-fila-prize-masculino/52/SFK-07WU-852/SFK-07WU-852_zoom1.jpg?ts=1790614529&ims=544x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Tênis Fila Prize Masculino - Azul+Marinho de alta performance para Musculação e Academia, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Futebol",
+    "produtos": [
+      {
+        "id": "futebol-1",
+        "id_produto": 28,
+        "nome": "Bola Campo Adidas Trionda Copa do Mundo 2026 League - Branco",
+        "genero": "unissex",
+        "tamanho": "5",
+        "preco": 249.99,
+        "marca": "Adidas",
+        "cor": "Branco",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/futebol/bolas?q=roupas+fitness+luxo",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-campo-adidas-trionda-copa-do-mundo-2026-league/14/FBA-7870-014/FBA-7870-014_zoom1.jpg?ts=1783996986&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Bola Campo Adidas Trionda Copa do Mundo 2026 League - Branco de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "futebol-2",
+        "id_produto": 29,
+        "nome": "Bola Campo Adidas Trionda Copa do Mundo 2026 Pro - Branco",
+        "genero": "unissex",
+        "tamanho": "5",
+        "preco": 899.99,
+        "marca": "Adidas",
+        "cor": "Branco",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/p/bola-campo-adidas-trionda-copa-do-mundo-2026-pro-branco-FBA-7871-014",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-campo-adidas-trionda-copa-do-mundo-2026-pro/14/FBA-7871-014/FBA-7871-014_zoom1.jpg?ts=1783997952&ims=544x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Bola Campo Adidas Trionda Copa do Mundo 2026 Pro - Branco de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "futebol-3",
+        "id_produto": 30,
+        "nome": "Bola Campo Adidas Trionda Copa do Mundo 2026 Training - Branco",
+        "genero": "unissex",
+        "tamanho": "5",
+        "preco": 179.99,
+        "marca": "Adidas",
+        "cor": "Branco",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/p/bola-campo-adidas-trionda-copa-do-mundo-2026-training-branco-FBA-7874-014",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-campo-adidas-trionda-copa-do-mundo-2026-training/14/FBA-7874-014/FBA-7874-014_zoom1.jpg?ts=1783964298&ims=544x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Bola Campo Adidas Trionda Copa do Mundo 2026 Training - Branco de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "futebol-4",
+        "id_produto": 31,
+        "nome": "Camisa Puma Team Rise Masculina - Preto",
+        "genero": "masc",
+        "tamanho": "M",
+        "preco": 56.99,
+        "marca": "Puma",
+        "cor": "Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/p/camisa-puma-team-rise-masculina-preto-2I3-2723-226",
+        "imagem": "https://static.netshoes.com.br/produtos/camisa-puma-team-rise-masculina/26/2I3-2723-226/2I3-2723-226_zoom1.jpg?ts=1784000154&ims=544x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Camisa Puma Team Rise Masculina - Preto de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "futebol-5",
+        "id_produto": 32,
+        "nome": "Camisa Puma Team Rise Masculina - Azul+Branco",
+        "genero": "masc",
+        "tamanho": "G",
+        "preco": 56.99,
+        "marca": "Puma",
+        "cor": "Azul/Branco",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/p/camisa-puma-team-rise-masculina-azul+branco-2I3-2723-058",
+        "imagem": "https://static.netshoes.com.br/produtos/camisa-puma-team-rise-masculina/58/2I3-2723-058/2I3-2723-058_zoom1.jpg?ts=1783997799&ims=544x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Camisa Puma Team Rise Masculina - Azul+Branco de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "futebol-6",
+        "id_produto": 33,
+        "nome": "Camisa São Paulo 26/27 s/n Pré-Jogo New Balance Masculina",
+        "genero": "masc",
+        "tamanho": "G",
+        "preco": 249.99,
+        "marca": "New Balance",
+        "cor": "Vermelho/Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/busca/camisa-de-time",
+        "imagem": "https://static.netshoes.com.br/produtos/camisa-sao-paulo-2627-sn-pre-jogo-new-balance-masculina/56/39V-24W3-056/39V-24W3-056_zoom1.jpg?ts=1783996474&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Camisa São Paulo 26/27 s/n Pré-Jogo New Balance Masculina de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "futebol-7",
+        "id_produto": 34,
+        "nome": "Kit Camisa Infantil Santos II 25/26 s/n Torcedor Umbro Masculina",
+        "genero": "masc",
+        "tamanho": "10",
+        "preco": 229.99,
+        "marca": "Umbro",
+        "cor": "Preto/Branco",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/busca/kit-penalty-umbro",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-camisa-infantil-santos-ii-2526-sn-torcedor-umbro-masculina/26/2IB-2357-026/2IB-2357-026_zoom1.jpg?ts=1786328632&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Kit Camisa Infantil Santos II 25/26 s/n Torcedor Umbro Masculina de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "futebol-8",
+        "id_produto": 35,
+        "nome": "Meião Adidas Básico Masculino - Preto",
+        "genero": "masc",
+        "tamanho": "39-42",
+        "preco": 39.99,
+        "marca": "Adidas",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/p/meiao-adidas-basico-masculino-preto-132-1126-006",
+        "imagem": "https://static.netshoes.com.br/produtos/meiao-adidas-basico-masculino/06/132-1126-006/132-1126-006_zoom1.jpg?ts=1780511742&ims=544x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Meião Adidas Básico Masculino - Preto de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "futebol-9",
+        "id_produto": 36,
+        "nome": "Meião Profissional Meia Coxa Kanxa Top Bicolor",
+        "genero": "unissex",
+        "tamanho": "39-43",
+        "preco": 29.9,
+        "marca": "Kanxa",
+        "cor": "Branco/Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/meioes?q=chuteira+futsal",
+        "imagem": "https://static.netshoes.com.br/produtos/meiao-profissional-meia-coxa-kanxa-top-bicolor/28/J96-1528-028/J96-1528-028_zoom1.jpg?ts=1785505134&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Meião Profissional Meia Coxa Kanxa Top Bicolor de alta performance para Futebol, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Futebol Society",
+    "produtos": [
+      {
+        "id": "futebol-society-1",
+        "id_produto": 37,
+        "nome": "Chuteira Society Nike Phantom 6 Academy",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 399.99,
+        "marca": "Nike",
+        "cor": "Azul/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/futebol/futebol/azul?q=chuteiras+campo",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-society-nike-phantom-6-academy/36/SGL-04ME-936/SGL-04ME-936_zoom1.jpg?ts=1783393283",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Chuteira Society Nike Phantom 6 Academy de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-2",
+        "id_produto": 38,
+        "nome": "Chuteira Nike Superfly 9 Club Infantil Society",
+        "genero": "unissex",
+        "tamanho": "34",
+        "preco": 249.99,
+        "marca": "Nike",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/chuteiras-society-nike-ou-adidas",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-nike-superfly-9-club-infantil-society/26/JD8-0443-026/JD8-0443-026_zoom1.jpg?ts=1758548654&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Chuteira Nike Superfly 9 Club Infantil Society de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-3",
+        "id_produto": 39,
+        "nome": "Chuteira Society Umbro Neo-Comfort Unissex",
+        "genero": "unissex",
+        "tamanho": "41",
+        "preco": 170.99,
+        "marca": "Umbro",
+        "cor": "Preto/Vermelho",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/chuteira-society",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-society-umbro-neo-comfort-unissex/56/SID-003Z-056/SID-003Z-056_zoom1.jpg?ts=1783822416&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Chuteira Society Umbro Neo-Comfort Unissex de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-4",
+        "id_produto": 40,
+        "nome": "Chuteira Society Adidas Copa 18.4 TF - Branco+Preto",
+        "genero": "masc",
+        "tamanho": "40",
+        "preco": 249.99,
+        "marca": "Adidas",
+        "cor": "Branco/Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-society-adidas-copa-18-4-tf-branco+preto-COL-2842-028",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-society-adidas-copa-18-4-tf/28/COL-2842-028/COL-2842-028_zoom1.jpg?ts=1781008738&ims=544x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Chuteira Society Adidas Copa 18.4 TF - Branco+Preto de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-5",
+        "id_produto": 41,
+        "nome": "Chuteira Society Adidas Copa 19.1 TF - Branco",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 499.99,
+        "marca": "Adidas",
+        "cor": "Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-society-adidas-copa-19-1-tf-branco-COL-5553-014",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-society-adidas-copa-19-1-tf/14/COL-5553-014/COL-5553-014_zoom1.jpg?ts=1780492842&ims=544x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Chuteira Society Adidas Copa 19.1 TF - Branco de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-6",
+        "id_produto": 42,
+        "nome": "Chuteira Strong Society + Meião + Caneleira + Porta Chuteira A7",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 149.9,
+        "marca": "A7",
+        "cor": "Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/chuteira-com-meiao-e-caneleira",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-strong-society-meiao-caneleira-porta-chuteira-a7/14/5CC-0216-014/5CC-0216-014_zoom1.jpg?ts=1774430759&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Chuteira Strong Society + Meião + Caneleira + Porta Chuteira A7 de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-7",
+        "id_produto": 43,
+        "nome": "Chuteira Society Adulto Nike Phantom 6 High Club",
+        "genero": "unissex",
+        "tamanho": "41",
+        "preco": 299.99,
+        "marca": "Nike",
+        "cor": "Azul/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.centauro.com.br/nav/categorias/calcados/esportes/futebol",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/965785H3A11.jpg",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Chuteira Society Adulto Nike Phantom 6 High Club de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-8",
+        "id_produto": 44,
+        "nome": "Chuteira Society Adulto Penalty Bravo",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 159.99,
+        "marca": "Penalty",
+        "cor": "Azul",
+        "categoria": "calçado",
+        "url_fonte": "https://www.centauro.com.br/busca/chuteira-society",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/9974Y62VA2.jpg",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Chuteira Society Adulto Penalty Bravo de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futebol-society-9",
+        "id_produto": 45,
+        "nome": "Chuteira Society Infantil Penalty Matis XXI",
+        "genero": "unissex",
+        "tamanho": "32",
+        "preco": 139.99,
+        "marca": "Penalty",
+        "cor": "Amarelo/Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/chuteira-society-penalty",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-society-infantil-penalty-matis-xxi/31/50D-1011-231/50D-1011-231_zoom1.jpg?ts=1783997835&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Chuteira Society Infantil Penalty Matis XXI de alta performance para Futebol Society, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Futsal",
+    "produtos": [
+      {
+        "id": "futsal-1",
+        "id_produto": 46,
+        "nome": "Chuteira Futsal Umbro Pro 5 Bump Unissex - Branco+Preto",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 265.99,
+        "marca": "Umbro",
+        "cor": "Branco/Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-futsal-umbro-pro-5-bump-unissex-branco+preto-2IA-2818-028",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-umbro-pro-5-bump-unissex/28/2IA-2818-028/2IA-2818-028_zoom1.jpg?ts=1783946177&ims=544x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Chuteira Futsal Umbro Pro 5 Bump Unissex - Branco+Preto de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-2",
+        "id_produto": 47,
+        "nome": "Chuteira Futsal Umbro Pro 5 Bump Unissex - Branco+Rosa",
+        "genero": "unissex",
+        "tamanho": "39",
+        "preco": 265.99,
+        "marca": "Umbro",
+        "cor": "Branco/Rosa",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-futsal-umbro-pro-5-bump-unissex-branco+rosa-2IA-2818-020",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-umbro-pro-5-bump-unissex/20/2IA-2818-020/2IA-2818-020_zoom1.jpg?ts=1784000972&ims=544x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Chuteira Futsal Umbro Pro 5 Bump Unissex - Branco+Rosa de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-3",
+        "id_produto": 48,
+        "nome": "Chuteira Futsal Umbro Pro 5 Bump Unissex - Laranja",
+        "genero": "unissex",
+        "tamanho": "41",
+        "preco": 265.99,
+        "marca": "Umbro",
+        "cor": "Laranja",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-futsal-umbro-pro-5-bump-unissex-laranja-2IA-2818-018",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-umbro-pro-5-bump-unissex/18/2IA-2818-018/2IA-2818-018_zoom1.jpg?ts=1783946182&ims=544x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Chuteira Futsal Umbro Pro 5 Bump Unissex - Laranja de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-4",
+        "id_produto": 49,
+        "nome": "Chuteira Futsal Umbro Neo-Comfort Unissex",
+        "genero": "unissex",
+        "tamanho": "41",
+        "preco": 180.49,
+        "marca": "Umbro",
+        "cor": "Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/futebol/chuteiras",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-umbro-neo-comfort-unissex/06/SID-003X-006/SID-003X-006_zoom1.jpg?ts=1783913392&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Chuteira Futsal Umbro Neo-Comfort Unissex de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-5",
+        "id_produto": 50,
+        "nome": "Chuteira Futsal Umbro Invictus Unissex",
+        "genero": "unissex",
+        "tamanho": "39",
+        "preco": 129.99,
+        "marca": "Umbro",
+        "cor": "Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/chuteira-futsal-ate-100-reais",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-umbro-invictus-unissex/06/SID-017A-006/SID-017A-006_zoom1.jpg?ts=1786550753&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Chuteira Futsal Umbro Invictus Unissex de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-6",
+        "id_produto": 51,
+        "nome": "Chuteira Nike Beco 2 Futsal",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 199.99,
+        "marca": "Nike",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/chuteira-futsal-promocao",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-nike-beco-2-futsal/26/JD8-9946-026/JD8-9946-026_zoom1.jpg?ts=1784213275&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Chuteira Nike Beco 2 Futsal de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-7",
+        "id_produto": 52,
+        "nome": "Chuteira Futsal Adidas Copa 19.4 IN - Branco+Vermelho",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 229.99,
+        "marca": "Adidas",
+        "cor": "Branco/Vermelho",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-futsal-adidas-copa-19-4-in-branco+vermelho-COL-3948-024",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-adidas-copa-19-4-in/24/COL-3948-024/COL-3948-024_zoom1.jpg?ts=1780493278&ims=544x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Chuteira Futsal Adidas Copa 19.4 IN - Branco+Vermelho de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-8",
+        "id_produto": 53,
+        "nome": "Chuteira Futsal Adidas X 17.4 IN - Amarelo",
+        "genero": "masc",
+        "tamanho": "40",
+        "preco": 219.99,
+        "marca": "Adidas",
+        "cor": "Amarelo",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-futsal-adidas-x-174-in-amarelo-COL-0604-030",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-adidas-x-174-in/30/COL-0604-030/COL-0604-030_zoom1.jpg?ts=1780493722",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Chuteira Futsal Adidas X 17.4 IN - Amarelo de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "futsal-9",
+        "id_produto": 54,
+        "nome": "Chuteira Futsal Adidas X 18.4 IN - Preto+Vermelho",
+        "genero": "masc",
+        "tamanho": "42",
+        "preco": 229.99,
+        "marca": "Adidas",
+        "cor": "Preto/Vermelho",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/p/chuteira-futsal-adidas-x-18-4-in-preto+vermelho-COL-3946-002",
+        "imagem": "https://static.netshoes.com.br/produtos/chuteira-futsal-adidas-x-18-4-in/02/COL-3946-002/COL-3946-002_zoom1.jpg?ts=1785795106&ims=544x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Chuteira Futsal Adidas X 18.4 IN - Preto+Vermelho de alta performance para Futsal, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Vôlei",
+    "produtos": [
+      {
+        "id": "volei-1",
+        "id_produto": 55,
+        "nome": "Tênis Asics Upcourt 6 Masculino",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 359.99,
+        "marca": "Asics",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/volei/asics",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-asics-upcourt-6-masculino/26/2FW-2378-026/2FW-2378-026_zoom1.jpg?ts=1784125446&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Tênis Asics Upcourt 6 Masculino de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "volei-2",
+        "id_produto": 56,
+        "nome": "Bola de Vôlei Oficial Mikasa V200W",
+        "genero": "unissex",
+        "tamanho": "5",
+        "preco": 889,
+        "marca": "Mikasa",
+        "cor": "Amarelo/Azul",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/volei/bolas",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-de-volei-oficial-mikasa-v200w/30/972-0399-030/972-0399-030_zoom1.jpg?ts=1784586084&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Bola de Vôlei Oficial Mikasa V200W de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "volei-3",
+        "id_produto": 57,
+        "nome": "Bola de Vôlei de Quadra Mikasa V360W FIVB Couro Sintético",
+        "genero": "unissex",
+        "tamanho": "5",
+        "preco": 239.9,
+        "marca": "Mikasa",
+        "cor": "Amarelo/Azul",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/volei/mikasa",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-de-volei-de-quadra-mikasa-v360w-fivb-couro-sintetico/30/972-0983-030/972-0983-030_zoom1.jpg?ts=1788353473&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Bola de Vôlei de Quadra Mikasa V360W FIVB Couro Sintético de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "volei-4",
+        "id_produto": 58,
+        "nome": "Bola de Vôlei Mikasa V335W - Padrão FIVB",
+        "genero": "unissex",
+        "tamanho": "5",
+        "preco": 309.9,
+        "marca": "Mikasa",
+        "cor": "Amarelo/Azul",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/busca/bola-de-volei",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/985095D1A2.jpg",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Bola de Vôlei Mikasa V335W - Padrão FIVB de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "volei-5",
+        "id_produto": 59,
+        "nome": "Bola Vôlei de Praia Mikasa BV543",
+        "genero": "unissex",
+        "tamanho": "5",
+        "preco": 237.83,
+        "marca": "Mikasa",
+        "cor": "Amarelo/Azul",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/nav/produto/boladevolei/esportes/volei",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/989299E0A2.jpg",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Bola Vôlei de Praia Mikasa BV543 de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "volei-6",
+        "id_produto": 60,
+        "nome": "Joelheira Esportiva Vôlei Futsal Anti-impacto Ajustável Unissex",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 49.9,
+        "marca": "Kanxa",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/joelheira-volei",
+        "imagem": "https://static.netshoes.com.br/produtos/joelheira-esportiva-volei-futsal-skate-handball-ante-impacto-ajustavel-unissex/06/CSE-090I-006/CSE-090I-006_zoom1.jpg?ts=1785858715&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Joelheira Esportiva Vôlei Futsal Anti-impacto Ajustável Unissex de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "volei-7",
+        "id_produto": 61,
+        "nome": "Kit Joelheira e Manguito Vôlei Poker Power",
+        "genero": "unissex",
+        "tamanho": "M",
+        "preco": 89.9,
+        "marca": "Poker",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/kit-manguito-joelheira-voleibol",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-joelheira-manguito-volei-poker-power/06/D57-6603-006/D57-6603-006_zoom1.jpg?ts=1788921165&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Kit Joelheira e Manguito Vôlei Poker Power de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "volei-8",
+        "id_produto": 62,
+        "nome": "Kit Manguito Proteção UV50+ Manga Longa + Joelheira Anti-impacto Vôlei",
+        "genero": "unissex",
+        "tamanho": "G",
+        "preco": 41.8,
+        "marca": "Poker",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/kit-joelheira-volei-futsal",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-manguito-protecao-uv50-manga-longa-joelheira-anti-impacto-volei-futsal-handball-pares/06/NTZ-032C-006/NTZ-032C-006_zoom1.jpg?ts=1783976243&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Kit Manguito Proteção UV50+ Manga Longa + Joelheira Anti-impacto Vôlei de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "volei-9",
+        "id_produto": 63,
+        "nome": "Kit Joelheira e Cotoveleira Infantil para Vôlei e Futsal",
+        "genero": "unissex",
+        "tamanho": "P",
+        "preco": 54.9,
+        "marca": "Poker",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/kit-manguito-volei-joelheira",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-joelheira-e-cotoveleira-infantil-para-volei-futsal/06/REZ-0035-006/REZ-0035-006_zoom1.jpg?ts=1786379968&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Kit Joelheira e Cotoveleira Infantil para Vôlei e Futsal de alta performance para Vôlei, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Natação",
+    "produtos": [
+      {
+        "id": "natacao-1",
+        "id_produto": 64,
+        "nome": "Sunga Adidas 3 Listras",
+        "genero": "masc",
+        "tamanho": "M",
+        "preco": 125.99,
+        "marca": "Adidas",
+        "cor": "Preto/Branco",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/natacao",
+        "imagem": "https://static.netshoes.com.br/produtos/sunga-adidas-3-listras/40/FB9-1366-040/FB9-1366-040_zoom1.jpg?ts=1773290252&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Sunga Adidas 3 Listras de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "natacao-2",
+        "id_produto": 65,
+        "nome": "Shorts Adidas de Natação Três Listras 5 Polegadas",
+        "genero": "masc",
+        "tamanho": "G",
+        "preco": 98.99,
+        "marca": "Adidas",
+        "cor": "Amarelo/Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/natacao",
+        "imagem": "https://static.netshoes.com.br/produtos/shorts-adidas-de-natacao-tres-listras-5-polegadas/30/FBA-85WX-030/FBA-85WX-030_zoom1.jpg?ts=1783507813&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Shorts Adidas de Natação Três Listras 5 Polegadas de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "natacao-3",
+        "id_produto": 66,
+        "nome": "Sunga Speedo Acquaplus Infantil",
+        "genero": "masc",
+        "tamanho": "8",
+        "preco": 69.99,
+        "marca": "Speedo",
+        "cor": "Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/natacao",
+        "imagem": "https://static.netshoes.com.br/produtos/sunga-speedo-acquaplus-infantil/06/146-1234-006/146-1234-006_zoom1.jpg?ts=1787220762&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Sunga Speedo Acquaplus Infantil de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "natacao-4",
+        "id_produto": 67,
+        "nome": "Bermuda Jammer High Speed Maré para Atletas",
+        "genero": "masc",
+        "tamanho": "M",
+        "preco": 149.9,
+        "marca": "Speedo",
+        "cor": "Azul Noturno",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/speedo",
+        "imagem": "https://static.netshoes.com.br/produtos/bermuda-jammer-high-speed-mare-para-atletas-azul-noturno/08/S5O-03L9-008/S5O-03L9-008_zoom1.jpg?ts=1784084582&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Bermuda Jammer High Speed Maré para Atletas de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "natacao-5",
+        "id_produto": 68,
+        "nome": "Kit Óculos Speedo Swim SLC + Touca + Protetor",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 89.9,
+        "marca": "Speedo",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/kit-natacao-touca-oculos",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-oculos-speedo-swim-slc-touca-protetor/06/I46-1985-006/I46-1985-006_zoom1.jpg?ts=1788530505&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Kit Óculos Speedo Swim SLC + Touca + Protetor de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "natacao-6",
+        "id_produto": 69,
+        "nome": "Óculos de Natação Speedo Espelhado Antiembaçante",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 119.99,
+        "marca": "Speedo",
+        "cor": "Azul/Prata",
+        "categoria": "acessório",
+        "url_fonte": "https://www.centauro.com.br/nav/produto/oculosdenatacao/esportes/natacao",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/98513302A4.jpg",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Óculos de Natação Speedo Espelhado Antiembaçante de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "natacao-7",
+        "id_produto": 70,
+        "nome": "Óculos de Natação Gold Sports Cool Performance 6.0 Espelhado HD",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 79.9,
+        "marca": "Gold Sports",
+        "cor": "Preto/Espelhado",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/natacao/oculos-para-natacao",
+        "imagem": "https://static.netshoes.com.br/produtos/oculos-de-natacao-gold-sports-cool-performance-60-espelhado-hd/06/939-55BM-006/939-55BM-006_zoom1.jpg?ts=1788653631&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Óculos de Natação Gold Sports Cool Performance 6.0 Espelhado HD de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "natacao-8",
+        "id_produto": 71,
+        "nome": "Touca de Natação Speedo Silicone",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 49.9,
+        "marca": "Speedo",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/touca-natacao",
+        "imagem": "https://static.netshoes.com.br/produtos/touca-de-natacao-speedo/06/I46-8827-006/I46-8827-006_zoom1.jpg?ts=1785493537&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Touca de Natação Speedo Silicone de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "natacao-9",
+        "id_produto": 72,
+        "nome": "Maiô Fila Tri Logo II Feminino",
+        "genero": "fem",
+        "tamanho": "M",
+        "preco": 159.99,
+        "marca": "Fila",
+        "cor": "Preto/Vermelho",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/natacao/maios/feminino",
+        "imagem": "https://static.netshoes.com.br/produtos/maio-fila-tri-logo-ii-feminino/16/SFK-06W8-016/SFK-06W8-016_zoom1.jpg?ts=1785983081&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Maiô Fila Tri Logo II Feminino de alta performance para Natação, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Basquete",
+    "produtos": [
+      {
+        "id": "basquete-1",
+        "id_produto": 73,
+        "nome": "Tênis Masculino Nike Giannis Immortality 5",
+        "genero": "masc",
+        "tamanho": "42",
+        "preco": 599.99,
+        "marca": "Nike",
+        "cor": "Branco/Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.centauro.com.br/tenis-masculino-nike-giannis-immortality-5-9975NJ.html?cor=0O",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/9975NJ2VA2.jpg",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Tênis Masculino Nike Giannis Immortality 5 de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "basquete-2",
+        "id_produto": 74,
+        "nome": "Tênis Nike Precision 8 Mid Masculino",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 251.99,
+        "marca": "Nike",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/basquete",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-nike-precision-8-mid-masculino/96/SGL-04O4-E96/SGL-04O4-E96_zoom1.jpg?ts=1783506844&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Tênis Nike Precision 8 Mid Masculino de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "basquete-3",
+        "id_produto": 75,
+        "nome": "Tênis Adidas Gamechaser Masculino",
+        "genero": "masc",
+        "tamanho": "40",
+        "preco": 349.99,
+        "marca": "Adidas",
+        "cor": "Preto/Vermelho",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/basquete/tenis",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-adidas-gamechaser-masculino/02/FBA-7419-002/FBA-7419-002_zoom1.jpg?ts=1784769334&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tênis Adidas Gamechaser Masculino de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "basquete-4",
+        "id_produto": 76,
+        "nome": "Tênis de Basquete Adidas Initiation Masculino",
+        "genero": "masc",
+        "tamanho": "42",
+        "preco": 429.99,
+        "marca": "Adidas",
+        "cor": "Azul/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-basquete",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-de-basquete-adidas-initiation-masculino/83/FBA-864Q-483/FBA-864Q-483_zoom1.jpg?ts=1791998874&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tênis de Basquete Adidas Initiation Masculino de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "basquete-5",
+        "id_produto": 77,
+        "nome": "Tênis de Basquete Under Armour Curry 11 Mouthguard",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 1199.9,
+        "marca": "Under Armour",
+        "cor": "Azul",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-de-basquete",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-de-basquete-under-armour-curry-11-mouthguard-48-azul/08/R5M-2365-008/R5M-2365-008_zoom1.jpg?ts=1783710351&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Tênis de Basquete Under Armour Curry 11 Mouthguard de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "basquete-6",
+        "id_produto": 78,
+        "nome": "Bola de Basquete Adidas All Court 3.0",
+        "genero": "unissex",
+        "tamanho": "7",
+        "preco": 179.99,
+        "marca": "Adidas",
+        "cor": "Laranja/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/nav/produto/boladebasquete/esportes/basquete",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/9911974WA7.jpg",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Bola de Basquete Adidas All Court 3.0 de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "basquete-7",
+        "id_produto": 79,
+        "nome": "Bola de Basquete Wilson NBA DRV Pro 7",
+        "genero": "unissex",
+        "tamanho": "7",
+        "preco": 169.9,
+        "marca": "Wilson",
+        "cor": "Laranja",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/basquete/bolas",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-de-basquete-wilson-nba-dvr-pro-7/38/D25-3614-138/D25-3614-138_zoom1.jpg?ts=1783743219&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Bola de Basquete Wilson NBA DRV Pro 7 de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "basquete-8",
+        "id_produto": 80,
+        "nome": "Camiseta Regata Basquete Treino Academia Bulls",
+        "genero": "masc",
+        "tamanho": "G",
+        "preco": 89.9,
+        "marca": "NBA",
+        "cor": "Vermelho/Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/busca/camiseta-regata-basquete",
+        "imagem": "https://static.netshoes.com.br/produtos/camiseta-regata-basquete-treino-academia-bulls/38/HTZ-0995-138/HTZ-0995-138_zoom1.jpg?ts=1783941314&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Camiseta Regata Basquete Treino Academia Bulls de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "basquete-9",
+        "id_produto": 81,
+        "nome": "Bermuda NBA Brooklyn Nets Maxi Logo Masculina",
+        "genero": "masc",
+        "tamanho": "M",
+        "preco": 139.9,
+        "marca": "NBA",
+        "cor": "Preto/Branco",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/bermudas/masculino/nba",
+        "imagem": "https://static.netshoes.com.br/produtos/bermuda-nba-brooklyn-nets-maxi-logo-masculina/06/LEX-4224-006/LEX-4224-006_zoom1.jpg?ts=1789759857&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Bermuda NBA Brooklyn Nets Maxi Logo Masculina de alta performance para Basquete, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Tênis",
+    "produtos": [
+      {
+        "id": "tenis-1",
+        "id_produto": 82,
+        "nome": "Raquete de Tênis Wilson Fusion XL 274g",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 347.69,
+        "marca": "Wilson",
+        "cor": "Branco/Vermelho",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/tennis-e-squash/raquetes/wilson",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-de-tenis-wilson-fusion-xl-274g/14/D25-65F4-014/D25-65F4-014_zoom1.jpg?ts=1784083172&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Raquete de Tênis Wilson Fusion XL 274g de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "tenis-2",
+        "id_produto": 83,
+        "nome": "Raquete de Tênis Yonex Ezone 100 Espresso Brown Marrom",
+        "genero": "unissex",
+        "tamanho": "L3",
+        "preco": 2599.9,
+        "marca": "Yonex",
+        "cor": "Marrom",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/raquete-de-tenis",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-de-tenis-yonex-ezone-100-espresso-brown-marrom/38/595-16AI-138/595-16AI-138_zoom1.jpg?ts=1793103091&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Raquete de Tênis Yonex Ezone 100 Espresso Brown Marrom de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "tenis-3",
+        "id_produto": 84,
+        "nome": "Raquete de Tênis Wilson Blade 98 (16x19) V10",
+        "genero": "unissex",
+        "tamanho": "L3",
+        "preco": 1899.99,
+        "marca": "Wilson",
+        "cor": "Verde/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/busca/raquete-de-tenis",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/9974ZH0UA3.jpg",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Raquete de Tênis Wilson Blade 98 (16x19) V10 de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "tenis-4",
+        "id_produto": 85,
+        "nome": "Raquete de Tênis Adams Balance 27",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 179.99,
+        "marca": "Adams",
+        "cor": "Azul/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/nav/linha/intermediario/promocao/outlet",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/9974ZI75A2.jpg",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Raquete de Tênis Adams Balance 27 de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "tenis-5",
+        "id_produto": 86,
+        "nome": "Short Adidas Club Tennis Climacool Masculino",
+        "genero": "masc",
+        "tamanho": "M",
+        "preco": 159.99,
+        "marca": "Adidas",
+        "cor": "Branco",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/busca/tennis-e-squash",
+        "imagem": "https://static.netshoes.com.br/produtos/short-adidas-club-tennis-climacool-masculino/14/FBA-4463-014/FBA-4463-014_zoom1.jpg?ts=1785417925&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Short Adidas Club Tennis Climacool Masculino de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "tenis-6",
+        "id_produto": 87,
+        "nome": "Tênis Babolat SFX Evo Clay Saibro Azul Claro e Preto",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 649.9,
+        "marca": "Babolat",
+        "cor": "Azul Claro/Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/babolat",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-babolat-sfx-evo-clay-saibro-azul-claro-e-preto/08/2DC-14F1-008/2DC-14F1-008_zoom1.jpg?ts=1788363514&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Tênis Babolat SFX Evo Clay Saibro Azul Claro e Preto de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "tenis-7",
+        "id_produto": 88,
+        "nome": "Tênis Olympikus Quadra 2",
+        "genero": "unissex",
+        "tamanho": "40",
+        "preco": 279.99,
+        "marca": "Olympikus",
+        "cor": "Branco/Bege",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-para-quadra-de-saibro",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-olympikus-quadra-2/04/SE7-07TS-004/SE7-07TS-004_zoom1.jpg?ts=1784993449&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tênis Olympikus Quadra 2 de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "tenis-8",
+        "id_produto": 89,
+        "nome": "Tênis Asics Game FF Saibro Feminino",
+        "genero": "fem",
+        "tamanho": "37",
+        "preco": 599.9,
+        "marca": "Asics",
+        "cor": "Azul/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-tennis-saibro",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-asics-gameff-saibro-feminino/58/2FW-2977-058/2FW-2977-058_zoom1.jpg?ts=1783812630&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tênis Asics Game FF Saibro Feminino de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "tenis-9",
+        "id_produto": 90,
+        "nome": "Tênis Joma Master 1000 Saibro Masculino",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 419.9,
+        "marca": "Joma",
+        "cor": "Preto/Branco",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/tenis-tennis-saibro-masculino",
+        "imagem": "https://static.netshoes.com.br/produtos/tenis-joma-master-1000-saibro-masculino/26/049-539O-026/049-539O-026_zoom1.jpg?ts=1787759164&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Tênis Joma Master 1000 Saibro Masculino de alta performance para Tênis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Beach Tennis",
+    "produtos": [
+      {
+        "id": "beach-tennis-1",
+        "id_produto": 91,
+        "nome": "Raquete de Beach Tennis Adidas Metalbone Team 3.3 H31 Azul",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 469.9,
+        "marca": "Adidas",
+        "cor": "Azul",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/raquetes",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-de-beach-tennis-adidas-metalbone-team-33-h31-azul/08/FBA-2967-008/FBA-2967-008_zoom1.jpg?ts=1785574483&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Raquete de Beach Tennis Adidas Metalbone Team 3.3 H31 Azul de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-2",
+        "id_produto": 92,
+        "nome": "Raquete Beach Tennis Adidas BT 3.0",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 229.9,
+        "marca": "Adidas",
+        "cor": "Preto/Amarelo",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/raquetes-beach-tennis",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-beach-tennis-adidas-bt-30/92/3ZP-3241-092/3ZP-3241-092_zoom1.jpg?ts=1785085099&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Raquete Beach Tennis Adidas BT 3.0 de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-3",
+        "id_produto": 93,
+        "nome": "Raquete Beach Tennis Mormaii Defender",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 399.9,
+        "marca": "Mormaii",
+        "cor": "Roxo/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/raquete-de-beach-mormaii",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-beach-tennis-mormaii-defender/98/0ZI-4406-198/0ZI-4406-198_zoom1.jpg?ts=1646321094&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Raquete Beach Tennis Mormaii Defender de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-4",
+        "id_produto": 94,
+        "nome": "Raquete Beach Tennis Mormaii Beats",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 379.9,
+        "marca": "Mormaii",
+        "cor": "Azul/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/mormaii-beach-tennis-raquete",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-beach-tennis-mormaii-beats/08/0ZI-4410-008/0ZI-4410-008_zoom1.jpg?ts=1646321095&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Raquete Beach Tennis Mormaii Beats de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-5",
+        "id_produto": 95,
+        "nome": "Raquete Mormaii Beach Tennis Pro Vitória Marchezini II",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 1299.9,
+        "marca": "Mormaii",
+        "cor": "Branco/Rosa",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/raquetes/mormaii",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-mormaii-beach-tennis-pro-vitoria-marchezini-ii/14/I6F-9174-014/I6F-9174-014_zoom1.jpg?ts=1787315476&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Raquete Mormaii Beach Tennis Pro Vitória Marchezini II de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-6",
+        "id_produto": 96,
+        "nome": "Raquete de Beach Tennis Drop Shot Prime Attack 2026",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 899.9,
+        "marca": "Drop Shot",
+        "cor": "Preto/Laranja",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/raquetes/drop-shot",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-de-beach-tennis-drop-shot-prime-attack-2026/06/J97-102B-006/J97-102B-006_zoom1.jpg?ts=1786762710&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Raquete de Beach Tennis Drop Shot Prime Attack 2026 de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-7",
+        "id_produto": 97,
+        "nome": "Raquete de Beach Tennis Carbon 3K XXI Penalty",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 549.9,
+        "marca": "Penalty",
+        "cor": "Preto/Amarelo",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/raquetes-penalty-penalty",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-de-beach-tennis-carbon-3k-xxi-penalty/52/50D-0653-152/50D-0653-152_zoom1.jpg?ts=1776421402&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Raquete de Beach Tennis Carbon 3K XXI Penalty de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-8",
+        "id_produto": 98,
+        "nome": "Raquete Penalty Beach Tennis Fiber Glass XXII - Azul+Preto",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 299.9,
+        "marca": "Penalty",
+        "cor": "Azul/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/p/raquete-penalty-beach-tennis-fiber-glass-xxii-azul+preto-50D-63IY-108",
+        "imagem": "https://static.netshoes.com.br/produtos/raquete-penalty-beach-tennis-fiber-glass-xxii/08/50D-63IY-108/50D-63IY-108_zoom2.jpg?ts=1767633617&ims=544x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Raquete Penalty Beach Tennis Fiber Glass XXII - Azul+Preto de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "beach-tennis-9",
+        "id_produto": 99,
+        "nome": "Kit Bolas Penalty Beach Tennis XXII c/ 3 Bolas",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 49.9,
+        "marca": "Penalty",
+        "cor": "Laranja/Amarelo",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/tennis-e-squash-beach-tennis-kits",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-bolas-penalty-beach-tennis-xxii-c-3-bolas/10/50D-0804-110/50D-0804-110_zoom1.jpg?ts=1785355921",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Kit Bolas Penalty Beach Tennis XXII c/ 3 Bolas de alta performance para Beach Tennis, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Pilates e Yoga",
+    "produtos": [
+      {
+        "id": "pilates-e-yoga-1",
+        "id_produto": 100,
+        "nome": "Bola Suíça p/ Pilates 55cm + Bomba de Inflar Liveup",
+        "genero": "unissex",
+        "tamanho": "55cm",
+        "preco": 84,
+        "marca": "Liveup",
+        "cor": "Cinza",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/liveup",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-suica-p-pilates-55cm-bomba-de-inflar-liveup/96/J44-1277-296/J44-1277-296_zoom1.jpg?ts=1774402474&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Bola Suíça p/ Pilates 55cm + Bomba de Inflar Liveup de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-2",
+        "id_produto": 101,
+        "nome": "Bola para Yoga Pilates Fisio Overball Liveup LS3225",
+        "genero": "unissex",
+        "tamanho": "25cm",
+        "preco": 34.9,
+        "marca": "Liveup",
+        "cor": "Laranja",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/fitness-e-musculacao/liveup",
+        "imagem": "https://static.netshoes.com.br/produtos/bola-para-yoga-pilates-fisio-overball-liveup-ls3225/42/J44-0139-042/J44-0139-042_zoom1.jpg?ts=1784507311&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Bola para Yoga Pilates Fisio Overball Liveup LS3225 de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-3",
+        "id_produto": 102,
+        "nome": "Colchonete Yoga Pilates Liveup Rosa",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 79.9,
+        "marca": "Liveup",
+        "cor": "Rosa",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/colchonete-pilates",
+        "imagem": "https://static.netshoes.com.br/produtos/colchonete-yoga-pilates-liveup-rosa/18/J44-0144-018/J44-0144-018_zoom1.jpg?ts=1791496315&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Colchonete Yoga Pilates Liveup Rosa de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-4",
+        "id_produto": 103,
+        "nome": "Kit 3 Bolas de Pilates Yoga Vollo 75cm 65cm 55cm",
+        "genero": "unissex",
+        "tamanho": "55/65/75cm",
+        "preco": 219.9,
+        "marca": "Vollo",
+        "cor": "Cinza",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/tapete-yoga-bolas-vollo",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-3-bolas-de-pilates-yoga-vollo-75cm-65cm-55cm/10/01K-037N-010/01K-037N-010_zoom1.jpg?ts=1780477109&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Kit 3 Bolas de Pilates Yoga Vollo 75cm 65cm 55cm de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-5",
+        "id_produto": 104,
+        "nome": "Tapete de Yoga EVA Texturizado",
+        "genero": "unissex",
+        "tamanho": "180x60cm",
+        "preco": 59.9,
+        "marca": "Muvin",
+        "cor": "Roxo",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/tapete-de-yoga",
+        "imagem": "https://static.netshoes.com.br/produtos/tapete-de-yoga-eva-texturizado/98/IJZ-0101-198/IJZ-0101-198_zoom1.jpg?ts=1788197650&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Tapete de Yoga EVA Texturizado de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-6",
+        "id_produto": 105,
+        "nome": "Tapete Yoga Mat Pilates Exercícios TPE 6mm com Bolsa Yangfit",
+        "genero": "unissex",
+        "tamanho": "183x61cm",
+        "preco": 139.9,
+        "marca": "Yangfit",
+        "cor": "Verde/Cinza",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/tapete-yoga-track",
+        "imagem": "https://static.netshoes.com.br/produtos/tapete-yoga-mat-pilates-exercicios-tpe-6mm-com-bolsa-yangfit/27/ISQ-0064-827/ISQ-0064-827_zoom1.jpg?ts=1791318908&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Tapete Yoga Mat Pilates Exercícios TPE 6mm com Bolsa Yangfit de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-7",
+        "id_produto": 106,
+        "nome": "Tapete Yoga Mat Pilates PVC Ecológico 5mm Mandala Yangfit",
+        "genero": "unissex",
+        "tamanho": "173x61cm",
+        "preco": 119.9,
+        "marca": "Yangfit",
+        "cor": "Roxo",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/gym-yoga-mat",
+        "imagem": "https://static.netshoes.com.br/produtos/tapete-yoga-mat-pilates-pvc-ecologico-5mm-mandala-yangfit/98/ISQ-0338-198/ISQ-0338-198_zoom1.jpg?ts=1680542512&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Tapete Yoga Mat Pilates PVC Ecológico 5mm Mandala Yangfit de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-8",
+        "id_produto": 107,
+        "nome": "Tapete de Yoga Yangfit com Bolsa - 183x61x0,6cm TPE Azul",
+        "genero": "unissex",
+        "tamanho": "183x61cm",
+        "preco": 139.9,
+        "marca": "Yangfit",
+        "cor": "Azul",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/nav/categorias/acessorios/produto/tapete/modalidade/yoga",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/985182NFA5.jpg",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Tapete de Yoga Yangfit com Bolsa - 183x61x0,6cm TPE Azul de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "pilates-e-yoga-9",
+        "id_produto": 108,
+        "nome": "Mala Oxer Yoga Mat",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 99.99,
+        "marca": "Oxer",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.centauro.com.br/hotsite/ja-e-black-malas",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/98512502A8.jpg",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Mala Oxer Yoga Mat de alta performance para Pilates e Yoga, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Boxe e Artes Marciais",
+    "produtos": [
+      {
+        "id": "boxe-e-artes-marciais-1",
+        "id_produto": 109,
+        "nome": "Kit Saco de Pancada + Luva Boxe Muay Thai 6OZ Infantil Pretorian",
+        "genero": "unissex",
+        "tamanho": "6oz",
+        "preco": 189.9,
+        "marca": "Pretorian",
+        "cor": "Laranja/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/saco-de-pancada-e-luva-de-boxe",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-saco-de-pancada-luva-boxe-muay-thai-6oz-infantil-pretorian/18/D36-2643-018/D36-2643-018_zoom1.jpg?ts=1793284348&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Kit Saco de Pancada + Luva Boxe Muay Thai 6OZ Infantil Pretorian de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-2",
+        "id_produto": 110,
+        "nome": "Saco de Pancada 180cm Profissional Gorilla Boxe Muay Thai",
+        "genero": "unissex",
+        "tamanho": "180cm",
+        "preco": 143.27,
+        "marca": "Gorilla",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/saco-pancada-boxe",
+        "imagem": "https://static.netshoes.com.br/produtos/saco-de-pancada-180cm-profissional-gorilla-vazio-boxe-muay-thay-treino-luta-artes-maciais/06/KJQ-0009-006/KJQ-0009-006_zoom1.jpg?ts=1784126291&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Saco de Pancada 180cm Profissional Gorilla Boxe Muay Thai de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-3",
+        "id_produto": 111,
+        "nome": "Bandagem Elástica Boxe Artes Marciais Muay Thai MMA 3m",
+        "genero": "unissex",
+        "tamanho": "3m",
+        "preco": 29.9,
+        "marca": "Spank",
+        "cor": "Amarelo",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/boxe",
+        "imagem": "https://static.netshoes.com.br/produtos/bandagem-elastica-boxe-artes-marciais-muay-thai-mma-3-mts/30/DUA-020M-030/DUA-020M-030_zoom1.jpg?ts=1792065275&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Bandagem Elástica Boxe Artes Marciais Muay Thai MMA 3m de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-4",
+        "id_produto": 112,
+        "nome": "Kit Luva Boxe Muay Thai MKS Power e Bandagem 2,55m",
+        "genero": "unissex",
+        "tamanho": "12oz",
+        "preco": 219.9,
+        "marca": "MKS",
+        "cor": "Preto/Dourado",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/kit-luva-boxe",
+        "imagem": "https://static.netshoes.com.br/produtos/kit-luva-boxe-muay-thai-mks-power-e-bandagem-255m/38/019-99A2-038/019-99A2-038_zoom1.jpg?ts=1790598232&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Kit Luva Boxe Muay Thai MKS Power e Bandagem 2,55m de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-5",
+        "id_produto": 113,
+        "nome": "Luva de Boxe Spank 12 OZ Adulto",
+        "genero": "unissex",
+        "tamanho": "12oz",
+        "preco": 169.99,
+        "marca": "Spank",
+        "cor": "Preto/Vermelho",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/busca/luva-de-boxe",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/98504819A4.jpg",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Luva de Boxe Spank 12 OZ Adulto de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-6",
+        "id_produto": 114,
+        "nome": "Luvas de Boxe Naja Viper Line Muay Thai 12 OZ Adulto",
+        "genero": "unissex",
+        "tamanho": "12oz",
+        "preco": 199.99,
+        "marca": "Naja",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/nav/produto/luvas/esportes/lutas",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/98504302A6.jpg",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Luvas de Boxe Naja Viper Line Muay Thai 12 OZ Adulto de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-7",
+        "id_produto": 115,
+        "nome": "Luva de Boxe Muay Thai Maximum New Classic Black",
+        "genero": "unissex",
+        "tamanho": "14oz",
+        "preco": 279.9,
+        "marca": "Maximum",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/artes-marciais/luvas",
+        "imagem": "https://static.netshoes.com.br/produtos/luva-de-boxe-muay-thai-maximum-new-classic-black/06/MX9-0005-006/MX9-0005-006_zoom1.jpg?ts=1786708679&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Luva de Boxe Muay Thai Maximum New Classic Black de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-8",
+        "id_produto": 116,
+        "nome": "Luvas de Boxe Muay Thai MMA Classic Power Black Maximum",
+        "genero": "unissex",
+        "tamanho": "16oz",
+        "preco": 299.9,
+        "marca": "Maximum",
+        "cor": "Preto/Branco",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/luvas-de-boxe",
+        "imagem": "https://static.netshoes.com.br/produtos/luvas-de-boxe-muay-thai-mma-classic-power-black-maximum/06/MX9-008M-006/MX9-008M-006_zoom1.jpg?ts=1791478417&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Luvas de Boxe Muay Thai MMA Classic Power Black Maximum de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "boxe-e-artes-marciais-9",
+        "id_produto": 117,
+        "nome": "Kimono Jiu Jitsu Judo Naja Heroic Infantil",
+        "genero": "unissex",
+        "tamanho": "M2",
+        "preco": 289.9,
+        "marca": "Naja",
+        "cor": "Branco",
+        "categoria": "roupa",
+        "url_fonte": "https://www.centauro.com.br/busca/kimono-jiu-jitsu",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/97522702A12.jpg",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Kimono Jiu Jitsu Judo Naja Heroic Infantil de alta performance para Boxe e Artes Marciais, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Ciclismo",
+    "produtos": [
+      {
+        "id": "ciclismo-1",
+        "id_produto": 118,
+        "nome": "Bicicleta Elétrica Bikelete V8 1000W 48V 32km/h Lítio",
+        "genero": "unissex",
+        "tamanho": "Aro 20",
+        "preco": 7621.99,
+        "marca": "Bikelete",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/bicicleta-frete-gratis",
+        "imagem": "https://static.netshoes.com.br/produtos/bicicleta-eletrica-bikelete-v8-1000w-48v-32kmh-litio-com-seguro-roubo-furto/06/EYI-0006-006/EYI-0006-006_zoom1.jpg?ts=1786961363&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Bicicleta Elétrica Bikelete V8 1000W 48V 32km/h Lítio de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "ciclismo-2",
+        "id_produto": 119,
+        "nome": "Bicicleta Aro 29 Caloi Sport V21 21 Marchas",
+        "genero": "unissex",
+        "tamanho": "Aro 29",
+        "preco": 1399.99,
+        "marca": "Caloi",
+        "cor": "Preto/Grafite",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/nav/esportes/bike/marca/caloi",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/99503304A2.jpg",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Bicicleta Aro 29 Caloi Sport V21 21 Marchas de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "ciclismo-3",
+        "id_produto": 120,
+        "nome": "Capacete para Bike Infantil Spin Fogo",
+        "genero": "unissex",
+        "tamanho": "P",
+        "preco": 89.99,
+        "marca": "Spin",
+        "cor": "Vermelho/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.centauro.com.br/nav/produto/capacete/esportes/bike",
+        "imagem": "https://imgcentauro-a.akamaihd.net/1024x1024/M18ZL93YA1.jpg",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Capacete para Bike Infantil Spin Fogo de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "ciclismo-4",
+        "id_produto": 121,
+        "nome": "Capacete Esportivo Adulto Laranja e Cinza Vollo",
+        "genero": "unissex",
+        "tamanho": "M",
+        "preco": 129.9,
+        "marca": "Vollo",
+        "cor": "Laranja/Cinza",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/bike/capacetes",
+        "imagem": "https://static.netshoes.com.br/produtos/capacete-esportivo-adulto-laranja-e-cinza-vollo/50/01K-035A-150/01K-035A-150_zoom1.jpg?ts=1791291599&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Capacete Esportivo Adulto Laranja e Cinza Vollo de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "ciclismo-5",
+        "id_produto": 122,
+        "nome": "Capacete Ciclismo MTB GTA Inmold Start com Sinalizador LED",
+        "genero": "unissex",
+        "tamanho": "G",
+        "preco": 119.9,
+        "marca": "GTA",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/capacete-ciclismo",
+        "imagem": "https://static.netshoes.com.br/produtos/capacete-ciclismo-mtb-gta-inmold-start-com-sinalizador-led/06/CGW-09J1-006/CGW-09J1-006_zoom1.jpg?ts=1784260459&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Capacete Ciclismo MTB GTA Inmold Start com Sinalizador LED de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "ciclismo-6",
+        "id_produto": 123,
+        "nome": "Bermuda Ciclismo Forro Gel D80 Preto MTB Bike Livestrong",
+        "genero": "masc",
+        "tamanho": "G",
+        "preco": 89.9,
+        "marca": "Livestrong",
+        "cor": "Preto",
+        "categoria": "roupa",
+        "url_fonte": "https://www.netshoes.com.br/busca/bermuda-ciclismo",
+        "imagem": "https://static.netshoes.com.br/produtos/bermuda-ciclismo-forro-gel-d80-preto-mtb-bike-livestrong/06/1ST-0232-006/1ST-0232-006_zoom1.jpg?ts=1784067714&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Bermuda Ciclismo Forro Gel D80 Preto MTB Bike Livestrong de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "P",
+          "M",
+          "G",
+          "GG"
+        ]
+      },
+      {
+        "id": "ciclismo-7",
+        "id_produto": 124,
+        "nome": "Luvas Ciclismo Oakley Drop In MTB",
+        "genero": "unissex",
+        "tamanho": "M",
+        "preco": 179.9,
+        "marca": "Oakley",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/luva-ciclismo",
+        "imagem": "https://static.netshoes.com.br/produtos/luvas-ciclismo-oakley-drop-in-mtb/06/PFN-9341-006/PFN-9341-006_zoom1.jpg?ts=1783937286&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Luvas Ciclismo Oakley Drop In MTB de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "ciclismo-8",
+        "id_produto": 125,
+        "nome": "Óculos de Sol Oakley Radar EV Path Ciclismo",
+        "genero": "unissex",
+        "tamanho": "Único",
+        "preco": 989.9,
+        "marca": "Oakley",
+        "cor": "Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/bike/oculos",
+        "imagem": "https://static.netshoes.com.br/produtos/oculos-de-sol-oakley-radar-ev-path/06/PFN-7813-006/PFN-7813-006_zoom1.jpg?ts=1783701208&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Óculos de Sol Oakley Radar EV Path Ciclismo de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "ciclismo-9",
+        "id_produto": 126,
+        "nome": "Sapatilha Ciclismo MTB Absolute Nero 5 c/ 3 Velcros",
+        "genero": "unissex",
+        "tamanho": "41",
+        "preco": 269.9,
+        "marca": "Absolute",
+        "cor": "Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/sapatilha-ciclismo-mtb-ciclista",
+        "imagem": "https://static.netshoes.com.br/produtos/sapatilha-ciclismo-mtb-absolute-nero-5-c-3-velcros/06/V09-5158-006/V09-5158-006_zoom1.jpg?ts=1783952679&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Sapatilha Ciclismo MTB Absolute Nero 5 c/ 3 Velcros de alta performance para Ciclismo, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Trilha e Camping",
+    "produtos": [
+      {
+        "id": "trilha-e-camping-1",
+        "id_produto": 127,
+        "nome": "Bota Coturno Adventure Masculina para Trilha Conforto Reforçada Marrom",
+        "genero": "masc",
+        "tamanho": "44",
+        "preco": 111.06,
+        "marca": "Acero",
+        "cor": "Marrom",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/bota-de-trilha",
+        "imagem": "https://static.netshoes.com.br/produtos/bota-coturno-adventure-masculina-para-trilha-conforto-reforcada-marrom-44/06/4QT-0013-006/4QT-0013-006_zoom1.jpg?ts=1789014910&ims=326x",
+        "destaque": true,
+        "estoque": 10,
+        "descricao": "Bota Coturno Adventure Masculina para Trilha Conforto Reforçada Marrom de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-2",
+        "id_produto": 128,
+        "nome": "Bota Coturno Adventure Masculina para Trilha Conforto Reforçada Café",
+        "genero": "masc",
+        "tamanho": "42",
+        "preco": 119.9,
+        "marca": "Acero",
+        "cor": "Café",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/melhores-botas-para-trilha",
+        "imagem": "https://static.netshoes.com.br/produtos/bota-coturno-adventure-masculina-para-trilha-conforto-reforcada-marrom-44/38/4QT-0013-138/4QT-0013-138_zoom1.jpg?ts=1788507211&ims=326x",
+        "destaque": true,
+        "estoque": 13,
+        "descricao": "Bota Coturno Adventure Masculina para Trilha Conforto Reforçada Café de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-3",
+        "id_produto": 129,
+        "nome": "Bota Adventure Nobuck Masculina Couro Trilha Conforto",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 179.46,
+        "marca": "Free Jump",
+        "cor": "Azul",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/bota-trilha-azul-free-jump",
+        "imagem": "https://static.netshoes.com.br/produtos/bota-adventure-nobuck-masculina-couro-trilha-conforto/08/OAR-0727-008/OAR-0727-008_zoom1.jpg?ts=1666371734",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Bota Adventure Nobuck Masculina Couro Trilha Conforto de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-4",
+        "id_produto": 130,
+        "nome": "Bota Adventure Venetto Masculina Wind Trail Impermeável em Couro",
+        "genero": "masc",
+        "tamanho": "40",
+        "preco": 219.9,
+        "marca": "Venetto",
+        "cor": "Preto",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/botas-trekking-impermeavel",
+        "imagem": "https://static.netshoes.com.br/produtos/bota-adventure-venetto-masculina-wind-trail-impermeavel-em-couro/06/EPL-059T-006/EPL-059T-006_zoom1.jpg?ts=1783510089&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Bota Adventure Venetto Masculina Wind Trail Impermeável em Couro de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-5",
+        "id_produto": 131,
+        "nome": "Bota Shelga Boots Patagonia Cano Médio Couro Tratorada Trekking",
+        "genero": "masc",
+        "tamanho": "41",
+        "preco": 199.9,
+        "marca": "Shelga Boots",
+        "cor": "Caramelo",
+        "categoria": "calçado",
+        "url_fonte": "https://www.netshoes.com.br/busca/botas-de-trekking",
+        "imagem": "https://static.netshoes.com.br/produtos/bota-shelga-boots-patagonia-cano-medio-couro-tratorada-trekking-seguranca-masculina/50/S0N-0004-050/S0N-0004-050_zoom1.jpg?ts=1783946669&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Bota Shelga Boots Patagonia Cano Médio Couro Tratorada Trekking de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-6",
+        "id_produto": 132,
+        "nome": "Mochila de Hidratação Hurley Esportiva Trilha Pedal 8 Litros",
+        "genero": "unissex",
+        "tamanho": "8L",
+        "preco": 189.9,
+        "marca": "Hurley",
+        "cor": "Cinza/Preto",
+        "categoria": "acessório",
+        "url_fonte": "https://www.netshoes.com.br/busca/mochilas-trilha",
+        "imagem": "https://static.netshoes.com.br/produtos/mochila-de-hidratacao-hurley-esportiva-trilha-pedal-bolso-termico-8-litros/72/D71-6548-172/D71-6548-172_zoom1.jpg?ts=1788290976&ims=326x",
+        "destaque": false,
+        "estoque": 13,
+        "descricao": "Mochila de Hidratação Hurley Esportiva Trilha Pedal 8 Litros de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-7",
+        "id_produto": 133,
+        "nome": "Mochila Cargueira Trilhas & Rumos Montanha 75 Litros",
+        "genero": "unissex",
+        "tamanho": "75L",
+        "preco": 649.9,
+        "marca": "Trilhas & Rumos",
+        "cor": "Azul/Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/mochilas-trilhas-e-rumos",
+        "imagem": "https://static.netshoes.com.br/produtos/mochila-trilhas-&-rumos-montanha-75/08/K28-0392-108/K28-0392-108_zoom1.jpg?ts=1767329119&ims=326x",
+        "destaque": false,
+        "estoque": 16,
+        "descricao": "Mochila Cargueira Trilhas & Rumos Montanha 75 Litros de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-8",
+        "id_produto": 134,
+        "nome": "Mochila Esporte 55L Camping Trilha Mochilão Resistente",
+        "genero": "unissex",
+        "tamanho": "55L",
+        "preco": 159.9,
+        "marca": "Alma",
+        "cor": "Preto",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/busca/mochila-trilhas",
+        "imagem": "https://static.netshoes.com.br/produtos/mochila-esporte-55l-camping-trilha-mochilao-resistente/06/AVL-1908-006/AVL-1908-006_zoom1.jpg?ts=1784130015&ims=326x",
+        "destaque": false,
+        "estoque": 19,
+        "descricao": "Mochila Esporte 55L Camping Trilha Mochilão Resistente de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      },
+      {
+        "id": "trilha-e-camping-9",
+        "id_produto": 135,
+        "nome": "Barraca Camping Mor Iglu Luna Até 4 Pessoas Acampamento",
+        "genero": "unissex",
+        "tamanho": "4 Pessoas",
+        "preco": 249.9,
+        "marca": "Mor",
+        "cor": "Azul",
+        "categoria": "equipamento",
+        "url_fonte": "https://www.netshoes.com.br/aventura/barracas",
+        "imagem": "https://static.netshoes.com.br/produtos/barraca-camping-mor-iglu-luna-ate-4-pessoas-acampamento/08/NIR-7540-008/NIR-7540-008_zoom1.jpg?ts=1794182462&ims=326x",
+        "destaque": false,
+        "estoque": 10,
+        "descricao": "Barraca Camping Mor Iglu Luna Até 4 Pessoas Acampamento de alta performance para Trilha e Camping, garantindo conforto e durabilidade.",
+        "variantes": [
+          "Único"
+        ]
+      }
+    ]
+  }
+]
