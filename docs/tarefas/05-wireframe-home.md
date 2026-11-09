@@ -1,6 +1,6 @@
 # 05: Wireframe: Home
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 1 (qua 04/11)
 **Estimativa:** 1h30
 

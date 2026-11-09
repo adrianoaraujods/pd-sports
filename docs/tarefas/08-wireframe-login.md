@@ -1,6 +1,6 @@
 # 08: Wireframe: Login
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 1 (qua 04/11)
 **Estimativa:** 1h
 

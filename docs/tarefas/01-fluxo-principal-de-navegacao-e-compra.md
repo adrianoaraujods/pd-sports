@@ -1,6 +1,6 @@
 # 01: Fluxo principal de navegação e compra
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 0 (ter 03/11)
 **Estimativa:** 1h30
 

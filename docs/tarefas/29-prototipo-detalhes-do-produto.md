@@ -1,7 +1,7 @@
 # 29: Protótipo: Detalhes do Produto
 
-**Status:** Não iniciado
-**Dia:** Dia 6 (seg 09/11)
+**Status:** Concluído
+**Dia:** Dia 3 (sex 06/11)
 **Estimativa:** 1h30
 
 **O que construir:** Tela em alta fidelidade a partir do wireframe correspondente, aplicando o design system, feita por quem fez esse wireframe.

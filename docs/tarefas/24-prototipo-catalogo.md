@@ -1,6 +1,6 @@
 # 24: Protótipo: Catálogo
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 3 (sex 06/11)
 **Estimativa:** 2h
 
