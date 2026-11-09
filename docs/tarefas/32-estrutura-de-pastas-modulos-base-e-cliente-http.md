@@ -1,6 +1,6 @@
 # 32: Estrutura de pastas, módulos base e cliente HTTP
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 6 (seg 09/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31
 
-- [ ] Responsabilidades separadas em camadas (API, serviços, componentes, páginas)
-- [ ] Cliente HTTP reutilizável com tratamento de falhas
+- [x] Responsabilidades separadas em camadas (API, serviços, componentes, páginas)
+- [x] Cliente HTTP reutilizável com tratamento de falhas
