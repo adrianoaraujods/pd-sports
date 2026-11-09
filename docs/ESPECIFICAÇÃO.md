@@ -86,13 +86,13 @@ Um site estático em módulos ES, publicado na Vercel, que consome três entidad
 ## Decisões de Implementação
 
 - **Arquitetura**: site estático, sem build e sem framework. JavaScript em módulos ES com camadas separadas: acesso à API (Fetch, `async`/`await` e tratamento de exceções), serviços de domínio (regras), componentes de interface e scripts por página.
-- **Entidades da MockAPI (3, uma por conta)**: `modalidades` (`id`, `nome`, `slug`, `descricao`, `produtos[]`), `usuarios` (`id`, `nome`, `email`, `senha`, `papel`) e `carrinhos` (`id`, `usuarioId`, `itens[]`). Não existe entidade `produtos` (ver `docs/adr/0001-produtos-embutidos-em-modalidades.md`).
+- **Entidades da MockAPI (3, uma por conta)**: `modalidades` (`id`, `nome`, `slug`, `descricao`, `produtos[]`), `usuarios` (`id`, `nome`, `email`, `senha`, `papel`) e `carrinhos` (`id`, `usuario_id`, `itens[]`). Não existe entidade `produtos` (ver `docs/adr/0001-produtos-embutidos-em-modalidades.md`).
 - **Produto** (embutido): `id` (UUID gerado no cliente), `nome`, `descricao`, `preco`, `imagem`, `destaque`, `estoque` (por Produto, agregado entre Variantes), `variantes[]` (textos; vazio = sem variação).
-- **Item do Carrinho**: `produtoId`, `modalidadeId`, `variante` (nula se não houver), `quantidade`. O preço é lido do Produto. A identidade do item é `produtoId` + `variante`. Um Carrinho por usuário.
+- **Item do Carrinho**: `produto_id`, `modalidade_id`, `variante` (nula se não houver), `quantidade`. O preço é lido do Produto. A identidade do item é `produto_id` + `variante`. Um Carrinho por usuário.
 - **CRUD de Produto**: ler a Modalidade, alterar o array e enviar PUT. Mover de Modalidade altera dois registros. Edições simultâneas podem se sobrescrever (aceito no MVP).
 - **Consulta do catálogo**: carregar todas as Modalidades uma vez, com cache em memória. Filtro, busca, ordenação e paginação são no cliente e refletidos na URL.
 - **Autenticação**: senha em texto simples (limitação de segurança do MVP, registrada no README), sessão no `localStorage`, papéis `cliente` e `administrador`. O cadastro público só cria `cliente`. A rota protegida é verificada no cliente, sem garantia real de segurança.
-- **Carrinho**: Visitante em `localStorage`. Cliente gravado na MockAPI a cada alteração. Mesclagem no login soma quantidades por `produtoId` + `variante` e limpa o `localStorage`. Logout não apaga o Carrinho salvo.
+- **Carrinho**: Visitante em `localStorage`. Cliente gravado na MockAPI a cada alteração. Mesclagem no login soma quantidades por `produto_id` + `variante` e limpa o `localStorage`. Logout não apaga o Carrinho salvo.
 - **Ordem de entrega do Carrinho**: primeiro o Carrinho do Cliente (apenas logado, na MockAPI); depois o Carrinho do Visitante em `localStorage` e, por último, a Mesclagem. Até o Carrinho do Visitante existir, adicionar ao Carrinho leva ao login.
 - **Sem páginas 404 nem telas de erro**: não há página 404, perfil nem histórico de pedidos. Falhas de rede e de API aparecem como toast ou aviso na própria tela; buscas sem resultado e Carrinho vazio têm mensagem inline.
 - **Frete**: CEP consultado no ViaCEP. A origem é MG. Mesma UF R$ 15,00, mesma região R$ 25,00, outras regiões R$ 40,00, grátis acima de R$ 300,00. Valores e prazos (3, 5 e 8 dias úteis) ficam em configuração.
