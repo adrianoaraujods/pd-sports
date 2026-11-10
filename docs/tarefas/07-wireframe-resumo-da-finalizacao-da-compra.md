@@ -1,6 +1,6 @@
 # 07: Wireframe: Resumo da Finalização da Compra
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 1 (qua 04/11)
 **Estimativa:** 1h
 
