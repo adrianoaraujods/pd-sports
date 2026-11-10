@@ -1,1 +1,28 @@
+@import url('variaveis.css');
+
 /* Estilos globais e customizações do Bootstrap */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.btn-primary {
+    background-color: var(--base-primary);
+    border: none;
+    color: var(--base-primary-foreground);
+
+    &:hover {
+        background-color: var(--base-primary-hover);
+        color: var(--base-primary-foreground);
+    }
+}

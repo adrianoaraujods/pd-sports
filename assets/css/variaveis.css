@@ -1,1 +1,37 @@
 /* Tokens de cores (claro/escuro), tipografia e espaçamentos */
+
+:root {
+    /* BASE */
+    --base-primary: #F4BC1D;
+    --base-primary-hover: #FFD55C;
+    --base-primary-foreground: #000000;
+
+    --base-secondary: #416FA8;
+    --base-secondary-hover: #6596D4;
+    --base-secondary-foreground: #FFFFFF;
+
+    --base-neutral: #FFFFFF;
+    --base-neutral-hover: #C4DEFF;
+    --base-neutral-foreground: #000000;
+
+    --base-estrutura: #19222C;
+    --base-navegacao: #263E57;
+    --base-muted-foreground: #878787;
+
+    /* INFORMATIVAS */
+    --info-error: #DC3545;
+    --info-error-hover: #ED5463;
+    --info-warn: #F4BC1D;
+    --info-success: #007E52;
+    --info-info: #6610F2;
+
+    /* CLARO */
+    --light-card-background: #EAEAEA;
+    --light-card-border: #D5DEE8;
+    --light-text-secondary: #607186;
+
+    /* ESCURO */
+    --dark-card-background: #19222C;
+    --dark-card-border: #263E57;
+    --dark-text-secondary: #869AB2;
+}
