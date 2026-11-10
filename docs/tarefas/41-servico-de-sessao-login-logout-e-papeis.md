@@ -1,6 +1,6 @@
 # 41: Serviço de sessão (login, logout e papéis)
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 7 (ter 10/11)
 **Estimativa:** 2h
 
@@ -8,7 +8,7 @@
 
 **Bloqueado por:** 28, 31, 33, 34
 
-- [ ] Cliente e Administrador entram com as credenciais dos dados iniciais
-- [ ] Credenciais erradas geram erro claro
-- [ ] Sessão persiste ao recarregar a página
-- [ ] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário
+- [x] Cliente e Administrador entram com as credenciais dos dados iniciais
+- [x] Credenciais erradas geram erro claro
+- [x] Sessão persiste ao recarregar a página
+- [x] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário
