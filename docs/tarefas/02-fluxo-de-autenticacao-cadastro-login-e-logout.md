@@ -1,6 +1,6 @@
 # 02: Fluxo de autenticação (cadastro, login e logout)
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 0 (ter 03/11)
 **Estimativa:** 1h
 

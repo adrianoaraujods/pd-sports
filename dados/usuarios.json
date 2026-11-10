@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "nome": "Administrador",
+    "email": "admin@pdsports.com",
+    "senha": "admin123",
+    "papel": "administrador"
+  },
+  {
+    "id": 2,
+    "nome": "Cliente Teste",
+    "email": "cliente@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 3,
+    "nome": "Mariana Souza",
+    "email": "mariana.souza@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 4,
+    "nome": "Lucas Pereira",
+    "email": "lucas.pereira@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 5,
+    "nome": "Beatriz Almeida",
+    "email": "beatriz.almeida@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 6,
+    "nome": "Rafael Costa",
+    "email": "rafael.costa@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 7,
+    "nome": "Camila Ribeiro",
+    "email": "camila.ribeiro@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 8,
+    "nome": "Thiago Martins",
+    "email": "thiago.martins@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 9,
+    "nome": "Larissa Fernandes",
+    "email": "larissa.fernandes@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 10,
+    "nome": "Gustavo Lima",
+    "email": "gustavo.lima@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 11,
+    "nome": "Juliana Rocha",
+    "email": "juliana.rocha@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  },
+  {
+    "id": 12,
+    "nome": "Pedro Barbosa",
+    "email": "pedro.barbosa@gmail.com",
+    "senha": "123456",
+    "papel": "cliente"
+  }
+]

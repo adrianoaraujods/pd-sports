@@ -1,6 +1,6 @@
 # 13: Wireframe: Admin, formulário de Produto e modal de exclusão
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 1 (qua 04/11)
 **Estimativa:** 1h
 

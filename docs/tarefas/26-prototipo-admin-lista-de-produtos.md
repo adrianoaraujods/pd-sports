@@ -1,6 +1,6 @@
 # 26: Protótipo: Admin, lista de Produtos
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 3 (sex 06/11)
 **Estimativa:** 1h30
 

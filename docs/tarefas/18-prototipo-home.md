@@ -1,6 +1,6 @@
 # 18: Protótipo: Home
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 2 (qui 05/11)
 **Estimativa:** 1h30
 

@@ -1,6 +1,6 @@
 # 21: Protótipo: Login
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 2 (qui 05/11)
 **Estimativa:** 30min
 

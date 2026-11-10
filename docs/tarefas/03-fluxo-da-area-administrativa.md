@@ -1,6 +1,6 @@
 # 03: Fluxo da área administrativa
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 0 (ter 03/11)
 **Estimativa:** 1h30
 
