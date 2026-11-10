@@ -1,0 +1,8 @@
+.site-footer {
+    background-color: var(--base-navegacao);
+}
+
+.footer-copyright {
+    background-color: var(--base-estrutura);
+    color: var(--base-muted-foreground);
+}
