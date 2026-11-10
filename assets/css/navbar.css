@@ -4,12 +4,14 @@
 .logo-img {
     width: 100px;
 }
+
 header {
     background-color: var(--base-navegacao);
     padding: 0 10%;
 }
 
-header p, a {
+header p,
+a {
     color: var(--base-neutral);
 }
 
@@ -22,9 +24,9 @@ header p, a {
     padding: 5px 15px;
 }
 
-.menu-mobile a{
-color: var(--base-estrutura);
-border-bottom: 1px solid var(--base-muted-foreground);
+.menu-mobile a {
+    color: var(--base-estrutura);
+    border-bottom: 1px solid var(--base-muted-foreground);
 }
 
 

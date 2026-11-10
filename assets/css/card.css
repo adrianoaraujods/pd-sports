@@ -1,0 +1,63 @@
+figure {
+    max-width: 250px;
+    height: 227px;
+    border-radius: 10px;
+
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.card {
+    padding: 10px;
+    max-width: 300px;
+    transition: .3s;
+
+    &:hover {
+        scale: 1.02;
+    }
+}
+
+/* Tipografia e espaçamento dos textos do card no Figma. */
+.product-card {
+    font-family: 'Vend Sans', sans-serif;
+    color: var(--base-primary-foreground);
+    gap: 9px;
+}
+
+.product-card figure {
+    margin-bottom: 0;
+}
+
+.card .product-name,
+.card .product-price {
+    margin: 0;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.card .product-name {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.card .product-price {
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.product-card .btn {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    min-height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

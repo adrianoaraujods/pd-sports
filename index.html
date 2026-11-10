@@ -10,6 +10,8 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/navbar.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap">
+    <link rel="stylesheet" href="./assets/css/card.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -83,38 +85,93 @@
                 </form>
             </div>
         </div>
+
+
+
+
+
+        <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuMobile"
+            aria-labelledby="menuMobileTitulo">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="menuMobileTitulo">
+                    PD Sports
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar menu"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <nav class="nav flex-column gap-3 align-items-center w-100" aria-label="Menu mobile">
+                    <a href="./index.html" class="nav-link" aria-current="page">
+                        Início
+                    </a>
+                    <a href="#" class="nav-link">Produtos</a>
+                    <a href="#" class="btn btn-primary w-100">Entrar</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
 
-    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuMobile" aria-labelledby="menuMobileTitulo">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="menuMobileTitulo">
-                PD Sports
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar menu"></button>
-        </div>
-
-        <div class="offcanvas-body">
-            <nav class="nav flex-column gap-3 align-items-center w-100" aria-label="Menu mobile">
-                <a href="./index.html" class="nav-link" aria-current="page">
-                    Início
-                </a>
-                <a href="#" class="nav-link">Produtos</a>
-                <a href="#" class="btn btn-primary w-100">Entrar</a>
-            </nav>
-        </div>
-    </div>
-
 
     <main class="flex-grow-1">
+        <div class="d-flex gap-2 my-5 mx-auto">
 
+            <article class="card product-card d-flex justify-content-between">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Imagem do produto">
+                </figure>
+                <div>
+                    <p class="product-name">Nome do produto</p>
+                    <p class="product-price">R$ 99,90</p>
+                    <a href="" class="btn btn-primary">Ver detalhes</a>
+                </div>
+
+            </article>
+            <article class="card product-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Imagem do produto">
+                </figure>
+                <p class="product-name">Nome do produto</p>
+                <p class="product-price">R$ 99,90</p>
+                <a href="" class="btn btn-primary">Ver detalhes</a>
+            </article>
+            <article class="card product-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Imagem do produto">
+                </figure>
+                <p class="product-name">Nome do produto</p>
+                <p class="product-price">R$ 99,90</p>
+                <a href="" class="btn btn-primary">Ver detalhes</a>
+            </article>
+            <article class="card product-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Imagem do produto">
+                </figure>
+                <p class="product-name">Nome do produto</p>
+                <p class="product-price">R$ 99,90</p>
+                <a href="" class="btn btn-primary">Ver detalhes</a>
+            </article>
+            <article class="card product-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Imagem do produto">
+                </figure>
+                <p class="product-name">Nome do produto</p>
+                <p class="product-price">R$ 99,90</p>
+                <a href="" class="btn btn-primary">Ver detalhes</a>
+            </article>
+        </div>
     </main>
 
     <footer class="site-footer text-white">
         <div class="container py-4">
             <div class="row g-4">
 
-                <!-- Marca: linha inteira no celular, metade no desktop -->
+
                 <div class="col-12 col-lg-6">
                     <h2 class="h4 fw-bold">PD Sports</h2>
                     <p>Os melhores produtos para atletas</p>
@@ -144,7 +201,7 @@
                     </div>
                 </div>
 
-                <!-- Menu: metade no celular, um quarto no desktop -->
+
                 <div class="col-6 col-lg-3">
                     <h2 class="h6 fw-bold text-uppercase mb-3">Menu</h2>
 
@@ -163,7 +220,7 @@
                     </ul>
                 </div>
 
-                <!-- Informações -->
+
                 <div class="col-6 col-lg-3">
                     <h2 class="h6 fw-bold text-uppercase mb-3">
                         Informações
@@ -186,7 +243,7 @@
             </div>
         </div>
 
-        <!-- Faixa inferior -->
+
         <div class="footer-copyright text-center px-3 py-2">
             <small>© 2026 PD Sports. Todos os direitos reservados.</small>
         </div>
