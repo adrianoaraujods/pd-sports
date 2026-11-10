@@ -17,6 +17,8 @@ img {
     padding: 10px;
     max-width: 280px;
     transition: .3s;
+    height: 390px;
+    margin: 0 auto;
 
     &:hover {
         scale: 1.02;
@@ -28,6 +30,7 @@ img {
     flex-direction: column;
     align-items: start;
     gap: 5px;
+    justify-content: space-between;
 }
 
 .card-bottom a {
