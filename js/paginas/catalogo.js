@@ -1,8 +1,10 @@
-import { listarProdutos } from "../servicos/catalogo.js";
+import { listarProdutos, listarModalidades } from "../servicos/catalogo.js";
 
 let todosProdutos = [];
-
 const camposBusca = document.querySelectorAll('input[name="q"]');
+
+let modalidadeSelecionada = "";
+const filtroModalidades = document.querySelector("#filtro-modalidades");
 
 const lista = document.querySelector("#lista-produtos");
 const status = document.querySelector("#status-produtos");
@@ -64,6 +66,9 @@ async function iniciarCatalogo() {
 
     try {
         todosProdutos = await listarProdutos();
+        const modalidades = await listarModalidades();
+
+        renderizarModalidades(modalidades);
 
         camposBusca.forEach((campo) => {
             campo.disabled = false;
@@ -93,9 +98,16 @@ function normalizarTexto(texto) {
 function aplicarBusca() {
     const termo = normalizarTexto(camposBusca[0]?.value ?? "");
 
-    const encontrados = todosProdutos.filter((produto) =>
-        normalizarTexto(produto.nome).includes(termo)
-    );
+    const encontrados = todosProdutos.filter((produto) => {
+        const correspondeAoNome =
+            normalizarTexto(produto.nome).includes(termo);
+
+        const correspondeAModalidade =
+            modalidadeSelecionada === "" ||
+            String(produto.modalidade_id) === modalidadeSelecionada;
+
+        return correspondeAoNome && correspondeAModalidade;
+    });
 
     renderizarProdutos(encontrados);
 
@@ -103,7 +115,6 @@ function aplicarBusca() {
         ? "Nenhum produto encontrado."
         : "";
 }
-
 
 
 
@@ -123,5 +134,52 @@ camposBusca.forEach((campo) => {
         aplicarBusca();
     });
 });
+
+
+
+
+
+
+function renderizarModalidades(modalidades) {
+    filtroModalidades.replaceChildren();
+
+    const opcoes = [
+        { id: "", nome: "Todas" },
+        ...modalidades,
+    ];
+
+    for (const modalidade of opcoes) {
+        const botao = document.createElement("button");
+
+        botao.type = "button";
+        botao.textContent = modalidade.nome;
+        botao.dataset.modalidade = String(modalidade.id);
+        botao.className = "btn flex-shrink-0";
+
+        const selecionado =
+            botao.dataset.modalidade === modalidadeSelecionada;
+
+        botao.classList.toggle("active", selecionado);
+        botao.classList.toggle("border-bot", selecionado);
+        botao.setAttribute("aria-pressed", String(selecionado));
+
+        botao.addEventListener("click", () => {
+            modalidadeSelecionada = botao.dataset.modalidade;
+
+            filtroModalidades.querySelectorAll("button").forEach((item) => {
+                const ativo =
+                    item.dataset.modalidade === modalidadeSelecionada;
+
+                item.classList.toggle("active", ativo);
+                item.classList.toggle("border-bot", ativo);
+                item.setAttribute("aria-pressed", String(ativo));
+            });
+
+            aplicarBusca();
+        });
+
+        filtroModalidades.appendChild(botao);
+    }
+}
 
 iniciarCatalogo();

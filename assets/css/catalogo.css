@@ -1,0 +1,12 @@
+@import url('./variaveis.css');
+
+#filtro-modalidades {
+    border-bottom: 2px solid var(--light-card-border);
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 10px 0 10px;
+}
+
+.border-bot {
+    border-bottom: 2px solid var(--base-primary);
+}
