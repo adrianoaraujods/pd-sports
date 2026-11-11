@@ -1,6 +1,6 @@
 # 49: Página de detalhes do Produto
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 8 (qua 11/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 29, 31, 42
 
-- [ ] Produto inexistente mostra aviso na própria página
-- [ ] Funciona em celular e em desktop (responsivo)
+- [x] Produto inexistente mostra aviso na própria página
+- [x] Funciona em celular e em desktop (responsivo)

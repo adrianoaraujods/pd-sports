@@ -1,0 +1,42 @@
+@import url('./variaveis.css');
+
+#filtro-modalidades {
+
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 10px 0 10px;
+    scrollbar-width: none;
+}
+
+#filtro-modalidades::-webkit-scrollbar {
+    display: none;
+}
+
+#filtro-modalidades .btn {
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+}
+
+#filtro-modalidades .btn.border-bot {
+    border-bottom-color: var(--base-primary);
+}
+
+.outer-container {
+    border-bottom: 2px solid var(--light-card-border);
+}
+
+
+
+
+
+
+
+
+.ordering-dropdown {
+    background-color: var(--light-card-background);
+    border-color: var(--light-text-secondary);
+}

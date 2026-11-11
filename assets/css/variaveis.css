@@ -34,4 +34,43 @@
     --dark-card-background: #19222C;
     --dark-card-border: #263E57;
     --dark-text-secondary: #869AB2;
+
+
+
+
+
+    /* TIPOGRAFIA */
+    --font-titulo: "Anton SC", sans-serif;
+    --font-texto: "Vend Sans", sans-serif;
+
+    --font-peso-regular: 400;
+
+    /* Títulos */
+    --titulo-lg: 2rem;
+    /* 32px */
+    --titulo-md: 1.5rem;
+    /* 24px */
+    --titulo-sm: 1rem;
+    /* 16px */
+
+    /* Textos */
+    --texto-xl: 2rem;
+    /* 32px */
+    --texto-lg: 1.5rem;
+    /* 24px */
+    --texto-md: 1rem;
+    /* 16px */
+    --texto-sm: 0.75rem;
+    /* 12px */
+
+    /* Espaçamento */
+    --font-entrelinha: normal;
+    --font-espacamento: 0;
+}
+
+
+
+h1, h2, h3{
+    font-family: var(--font-titulo);
+    font-size: var(--texto-lg);
 }
