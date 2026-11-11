@@ -1,13 +1,15 @@
 @import url('variaveis.css');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Vend+Sans:wght@400&display=swap');
 
 /* Estilos globais e customizações do Bootstrap */
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -25,4 +27,56 @@ ul li {
         background-color: var(--base-primary-hover);
         color: var(--base-primary-foreground);
     }
+}
+
+
+
+/* BAGDES */
+/* Estrutura compartilhada */
+.pd-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 4px;
+
+    font-family: var(--font-texto, "Vend Sans", sans-serif);
+    font-size: var(--texto-sm, 0.75rem);
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/* Amarela */
+.pd-badge-primary {
+    background-color: var(--base-primary);
+    color: var(--base-primary-foreground);
+}
+
+/* Azul */
+.pd-badge-secondary {
+    background-color: var(--base-secondary);
+    color: var(--base-secondary-foreground);
+}
+
+/* Branca com borda preta */
+.pd-badge-neutral {
+    background-color: var(--base-neutral);
+    color: var(--base-neutral-foreground);
+    border: 1px solid var(--base-neutral-foreground);
+}
+
+/* Modalidade: azul-claro, borda azul e cantos retos */
+.pd-badge-modalidade {
+    padding: 6px 10px;
+    gap: 10px;
+    border: 1px solid var(--base-secondary);
+    border-radius: 0;
+    background-color: var(--base-neutral-hover);
+    color: var(--base-neutral-foreground);
 }
