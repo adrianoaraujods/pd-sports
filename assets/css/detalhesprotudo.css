@@ -1,6 +1,8 @@
 .imagem-produto {
     max-width: 480px;
-    height: 480px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
 }
 
 .imagem-produto img {
