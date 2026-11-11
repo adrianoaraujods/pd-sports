@@ -9,6 +9,8 @@ const filtroModalidades = document.querySelector("#filtro-modalidades");
 const lista = document.querySelector("#lista-produtos");
 const status = document.querySelector("#status-produtos");
 
+const ordenacao = document.querySelector("#ordenacao");
+
 const moeda = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
@@ -74,6 +76,8 @@ async function iniciarCatalogo() {
             campo.disabled = false;
         });
 
+        ordenacao.disabled = false;
+
         aplicarBusca();
     } catch (erro) {
         status.textContent =
@@ -108,6 +112,12 @@ function aplicarBusca() {
 
         return correspondeAoNome && correspondeAModalidade;
     });
+
+    if (ordenacao.value === "menor-preco") {
+        encontrados.sort((a, b) => a.preco - b.preco);
+    } else if (ordenacao.value === "maior-preco") {
+        encontrados.sort((a, b) => b.preco - a.preco);
+    }
 
     renderizarProdutos(encontrados);
 
@@ -181,5 +191,5 @@ function renderizarModalidades(modalidades) {
         filtroModalidades.appendChild(botao);
     }
 }
-
+ordenacao.addEventListener("change", aplicarBusca);
 iniciarCatalogo();

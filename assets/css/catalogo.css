@@ -28,3 +28,15 @@
 .outer-container {
     border-bottom: 2px solid var(--light-card-border);
 }
+
+
+
+
+
+
+
+
+.ordering-dropdown {
+    background-color: var(--light-card-background);
+    border-color: var(--light-text-secondary);
+}

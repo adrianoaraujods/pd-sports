@@ -114,7 +114,18 @@
             </div>
         </div>
         <section class="container py-4">
-            <h1>Produtos</h1>
+            <div class="d-flex justify-content-between">
+                <h1>CATÁLOGO DE PRODUTOS</h1>
+                <div class="d-flex justify-content-end align-items-center gap-2 mb-3">
+                    <label for="ordenacao" class="text-nowrap">Ordenar por:</label>
+
+                    <select id="ordenacao" class="form-select w-auto ordering-dropdown" disabled>
+                        <option value="">Padrão</option>
+                        <option value="menor-preco">Menor preço</option>
+                        <option value="maior-preco">Maior preço</option>
+                    </select>
+                </div>
+            </div>
 
             <p id="status-produtos" role="status"></p>
 
