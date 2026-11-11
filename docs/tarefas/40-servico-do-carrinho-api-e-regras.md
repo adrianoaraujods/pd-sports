@@ -1,6 +1,6 @@
 # 40: Serviço do Carrinho (API e regras)
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 7 (ter 10/11)
 **Estimativa:** 2h
 
@@ -8,7 +8,7 @@
 
 **Bloqueado por:** 28, 31, 33
 
-- [ ] A identidade do item é produto mais Variante
-- [ ] Total calculado a partir do preço do Produto
-- [ ] Um Carrinho por usuário
-- [ ] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário
+- [x] A identidade do item é produto mais Variante
+- [x] Total calculado a partir do preço do Produto
+- [x] Um Carrinho por usuário
+- [x] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário
