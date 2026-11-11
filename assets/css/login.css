@@ -1,0 +1,45 @@
+@import url('estilos.css');
+
+/* A coluna da imagem tem a altura da linha (definida pelo formulário). A largura (proporção da arte,
+   785x901) é ajustada por js/paginas/login.js; sem JS ela ocupa metade da tela; o limite é 60% para sobrar espaço ao formulário. */
+.row > .login-imagem {
+    position: relative;
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 60%;
+    overflow: hidden;
+}
+
+.login-imagem-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+}
+
+.login-card {
+    max-width: 500px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
+}
+
+.login-card a.link-cadastro {
+    color: var(--base-secondary);
+
+    &:hover {
+        color: var(--base-secondary-hover);
+    }
+}
+
+.login-card .input-group-text {
+    background-color: var(--base-neutral);
+    color: var(--base-muted-foreground);
+}
+
+.login-card .form-control:focus {
+    border-color: var(--base-secondary);
+    box-shadow: 0 0 0 .2rem rgba(65, 111, 168, .25);
+}

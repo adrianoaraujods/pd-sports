@@ -1,36 +1,11 @@
 @import url('estilos.css');
 @import url('variaveis.css');
 
-.logo-img {
-    width: 100px;
-}
+/* O resto da navbar usa classes nativas do Bootstrap; aqui só a cor da marca. */
 header {
     background-color: var(--base-navegacao);
-    padding: .5% 10%;
 }
 
 header p, a {
     color: var(--base-neutral);
-}
-
-.navbar-input {
-    background-color: var(--base-estrutura);
-    color: var(--base-muted-foreground);
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    padding: 5px 15px;
-}
-
-.menu-mobile a{
-color: var(--base-estrutura);
-border-bottom: 1px solid var(--base-muted-foreground);
-}
-
-
-
-@media (max-width: 480px) {
-    header {
-        padding: 5px;
-    }
 }
