@@ -1,7 +1,7 @@
 # 53: Admin: validação do formulário de Produto
 
 **Status:** Concluído
-**Dia:** Dia 9 (qui 12/11)
+**Dia:** Dia 8 (qua 11/11)
 **Estimativa:** 2h
 
 **O que construir:** Regras de validação do formulário de Produto.
