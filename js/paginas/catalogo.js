@@ -46,7 +46,7 @@ function criarCard(produto) {
 }
 
 function renderizarProdutos(produtos) {
-    const fragmento = document.createDocumentFragment();
+    const fragmento = document.createDocumentFragment();////////////!!!!!!!!!!///////////
 
     for (const produto of produtos) {
         fragmento.appendChild(criarCard(produto));
@@ -58,7 +58,7 @@ function renderizarProdutos(produtos) {
 async function iniciarCatalogo() {
 
     camposBusca.forEach((campo) => {
-        campo.disabled = true;
+        campo.disabled = true;////////////!!!!!!!!!!///////////
     });
 
     status.textContent = "Carregando produtos...";
@@ -104,7 +104,7 @@ function aplicarBusca() {
 
         const correspondeAModalidade =
             modalidadeSelecionada === "" ||
-            String(produto.modalidade_id) === modalidadeSelecionada;
+            String(produto.modalidade_id) === modalidadeSelecionada;////////////!!!!!!!!!!///////////
 
         return correspondeAoNome && correspondeAModalidade;
     });
@@ -159,7 +159,7 @@ function renderizarModalidades(modalidades) {
         const selecionado =
             botao.dataset.modalidade === modalidadeSelecionada;
 
-        botao.classList.toggle("active", selecionado);
+        // botao.classList.toggle("active", selecionado);
         botao.classList.toggle("border-bot", selecionado);
         botao.setAttribute("aria-pressed", String(selecionado));
 
@@ -170,7 +170,7 @@ function renderizarModalidades(modalidades) {
                 const ativo =
                     item.dataset.modalidade === modalidadeSelecionada;
 
-                item.classList.toggle("active", ativo);
+                // item.classList.toggle("active", ativo);
                 item.classList.toggle("border-bot", ativo);
                 item.setAttribute("aria-pressed", String(ativo));
             });
