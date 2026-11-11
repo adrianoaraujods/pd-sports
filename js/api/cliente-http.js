@@ -38,7 +38,8 @@ async function requisicao(url, opcoes = {}) {
   let resposta;
 
   try {
-    resposta = await fetch(url, configuracao);
+    // Trata a URL para permitir caracteres especiais
+    resposta = await fetch(encodeURI(url), configuracao);
   } catch (erroRede) {
     // Trata problemas de DNS, conexão indisponível, CORS ou queda de rede
     throw new ErroApi(

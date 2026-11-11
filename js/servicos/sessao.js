@@ -19,7 +19,7 @@ export const PAPEL_ADMINISTRADOR = "administrador";
 async function buscarUsuariosPorEmail(email) {
   try {
     const usuarios = await clienteHttp.get(
-      `${CONFIG.API_MOCK.USUARIOS}?email=${encodeURIComponent(email)}`
+      `${CONFIG.API_MOCK.USUARIOS}?email=${email}`
     );
     return Array.isArray(usuarios) ? usuarios : [];
   } catch (erro) {
