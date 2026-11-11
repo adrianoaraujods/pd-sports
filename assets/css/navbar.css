@@ -6,6 +6,19 @@ header {
     background-color: var(--base-navegacao);
 }
 
-header p, a {
+.logo-img,
+.navbar-brand img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+header p,
+header a {
     color: var(--base-neutral);
+}
+
+.menu-mobile a {
+    color: var(--base-estrutura);
+    border-bottom: 1px solid var(--base-muted-foreground);
 }
