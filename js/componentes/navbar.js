@@ -16,12 +16,12 @@ function montarLinks(sessao) {
   if (sessao.papel === PAPEL_ADMINISTRADOR) {
     return [
       { texto: "Visão Geral", href: "./dashboard.html" },
-      { texto: "Produtos", href: "#" },
+      { texto: "Produtos", href: "./paginas/catalogo.html" },
     ];
   }
   return [
     { texto: "Início", href: "./index.html" },
-    { texto: "Produtos", href: "#" },
+    { texto: "Produtos", href: "./paginas/catalogo.html" },
   ];
 }
 

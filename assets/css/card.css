@@ -1,11 +1,11 @@
-figure {
+.product-card figure {
     width: 100%;
     height: 227px;
     border-radius: 10px;
     margin: 0 auto;
 
 }
-img {
+.product-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
