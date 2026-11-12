@@ -15,13 +15,13 @@ const BOTAO_ICONE = "btn text-white fs-4 lh-1 p-2";
 function montarLinks(sessao) {
   if (sessao.papel === PAPEL_ADMINISTRADOR) {
     return [
-      { texto: "Visão Geral", href: "./dashboard.html" },
-      { texto: "Produtos", href: "./paginas/catalogo.html" },
+      { texto: "Visão Geral", href: "/paginas/admin/dashboard.html" },
+      { texto: "Produtos", href: "/paginas/catalogo.html" },
     ];
   }
   return [
-    { texto: "Início", href: "./index.html" },
-    { texto: "Produtos", href: "./paginas/catalogo.html" },
+    { texto: "Início", href: "/index.html" },
+    { texto: "Produtos", href: "/paginas/catalogo.html" },
   ];
 }
 
@@ -55,8 +55,8 @@ function montarNavbar(sessao) {
   return `
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container" id="navbarConteudo">
-        <a href="./index.html" class="navbar-brand">
-          <img src="./assets/imagens/logo.png" alt="logo" width="100"> PD Sports
+        <a href="/index.html" class="navbar-brand">
+          <img src="/assets/imagens/logo.png" alt="logo"> PD Sports
         </a>
 
         <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
@@ -106,7 +106,7 @@ export function renderizarNavbar() {
   header.innerHTML = montarNavbar(sessao);
   header.querySelector('[data-acao="sair"]').addEventListener("click", () => {
     sair();
-    location.replace("./index.html");
+    location.replace("/index.html");
   });
 }
 
