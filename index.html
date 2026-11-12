@@ -32,7 +32,8 @@
       <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container" id="navbarConteudo">
           <a href="./index.html" class="navbar-brand">
-            <img src="./assets/imagens/logo.png" alt="logo" /> PD Sports
+            <img src="./assets/imagens/logo.png" alt="logo" width="100" /> PD
+            Sports
           </a>
 
           <div
@@ -128,7 +129,12 @@
     </header>
 
     <main class="container my-5 text-center flex-grow-1">
-      <section>
+      <p class="text-muted">
+        Veja os dados no console: <code>CTRL + SHIFT + I</code> ou
+        <code>F12</code>.
+      </p>
+
+      <section class="">
         <h2 class="text-start my-3 titulo-secao">Produtos em alta</h2>
         <p id="status-destaques" role="status"></p>
         <div class="d-flex">
@@ -148,6 +154,7 @@
             </svg>
           </button>
           <div class="cards-wrapper container d-flex"></div>
+
           <button class="btn nav-destaques" id="destaques-proximo">
             <svg
               xmlns="http://www.w3.org/2000/svg"
