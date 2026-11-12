@@ -20,11 +20,11 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <header>
+    <header id="navbar">
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-            <div class="container">
+            <div class="container d-flex align-items-center justify-content-between flex-nowrap">
 
-                <a href="../index.html" class="navbar-brand">
+                <a href="../index.html" class="navbar-brand me-2">
                     <img src="../assets/imagens/logo.png" alt="logo" class="logo-img">
                     PD Sports
                 </a>
@@ -40,7 +40,7 @@
                     </li>
                 </ul>
 
-                <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-1 gap-sm-2 ms-auto ms-lg-0">
                     <form class="d-none d-lg-flex" role="search">
                         <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
                             aria-label="Buscar produtos">
@@ -55,7 +55,7 @@
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                             </svg></span>
                     </button>
-                    <a href="#" class="text-white" aria-label="Carrinho">
+                    <a href="./carrinho.html" class="text-white" aria-label="Carrinho">
                         <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
                                 <path
@@ -181,7 +181,7 @@
                             <a href="./catalogo.html" class="text-white">Produtos</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Seu carrinho</a>
+                            <a href="./carrinho.html" class="text-white">Seu carrinho</a>
                         </li>
                     </ul>
                 </div>
@@ -218,6 +218,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script type="module" src="../js/componentes/navbar.js"></script>
 
 </body>
 

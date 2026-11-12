@@ -12,16 +12,26 @@ import { obterSessao, sair, PAPEL_ADMINISTRADOR } from "../servicos/sessao.js";
 
 const BOTAO_ICONE = "btn text-white fs-4 lh-1 p-2";
 
-function montarLinks(sessao) {
+function obterPrefixoBase() {
+  const segmentos = location.pathname.split("/").filter(Boolean);
+  const idxPaginas = segmentos.indexOf("paginas");
+  if (idxPaginas !== -1) {
+    const niveisAbaixo = segmentos.length - 1 - idxPaginas;
+    return "../".repeat(niveisAbaixo);
+  }
+  return "./";
+}
+
+function montarLinks(sessao, base) {
   if (sessao.papel === PAPEL_ADMINISTRADOR) {
     return [
-      { texto: "Visão Geral", href: "./dashboard.html" },
-      { texto: "Produtos", href: "./paginas/catalogo.html" },
+      { texto: "Visão Geral", href: `${base}dashboard.html` },
+      { texto: "Produtos", href: `${base}paginas/catalogo.html` },
     ];
   }
   return [
-    { texto: "Início", href: "./index.html" },
-    { texto: "Produtos", href: "./paginas/catalogo.html" },
+    { texto: "Início", href: `${base}index.html` },
+    { texto: "Produtos", href: `${base}paginas/catalogo.html` },
   ];
 }
 
@@ -49,14 +59,15 @@ function montarMenuUsuario(sessao) {
 }
 
 function montarNavbar(sessao) {
-  const links = montarLinks(sessao);
+  const base = obterPrefixoBase();
+  const links = montarLinks(sessao, base);
   const carrinho = sessao.papel !== PAPEL_ADMINISTRADOR;
 
   return `
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container" id="navbarConteudo">
-        <a href="./index.html" class="navbar-brand">
-          <img src="./assets/imagens/logo.png" alt="logo" width="100"> PD Sports
+        <a href="${base}index.html" class="navbar-brand">
+          <img src="${base}assets/imagens/logo.png" alt="logo" class="logo-img"> PD Sports
         </a>
 
         <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
@@ -64,7 +75,7 @@ function montarNavbar(sessao) {
               data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
               <i class="bi bi-search" aria-hidden="true"></i>
           </button>
-          ${carrinho ? `<a href="#" class="${BOTAO_ICONE}" aria-label="Carrinho"><i class="bi bi-cart4" aria-hidden="true"></i></a>` : ""}
+          ${carrinho ? `<a href="${base}paginas/carrinho.html" class="${BOTAO_ICONE}" aria-label="Carrinho"><i class="bi bi-cart4" aria-hidden="true"></i></a>` : ""}
           ${montarMenuUsuario(sessao)}
           <button class="${BOTAO_ICONE} d-lg-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
@@ -83,13 +94,13 @@ function montarNavbar(sessao) {
               )
               .join("")}
           </ul>
-          <form class="d-none d-lg-flex" role="search">
+          <form class="d-none d-lg-flex" role="search" action="${base}paginas/catalogo.html" method="GET">
             <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
           </form>
         </div>
 
         <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
-            <form class="d-flex gap-2 py-2" role="search">
+            <form class="d-flex gap-2 py-2" role="search" action="${base}paginas/catalogo.html" method="GET">
                 <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
                 <button type="submit" class="btn btn-primary">Buscar</button>
             </form>
@@ -103,10 +114,13 @@ export function renderizarNavbar() {
   if (!sessao) return;
 
   const header = document.getElementById("navbar");
+  if (!header) return;
+
   header.innerHTML = montarNavbar(sessao);
-  header.querySelector('[data-acao="sair"]').addEventListener("click", () => {
+  header.querySelector('[data-acao="sair"]')?.addEventListener("click", () => {
     sair();
-    location.replace("./index.html");
+    const base = obterPrefixoBase();
+    location.replace(`${base}index.html`);
   });
 }
 
