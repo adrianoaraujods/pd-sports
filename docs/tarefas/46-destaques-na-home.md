@@ -1,6 +1,6 @@
 # 46: Destaques na home
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 8 (qua 11/11)
 **Estimativa:** 1h
 
@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 18, 28, 31, 42
 
-- [ ] Mostra só Produtos marcados como Destaque
-- [ ] Cada Destaque leva aos detalhes
-- [ ] Funciona em celular e em desktop (responsivo)
+- [x] Mostra só Produtos marcados como Destaque
+- [x] Cada Destaque leva aos detalhes
+- [x] Funciona em celular e em desktop (responsivo)
