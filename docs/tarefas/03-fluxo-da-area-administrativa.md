@@ -8,5 +8,5 @@
 
 **Bloqueado por:** Nenhum (pode começar imediatamente)
 
-- [ ] Mostra o bloqueio de quem não é Administrador
-- [ ] Cobre os caminhos de erro de validação do formulário
+- [x] Mostra o bloqueio de quem não é Administrador
+- [x] Cobre os caminhos de erro de validação do formulário

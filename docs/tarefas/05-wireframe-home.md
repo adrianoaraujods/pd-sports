@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 04
 
-- [ ] Mostra até 8 Destaques
-- [ ] Mostra atalhos para as 15 Modalidades
+- [x] Mostra até 8 Destaques
+- [x] Mostra atalhos para as 15 Modalidades

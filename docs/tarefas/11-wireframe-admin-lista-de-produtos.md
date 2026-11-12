@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 04
 
-- [ ] Mostra as ações por linha
-- [ ] Prevê o filtro por Modalidade
+- [x] Mostra as ações por linha
+- [x] Prevê o filtro por Modalidade

@@ -124,10 +124,10 @@
                     <h1 class="my-3" id="produto-nome"></h1>
                     <p id="produto-preco"></p>
                     <p id="produto-descricao"></p>
-                    <div>
-                        <p>Variantes:</p>
-                        <div id="produto-variantes" class="d-flex flex-wrap gap-2"></div>
-                        <small>Selecione uma variante para continuar.</small>
+                    <div id="secao-variantes" class="my-3">
+                        <p id="rotulo-variantes" class="mb-2">Variantes:</p>
+                        <div id="produto-variantes" class="d-flex flex-wrap gap-2" role="group" aria-labelledby="rotulo-variantes"></div>
+                        <small id="aviso-variante" class="text-muted d-block mt-1">Selecione uma variante para continuar.</small>
                     </div>
                     <div class="my-3">
                         <p id="rotulo-quantidade" class="mb-2">Quantidade</p>
@@ -142,7 +142,7 @@
                         <small id="produto-estoque"></small>
                     </div>
 
-                    <button class="btn btn-primary d-flex align-items-center gap-2">
+                    <button id="botao-adicionar-carrinho" class="btn btn-primary d-flex align-items-center gap-2">
                         Adicionar ao Carrinho<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
                             <path

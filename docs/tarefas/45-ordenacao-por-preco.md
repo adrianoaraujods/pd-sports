@@ -1,6 +1,6 @@
 # 45: Ordenação por preço
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 8 (qua 11/11)
 **Estimativa:** 1h
 
@@ -8,4 +8,4 @@
 
 **Bloqueado por:** 28, 31, 42
 
-- [ ] Ordena corretamente nas duas direções
+- [x] Ordena corretamente nas duas direções

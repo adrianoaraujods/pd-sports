@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 04
 
-- [ ] Mostra alteração de quantidade, remoção e total
-- [ ] Mostra o Frete grátis acima de R$ 300,00
-- [ ] Prevê o Carrinho vazio
+- [x] Mostra alteração de quantidade, remoção e total
+- [x] Mostra o Frete grátis acima de R$ 300,00
+- [x] Prevê o Carrinho vazio

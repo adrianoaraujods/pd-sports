@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 05, 06, 07, 08, 09, 10, 11, 12, 13, 14
 
-- [ ] Escala de títulos e texto definida
-- [ ] Grid compatível com o Bootstrap
+- [x] Escala de títulos e texto definida
+- [x] Grid compatível com o Bootstrap

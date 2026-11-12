@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 04
 
-- [ ] Campos: nome, Modalidade, descrição, preço, imagem por URL com pré-visualização, estoque, Variantes e Destaque
-- [ ] Mostra a mensagem de erro por campo
+- [x] Campos: nome, Modalidade, descrição, preço, imagem por URL com pré-visualização, estoque, Variantes e Destaque
+- [x] Mostra a mensagem de erro por campo

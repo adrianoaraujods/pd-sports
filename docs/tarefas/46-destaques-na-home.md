@@ -1,7 +1,7 @@
 # 46: Destaques na home
 
 **Status:** Concluído
-**Dia:** Dia 8 (qua 11/11)
+**Dia:** Dia 9 (qui 12/11)
 **Estimativa:** 1h
 
 **O que construir:** Faixa com até 8 Destaques na página inicial.

@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 18, 24, 25, 29, 30
 
-- [ ] O fluxo do ticket de fluxo principal é navegável de ponta a ponta
-- [ ] Link do Figma registrado para o README
+- [x] O fluxo do ticket de fluxo principal é navegável de ponta a ponta
+- [x] Link do Figma registrado para o README
