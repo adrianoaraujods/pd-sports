@@ -32,7 +32,7 @@ export function criarCard(produto) {
         moeda.format(produto.preco);
 
     const link = coluna.querySelector("a");
-    link.href = `./detalhes-produto.html?id=${encodeURIComponent(produto.id)}`;
+    link.href = `/paginas/detalhes-produto.html?id=${encodeURIComponent(produto.id)}`;
 
     return coluna;
 }

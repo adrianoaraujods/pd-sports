@@ -25,7 +25,7 @@ function obterPrefixoBase() {
 function montarLinks(sessao, base) {
   if (sessao.papel === PAPEL_ADMINISTRADOR) {
     return [
-      { texto: "Visão Geral", href: `${base}dashboard.html` },
+      { texto: "Visão Geral", href: `${base}paginas/admin/dashboard.html` },
       { texto: "Produtos", href: `${base}paginas/catalogo.html` },
     ];
   }
