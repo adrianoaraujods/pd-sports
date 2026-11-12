@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap">
     <link rel="stylesheet" href="./assets/css/card.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -26,10 +27,12 @@
 
                 <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
                     <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
+                        data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false"
+                        aria-label="Abrir busca">
                         <i class="bi bi-search" aria-hidden="true"></i>
                     </button>
-                    <a href="#" class="btn text-white fs-4 lh-1 p-2" aria-label="Carrinho"><i class="bi bi-cart4" aria-hidden="true"></i></a>
+                    <a href="#" class="btn text-white fs-4 lh-1 p-2" aria-label="Carrinho"><i class="bi bi-cart4"
+                            aria-hidden="true"></i></a>
                     <a href="./login.html" class="btn btn-primary ms-1 d-none d-lg-inline-flex">Entrar</a>
                     <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false"
@@ -56,7 +59,8 @@
 
                 <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
                     <form class="d-flex gap-2 py-2" role="search">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
+                            aria-label="Buscar produtos">
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                 </div>
@@ -66,25 +70,41 @@
 
     <main class="container my-5 text-center flex-grow-1">
         <p class="text-muted">Veja os dados no console: <code>CTRL + SHIFT + I</code> ou <code>F12</code>.</p>
-      
-        <article class="card product-card d-flex justify-content-between">
-            <figure>
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                    alt="Imagem do produto">
-            </figure>
-            <div class="card-bottom">
-                <p class="product-name">Nome do produto</p>
-                <p class="product-price">R$ 99,90</p>
-                <a href="" class="btn btn-primary">Ver detalhes</a>
+
+        <section class="">
+            <h2 class="text-start my-3 titulo-secao">Produtos em alta</h2>
+            <p id="status-destaques" role="status"></p>
+            <div class="d-flex">
+                <button class="btn nav-destaques" id="destaques-anterior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                    </svg>
+                </button>
+                <div class="cards-wrapper container d-flex">
+
+                </div>
+
+                <button class="btn nav-destaques" id="destaques-proximo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </button>
             </div>
-        </article>
+
+        </section>
+
+
     </main>
 
     <footer class="site-footer text-white">
         <div class="container py-4">
             <div class="row g-4">
 
-               
+
                 <div class="col-12 col-lg-6">
                     <h2 class="h4 fw-bold">PD Sports</h2>
                     <p>Os melhores produtos para atletas</p>
@@ -102,7 +122,7 @@
                     </div>
                 </div>
 
-               
+
                 <div class="col-6 col-lg-3">
                     <h2 class="h6 fw-bold text-uppercase mb-3">Menu</h2>
 
@@ -121,7 +141,7 @@
                     </ul>
                 </div>
 
-             
+
                 <div class="col-6 col-lg-3">
                     <h2 class="h6 fw-bold text-uppercase mb-3">
                         Informações
@@ -144,7 +164,7 @@
             </div>
         </div>
 
-       
+
         <div class="footer-copyright text-center px-3 py-2">
             <small>© 2026 PD Sports. Todos os direitos reservados.</small>
         </div>
@@ -167,6 +187,7 @@
         }
     </script>
     <script type="module" src="./js/componentes/navbar.js"></script>
+    <script type="module" src="./js/componentes/carrossel-destaques.js"></script>
 </body>
 
 </html>
