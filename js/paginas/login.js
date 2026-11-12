@@ -2,7 +2,7 @@
 
 import { entrar, estaLogado } from "../servicos/sessao.js";
 
-const PAGINA_PADRAO = "./index.html";
+const PAGINA_PADRAO = "/index.html";
 
 /**
  * Lê o destino do parâmetro `redirect` e só aceita caminhos do mesmo site
