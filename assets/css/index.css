@@ -1,0 +1,74 @@
+@import url('variaveis.css');
+
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-secao::before {
+    content: "";
+    width: 8px;
+    height: 1.5em;
+    background-color: #ffc107;
+    
+    flex-shrink: 0;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+}
+
+.cards-wrapper>.card {
+    flex: 0 0 85%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+}
+
+.nav-destaques {
+    border: none;
+}
+
+
+.cards-wrapper {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 12px;
+    scrollbar-width: none;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-destaques {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .cards-wrapper > .card {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+}
+
+/* A partir de 992px: três cards */
+@media (min-width: 992px) {
+    .cards-wrapper > .card {
+        flex-basis: calc((100% - 32px) / 3);
+    }
+}
+
+/* A partir de 1200px: quatro cards */
+@media (min-width: 1200px) {
+    .cards-wrapper > .card {
+        flex-basis: calc((100% - 48px) / 4);
+    }
+}
