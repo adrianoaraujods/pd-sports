@@ -1,6 +1,6 @@
 # 55: Tela do Carrinho: itens, quantidade e remoção
 
-**Status:** Não iniciado
+**Status:** Em andamento
 **Dia:** Dia 10 (sex 13/11)
 **Estimativa:** 2h
 
