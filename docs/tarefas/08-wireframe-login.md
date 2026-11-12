@@ -8,4 +8,4 @@
 
 **Bloqueado por:** 04
 
-- [ ] Prevê erro de credenciais e link para o cadastro
+- [x] Prevê erro de credenciais e link para o cadastro

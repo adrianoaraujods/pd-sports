@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 04
 
-- [ ] Prevê Produto sem Variante (seletor ausente)
-- [ ] Prevê o aviso de login ao adicionar sem estar logado
+- [x] Prevê Produto sem Variante (seletor ausente)
+- [x] Prevê o aviso de login ao adicionar sem estar logado

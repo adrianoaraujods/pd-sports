@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 15, 16
 
-- [ ] Card de Produto com imagem, nome, preço e ação
-- [ ] Toasts de sucesso e de erro
-- [ ] Modal de confirmação
+- [x] Card de Produto com imagem, nome, preço e ação
+- [x] Toasts de sucesso e de erro
+- [x] Modal de confirmação
