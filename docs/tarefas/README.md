@@ -59,7 +59,7 @@ As tarefas não têm responsável definido; a atribuição é feita no próprio 
 | 51 | ✅ | [Serviço de Produtos (administração)](51-servico-de-produtos-administracao.md) | Dia 8 (qui 11/11) | 2h | 28, 31, 39 |
 | 52 | 🔁 | [Admin: tela de lista de Produtos](52-admin-tela-de-lista-de-produtos.md) | Dia 9 (qui 12/11) | 2h | 26, 28, 31, 48, 51 |
 | 53 | ✅ | [Admin: validação do formulário de Produto](53-admin-validacao-do-formulario-de-produto.md) | Dia 8 (qua 11/11) | 2h | 28, 31, 51 |
-| 54 | 🔁 | [Serviço de cadastro e validações](54-servico-de-cadastro-e-validacoes.md) | Dia 9 (qui 12/11) | 2h | 28, 31, 41 |
+| 54 | ✅ | [Serviço de cadastro e validações](54-servico-de-cadastro-e-validacoes.md) | Dia 9 (qui 12/11) | 2h | 28, 31, 41 |
 | 55 | 🔁 | [Tela do Carrinho: itens, quantidade e remoção](55-tela-do-carrinho-itens-quantidade-e-remocao.md) | Dia 9 (qui 12/11) | 2h | 25, 28, 31, 40, 57 |
 | 56 | ⛔ | [Tela do Carrinho: total e resumo](56-tela-do-carrinho-total-e-resumo.md) | Dia 10 (sex 13/11) | 1h | 28, 31, 55 |
 | 57 | ⛔ | [Botão de adicionar ao Carrinho](57-botao-de-adicionar-ao-carrinho.md) | Dia 10 (sex 13/11) | 1h | 28, 31, 40, 47, 50 |
