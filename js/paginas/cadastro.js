@@ -1,7 +1,7 @@
 import { cadastrar, validarCadastro } from "../servicos/cadastro.js";
-import { estaLogado } from "../servicos/sessao.js";
+import { entrar, estaLogado } from "../servicos/sessao.js";
 
-const PAGINA_LOGIN = "./login.html";
+const PAGINA_INICIAL = "./index.html";
 
 const form = document.getElementById("formCadastro");
 const botao = document.getElementById("cadastroEnviar");
@@ -36,7 +36,7 @@ function exibirErros(erros) {
   return nomes.length > 0;
 }
 
-if (estaLogado()) location.replace("./index.html");
+if (estaLogado()) location.replace(PAGINA_INICIAL);
 
 form.addEventListener("submit", async (evento) => {
   evento.preventDefault();
@@ -65,7 +65,8 @@ form.addEventListener("submit", async (evento) => {
 
   try {
     await cadastrar(dados);
-    location.assign(PAGINA_LOGIN);
+    await entrar(dados.email, dados.senha);
+    location.assign(PAGINA_INICIAL);
   } catch (erro) {
     const porCampo =
       erro.detalhes && typeof erro.detalhes === "object" ? erro.detalhes : {};
