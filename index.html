@@ -24,6 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap"
     />
     <link rel="stylesheet" href="./assets/css/card.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
 
   <body class="d-flex flex-column min-vh-100">
@@ -31,7 +32,8 @@
       <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container" id="navbarConteudo">
           <a href="./index.html" class="navbar-brand">
-            <img src="./assets/imagens/logo.png" alt="logo" /> PD Sports
+            <img src="./assets/imagens/logo.png" alt="logo" width="100" /> PD
+            Sports
           </a>
 
           <div
@@ -132,19 +134,44 @@
         <code>F12</code>.
       </p>
 
-      <article class="card product-card d-flex justify-content-between">
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-            alt="Imagem do produto"
-          />
-        </figure>
-        <div class="card-bottom">
-          <p class="product-name">Nome do produto</p>
-          <p class="product-price">R$ 99,90</p>
-          <a href="" class="btn btn-primary">Ver detalhes</a>
+      <section class="">
+        <h2 class="text-start my-3 titulo-secao">Produtos em alta</h2>
+        <p id="status-destaques" role="status"></p>
+        <div class="d-flex">
+          <button class="btn nav-destaques" id="destaques-anterior">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-chevron-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+              />
+            </svg>
+          </button>
+          <div class="cards-wrapper container d-flex"></div>
+
+          <button class="btn nav-destaques" id="destaques-proximo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-chevron-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+          </button>
         </div>
-      </article>
+      </section>
     </main>
 
     <footer class="site-footer text-white">
@@ -224,5 +251,9 @@
       }
     </script>
     <script type="module" src="./js/componentes/navbar.js"></script>
+    <script
+      type="module"
+      src="./js/componentes/carrossel-destaques.js"
+    ></script>
   </body>
 </html>
