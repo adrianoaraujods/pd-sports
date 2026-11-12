@@ -1,12 +1,44 @@
+import { buscarProdutoPorId, listarProdutos } from "../servicos/catalogo.js";
+import { criarCard } from "../componentes/card-produto.js";
+
 const quantidadeProduto = document.querySelector("#quantidade-produto");
 const diminuirQuantidade = document.querySelector("#diminuir-quantidade");
 const aumentarQuantidade = document.querySelector("#aumentar-quantidade");
 
-import { buscarProdutoPorId, listarProdutos } from "../servicos/catalogo.js";
-import { criarCard } from "../componentes/card-produto.js";
+const statusProduto = document.querySelector("#status-produto");
+const detalhesProduto = document.querySelector("#detalhes-produto");
+const secaoVariantes = document.querySelector("#secao-variantes");
+const containerVariantes = document.querySelector("#produto-variantes");
+const avisoVariante = document.querySelector("#aviso-variante");
+const botaoAdicionarCarrinho = document.querySelector("#botao-adicionar-carrinho");
 
 let quantidade = 1;
 let varianteSelecionada = null;
+let produtoAtual = null;
+
+const moeda = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+});
+
+/**
+ * Verifica se o produto possui variantes reais para seleção.
+ * Produtos sem variantes ou com apenas "Único" não mostram o seletor.
+ * @param {object} produto
+ * @returns {boolean}
+ */
+export function produtoTemVariantes(produto) {
+    const variantes = produto?.variantes ?? [];
+    return variantes.length > 1 || (variantes.length === 1 && variantes[0] !== "Único");
+}
+
+/**
+ * Retorna a variante atualmente selecionada (ou "Único" se não houver seletor).
+ * @returns {string|null}
+ */
+export function obterVarianteSelecionada() {
+    return varianteSelecionada;
+}
 
 function atualizarQuantidade(valor) {
     quantidade = Math.max(1, valor);
@@ -22,21 +54,52 @@ aumentarQuantidade.addEventListener("click", () => {
     atualizarQuantidade(quantidade + 1);
 });
 
+function configurarVariantes(produto) {
+    const temVariantes = produtoTemVariantes(produto);
+    secaoVariantes.hidden = !temVariantes;
 
+    if (!temVariantes) {
+        varianteSelecionada = "Único";
+        botaoAdicionarCarrinho.disabled = produto.estoque <= 0;
+        containerVariantes.replaceChildren();
+        return;
+    }
 
+    varianteSelecionada = null;
+    botaoAdicionarCarrinho.disabled = true;
+    avisoVariante.textContent = "Selecione uma variante para continuar.";
+    avisoVariante.className = "text-muted d-block mt-1";
 
+    const botoes = produto.variantes.map((variante) => {
+        const botao = document.createElement("button");
+        botao.type = "button";
+        botao.className = "pd-badge pd-badge-neutral variante-botao";
+        botao.textContent = variante;
+        botao.setAttribute("aria-pressed", "false");
 
+        botao.addEventListener("click", () => {
+            varianteSelecionada = variante;
 
+            containerVariantes.querySelectorAll(".variante-botao").forEach((btn) => {
+                const ativo = btn === botao;
+                btn.classList.toggle("selecionada", ativo);
+                btn.setAttribute("aria-pressed", String(ativo));
+            });
 
-const statusProduto = document.querySelector("#status-produto");
-const detalhesProduto = document.querySelector("#detalhes-produto");
+            avisoVariante.innerHTML = `Variante selecionada: <strong>${variante}</strong>`;
+            avisoVariante.className = "text-success d-block mt-1";
+            botaoAdicionarCarrinho.disabled = produto.estoque <= 0;
+        });
 
-const moeda = new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-});
+        return botao;
+    });
+
+    containerVariantes.replaceChildren(...botoes);
+}
 
 function preencherProduto(produto) {
+    produtoAtual = produto;
+
     document.querySelector("#produto-nome").textContent = produto.nome;
 
     document.querySelector("#produto-modalidade").textContent =
@@ -57,32 +120,7 @@ function preencherProduto(produto) {
             ? `Estoque: ${produto.estoque} unidades`
             : "Produto indisponível";
 
-    const variantes = document.querySelector("#produto-variantes");
-    variantes.replaceChildren();
-
-    varianteSelecionada = null;
-
-    for (const variante of produto.variantes ?? []) {
-        const botao = document.createElement("button");
-
-        botao.type = "button";
-        botao.className = "pd-badge pd-badge-neutral variante-botao";
-        botao.textContent = variante;
-        botao.setAttribute("aria-pressed", "false");
-
-        botao.addEventListener("click", () => {
-            varianteSelecionada = variante;
-
-            variantes.querySelectorAll("button").forEach((item) => {
-                const selecionado = item === botao;
-
-                item.classList.toggle("selecionada", selecionado);
-                item.setAttribute("aria-pressed", String(selecionado));
-            });
-        });
-
-        variantes.appendChild(botao);
-    }
+    configurarVariantes(produto);
 
     document.title = `${produto.nome} | PD Sports`;
 }
