@@ -8,4 +8,4 @@
 
 **Bloqueado por:** 04
 
-- [ ] Mostra a confirmação final e o retorno ao catálogo
+- [x] Mostra a confirmação final e o retorno ao catálogo

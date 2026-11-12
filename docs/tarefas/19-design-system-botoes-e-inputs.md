@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 15, 16
 
-- [ ] Botões primário, secundário e perigo, com hover, foco e desabilitado
-- [ ] Inputs com estados normal, foco, erro e sucesso
+- [x] Botões primário, secundário e perigo, com hover, foco e desabilitado
+- [x] Inputs com estados normal, foco, erro e sucesso

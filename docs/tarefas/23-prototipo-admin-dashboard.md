@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 12, 17, 19, 20
 
-- [ ] Respeita o wireframe e o design system
-- [ ] Usa os componentes do design system, sem estilos soltos
+- [x] Respeita o wireframe e o design system
+- [x] Usa os componentes do design system, sem estilos soltos

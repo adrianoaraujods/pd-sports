@@ -1,6 +1,6 @@
 # 54: Serviço de cadastro e validações
 
-**Status:** Não iniciado
+**Status:** Em andamento
 **Dia:** Dia 9 (qui 12/11)
 **Estimativa:** 2h
 

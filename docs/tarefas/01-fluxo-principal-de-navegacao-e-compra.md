@@ -8,6 +8,6 @@
 
 **Bloqueado por:** Nenhum (pode começar imediatamente)
 
-- [ ] Cobre filtro por Modalidade, busca, ordenação, paginação e escolha de Variante
-- [ ] Mostra que adicionar ao Carrinho exige login e onde entra o Carrinho do Visitante
-- [ ] Cobre o cálculo de Frete pelo CEP e a Finalização da Compra
+- [x] Cobre filtro por Modalidade, busca, ordenação, paginação e escolha de Variante
+- [x] Mostra que adicionar ao Carrinho exige login e onde entra o Carrinho do Visitante
+- [x] Cobre o cálculo de Frete pelo CEP e a Finalização da Compra

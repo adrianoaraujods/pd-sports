@@ -1,6 +1,6 @@
 # 50: Seletor de Variante
 
-**Status:** Não iniciado
+**Status:** Em andamento
 **Dia:** Dia 9 (qui 12/11)
 **Estimativa:** 2h
 

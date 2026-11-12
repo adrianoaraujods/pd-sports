@@ -1,7 +1,7 @@
 # 58: Admin: tela do formulário de Produto
 
-**Status:** Não iniciado
-**Dia:** Dia 10 (sex 13/11)
+**Status:** Em andamento
+**Dia:** Dia 9 (qui 12/11)
 **Estimativa:** 2h
 
 **O que construir:** Formulário de cadastro e edição com imagem por URL e pré-visualização, Variantes, Destaque e troca de Modalidade.

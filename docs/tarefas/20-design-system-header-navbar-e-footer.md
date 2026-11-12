@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 15, 16
 
-- [ ] A navbar mostra links diferentes conforme o papel
-- [ ] Versões para celular (menu recolhido) e desktop
+- [x] A navbar mostra links diferentes conforme o papel
+- [x] Versões para celular (menu recolhido) e desktop

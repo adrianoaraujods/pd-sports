@@ -8,5 +8,5 @@
 
 **Bloqueado por:** Nenhum (pode começar imediatamente)
 
-- [ ] Mostra a diferença entre os papéis Cliente e Administrador
-- [ ] Cobre erro de credenciais, e-mail repetido e senha curta
+- [x] Mostra a diferença entre os papéis Cliente e Administrador
+- [x] Cobre erro de credenciais, e-mail repetido e senha curta

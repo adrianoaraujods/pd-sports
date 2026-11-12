@@ -8,4 +8,4 @@
 
 **Bloqueado por:** 04
 
-- [ ] Prevê erros de e-mail repetido ou inválido e senha curta
+- [x] Prevê erros de e-mail repetido ou inválido e senha curta

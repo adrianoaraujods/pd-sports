@@ -8,4 +8,4 @@
 
 **Bloqueado por:** 04
 
-- [ ] Mostra total de Produtos, Produtos por Modalidade, preço médio por Modalidade, Destaques e totais de usuários e Carrinhos
+- [x] Mostra total de Produtos, Produtos por Modalidade, preço médio por Modalidade, Destaques e totais de usuários e Carrinhos
