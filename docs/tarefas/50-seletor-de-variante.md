@@ -1,6 +1,6 @@
 # 50: Seletor de Variante
 
-**Status:** Em andamento
+**Status:** Concluído
 **Dia:** Dia 9 (qui 12/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31, 49
 
-- [ ] Variante obrigatória quando o Produto tem Variantes
-- [ ] Produto sem Variantes não mostra o seletor
+- [x] Variante obrigatória quando o Produto tem Variantes
+- [x] Produto sem Variantes não mostra o seletor
