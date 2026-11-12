@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br" hidden>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | PD Sports</title>
+    <title>Login | PD Sports</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"
         integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/navbar.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
     <header id="navbar">
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
             <div class="container" id="navbarConteudo">
-                <a href="./index.html" class="navbar-brand">
-                    <img src="./assets/imagens/logo.png" alt="logo" width="100"> PD Sports
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../assets/imagens/logo.png" alt="logo" width="100"> PD Sports
                 </a>
 
                 <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
@@ -39,10 +40,10 @@
                 <div class="collapse navbar-collapse" id="menuNavbar" data-bs-parent="#navbarConteudo">
                     <ul class="navbar-nav me-lg-auto">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link">Início</a>
+                            <a href="../index.html" class="nav-link">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./paginas/catalogo.html" class="nav-link">Produtos</a>
+                            <a href="./catalogo.html" class="nav-link">Produtos</a>
                         </li>
                     </ul>
                     <a href="./login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
@@ -62,7 +63,61 @@
         </nav>
     </header>
 
-    <main class="container my-5 flex-grow-1"></main>
+    <main class="flex-grow-1 d-flex">
+        <div class="row g-0 login-pagina flex-grow-1">
+            <div class="d-none d-lg-block login-imagem">
+                <img src="../assets/imagens/login-cadastro.png" alt="Equipe-se para o seu melhor jogo com a PD-Sports"
+                    class="login-imagem-img">
+            </div>
+
+            <div class="col-12 col-lg d-flex align-items-center justify-content-center p-3 p-md-5">
+                <section class="card login-card w-100 p-4 p-md-5" aria-labelledby="loginTitulo">
+                    <h1 class="h2 fw-bold mb-1" id="loginTitulo">Login</h1>
+                    <p class="mb-4">Entre com sua conta para continuar</p>
+
+                    <form id="formLogin" class="needs-validation" novalidate>
+                        <div class="alert alert-danger d-none" id="loginErro" role="alert"></div>
+
+                        <div class="mb-3">
+                            <label for="loginEmail" class="visually-hidden">E-mail</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" aria-hidden="true">
+                                    <i class="bi bi-person fs-6"></i>
+                                </span>
+                                <input type="email" class="form-control" id="loginEmail" name="email"
+                                    placeholder="E-mail" autocomplete="email" required>
+                                <div class="invalid-feedback" id="loginEmailFeedback">Informe seu e-mail.</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="loginSenha" class="visually-hidden">Senha</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" aria-hidden="true">
+                                    <i class="bi bi-lock fs-6"></i>
+                                </span>
+                                <input type="password" class="form-control" id="loginSenha" name="senha"
+                                    placeholder="Senha" autocomplete="current-password" required>
+                                <div class="invalid-feedback">Informe sua senha.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="loginLembrar" name="lembrar">
+                            <label class="form-check-label" for="loginLembrar">Lembrar de mim</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2" id="loginEnviar">Entrar</button>
+                    </form>
+
+                    <p class="text-center mt-4 mb-0">
+                        Ainda não tem conta?
+                        <a href="./cadastro.html" class="link-cadastro">Cadastre-se</a>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
 
     <footer class="site-footer text-white">
         <div class="container py-4">
@@ -92,7 +147,7 @@
 
                     <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
                         <li>
-                            <a href="./index.html" class="text-white">
+                            <a href="../index.html" class="text-white">
                                 Início
                             </a>
                         </li>
@@ -137,8 +192,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script type="module" src="./js/paginas/dashboard.js"></script>
-    <script type="module" src="./js/componentes/navbar.js"></script>
+
+    <script type="module" src="../js/paginas/login.js"></script>
+    <script type="module" src="../js/componentes/navbar.js"></script>
 </body>
 
 </html>

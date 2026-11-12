@@ -1,6 +1,6 @@
 import { obterSessao, ehAdministrador } from "./sessao.js";
 
-const PAGINA_LOGIN = "/login.html";
+const PAGINA_LOGIN = "/paginas/login.html";
 const PAGINA_INICIAL = "/index.html";
 
 /**
