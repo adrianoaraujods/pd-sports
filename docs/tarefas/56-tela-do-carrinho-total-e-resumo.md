@@ -1,6 +1,6 @@
 # 56: Tela do Carrinho: total e resumo
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 10 (sex 13/11)
 **Estimativa:** 1h
 
@@ -8,4 +8,4 @@
 
 **Bloqueado por:** 28, 31, 55
 
-- [ ] Total recalculado a cada alteração
+- [x] Total recalculado a cada alteração

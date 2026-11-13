@@ -51,7 +51,7 @@ As tarefas não têm responsável definido; a atribuição é feita no próprio 
 | 43 | ✅ | [Filtro por Modalidade](43-filtro-por-modalidade.md) | Dia 7 (terça 10/11) | 1h30 | 28, 31, 42 |
 | 44 | ✅ | [Busca por nome](44-busca-por-nome.md) | Dia 7 (terça 10/11) | 1h | 28, 31, 42 |
 | 45 | ✅ | [Ordenação por preço](45-ordenacao-por-preco.md) | Dia 8 (qua 11/11) | 1h | 28, 31, 42 |
-| 46 | 🔁 | [Destaques na home](46-destaques-na-home.md) | Dia 9 (qui 12/11) | 1h | 18, 28, 31, 42 |
+| 46 | ✅ | [Destaques na home](46-destaques-na-home.md) | Dia 9 (qui 12/11) | 1h | 18, 28, 31, 42 |
 | 47 | ✅ | [Tela de login](47-tela-de-login.md) | Dia 7 (qua 10/11) | 1h | 21, 28, 31, 37, 41 |
 | 48 | ✅ | [Proteção das rotas administrativas](48-protecao-das-rotas-administrativas.md) | Dia 7 (qua 10/11) | 1h | 28, 31, 41 |
 | 49 | ✅ | [Página de detalhes do Produto](49-pagina-de-detalhes-do-produto.md) | Dia 8 (qua 11/11) | 2h | 28, 29, 31, 42 |
@@ -61,8 +61,8 @@ As tarefas não têm responsável definido; a atribuição é feita no próprio 
 | 53 | ✅ | [Admin: validação do formulário de Produto](53-admin-validacao-do-formulario-de-produto.md) | Dia 8 (qua 11/11) | 2h | 28, 31, 51 |
 | 54 | ✅ | [Serviço de cadastro e validações](54-servico-de-cadastro-e-validacoes.md) | Dia 9 (qui 12/11) | 2h | 28, 31, 41 |
 | 55 | ✅ | [Tela do Carrinho: itens, quantidade e remoção](55-tela-do-carrinho-itens-quantidade-e-remocao.md) | Dia 9 (qui 12/11) | 2h | 25, 28, 31, 40, 57 |
-| 56 | ⬜ | [Tela do Carrinho: total e resumo](56-tela-do-carrinho-total-e-resumo.md) | Dia 10 (sex 13/11) | 1h | 28, 31, 55 |
-| 57 | ⬜ | [Botão de adicionar ao Carrinho](57-botao-de-adicionar-ao-carrinho.md) | Dia 10 (sex 13/11) | 1h | 28, 31, 40, 47, 50 |
+| 56 | ✅ | [Tela do Carrinho: total e resumo](56-tela-do-carrinho-total-e-resumo.md) | Dia 10 (sex 13/11) | 1h | 28, 31, 55 |
+| 57 | ✅ | [Botão de adicionar ao Carrinho](57-botao-de-adicionar-ao-carrinho.md) | Dia 10 (sex 13/11) | 1h | 28, 31, 40, 47, 50 |
 | 58 | ✅ | [Admin: tela do formulário de Produto](58-admin-tela-do-formulario-de-produto.md) | Dia 9 (qui 12/11) | 2h | 27, 28, 31, 52, 53 |
 | 59 | ✅ | [Tela de cadastro](59-tela-de-cadastro.md) | Dia 10 (sex 13/11) | 1h30 | 22, 28, 31, 54 |
 | 60 | ✅ | [Serviço de CEP e Frete (ViaCEP)](60-servico-de-cep-e-frete-viacep.md) | Dia 10 (sex 13/11) | 2h30 | 28, 31, 40 |
