@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | PD Sports</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+      integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <header id="navbar">
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container" id="navbarConteudo">
+          <a href="../index.html" class="navbar-brand">
+            <img src="../assets/imagens/logo.png" alt="logo" width="100" /> PD
+            Sports
+          </a>
+
+          <div
+            class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last"
+          >
+            <button
+              class="btn text-white fs-4 lh-1 p-2 d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#buscaNavbar"
+              aria-controls="buscaNavbar"
+              aria-expanded="false"
+              aria-label="Abrir busca"
+            >
+              <i class="bi bi-search" aria-hidden="true"></i>
+            </button>
+            <a
+              href="#"
+              class="btn text-white fs-4 lh-1 p-2"
+              aria-label="Carrinho"
+              ><i class="bi bi-cart4" aria-hidden="true"></i
+            ></a>
+            <a
+              href="./login.html"
+              class="btn btn-primary ms-1 d-none d-lg-inline-flex"
+              >Entrar</a
+            >
+            <button
+              class="btn text-white fs-4 lh-1 p-2 d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuNavbar"
+              aria-controls="menuNavbar"
+              aria-expanded="false"
+              aria-label="Abrir menu"
+            >
+              <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div
+            class="collapse navbar-collapse"
+            id="menuNavbar"
+            data-bs-parent="#navbarConteudo"
+          >
+            <ul class="navbar-nav me-lg-auto">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="../paginas/catalogo.html" class="nav-link">Produtos</a>
+              </li>
+            </ul>
+            <a href="../login.html" class="btn btn-primary d-lg-none my-2"
+              >Entrar</a
+            >
+            <form class="d-none d-lg-flex" role="search">
+              <input
+                type="search"
+                name="q"
+                class="form-control"
+                placeholder="Buscar produtos..."
+                aria-label="Buscar produtos"
+              />
+            </form>
+          </div>
+
+          <div
+            class="collapse d-lg-none w-100"
+            id="buscaNavbar"
+            data-bs-parent="#navbarConteudo"
+          >
+            <form class="d-flex gap-2 py-2" role="search">
+              <input
+                type="search"
+                name="q"
+                class="form-control"
+                placeholder="Buscar produtos..."
+                aria-label="Buscar produtos"
+              />
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow-1 d-flex">
+      <div class="row g-0 login-pagina flex-grow-1">
+        <div class="d-none d-lg-block login-imagem">
+          <img
+            src="../assets/imagens/login-cadastro.png"
+            alt="Equipe-se para o seu melhor jogo com a PD-Sports"
+            class="login-imagem-img"
+          />
+        </div>
+
+        <div
+          class="col-12 col-lg d-flex align-items-center justify-content-center p-3 p-md-5"
+        >
+          <section
+            class="card login-card w-100 p-4 p-md-5"
+            aria-labelledby="cadastroTitulo"
+          >
+            <h1 class="h2 fw-bold mb-1" id="cadastroTitulo">Cadastro</h1>
+            <p class="mb-4">
+              Crie sua conta na PD-Sports e aproveite todas as vantagens
+            </p>
+
+            <form id="formCadastro" novalidate>
+              <div
+                class="alert alert-danger d-none"
+                id="cadastroErro"
+                role="alert"
+              ></div>
+
+              <div class="mb-3">
+                <label for="cadastroNome" class="visually-hidden"
+                  >Nome completo</label
+                >
+                <div class="input-group has-validation">
+                  <span class="input-group-text" aria-hidden="true">
+                    <i class="bi bi-person fs-6"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cadastroNome"
+                    name="nome"
+                    placeholder="Nome completo"
+                    autocomplete="name"
+                    required
+                  />
+                  <div class="invalid-feedback" id="cadastroNomeFeedback"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="cadastroEmail" class="visually-hidden"
+                  >E-mail</label
+                >
+                <div class="input-group has-validation">
+                  <span class="input-group-text" aria-hidden="true">
+                    <i class="bi bi-envelope fs-6"></i>
+                  </span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="cadastroEmail"
+                    name="email"
+                    placeholder="E-mail"
+                    autocomplete="email"
+                    required
+                  />
+                  <div
+                    class="invalid-feedback"
+                    id="cadastroEmailFeedback"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="cadastroSenha" class="visually-hidden">Senha</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" aria-hidden="true">
+                    <i class="bi bi-lock fs-6"></i>
+                  </span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="cadastroSenha"
+                    name="senha"
+                    placeholder="Senha"
+                    autocomplete="new-password"
+                    required
+                  />
+                  <div
+                    class="invalid-feedback"
+                    id="cadastroSenhaFeedback"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="cadastroConfirmarSenha" class="visually-hidden"
+                  >Confirmar senha</label
+                >
+                <div class="input-group has-validation">
+                  <span class="input-group-text" aria-hidden="true">
+                    <i class="bi bi-lock fs-6"></i>
+                  </span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="cadastroConfirmarSenha"
+                    name="confirmarSenha"
+                    placeholder="Confirmar senha"
+                    autocomplete="new-password"
+                    required
+                  />
+                  <div
+                    class="invalid-feedback"
+                    id="cadastroConfirmarSenhaFeedback"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="cadastroTermos"
+                  name="termos"
+                  required
+                />
+                <label class="form-check-label" for="cadastroTermos">
+                  Li e concordo com os
+                  <a href="#" class="link-cadastro">Termos de Uso</a> e a
+                  <a href="#" class="link-cadastro">Política de Privacidade</a>
+                  da PD-Sports.
+                </label>
+                <div class="invalid-feedback" id="cadastroTermosFeedback">
+                  Aceite os termos para continuar.
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary w-100 py-2"
+                id="cadastroEnviar"
+              >
+                Criar conta
+              </button>
+            </form>
+
+            <p class="text-center mt-4 mb-0">
+              Já tem uma conta?
+              <a href="./login.html" class="link-cadastro">Entre</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer text-white">
+      <div class="container py-4">
+        <div class="row g-4">
+          <!-- Marca: linha inteira no celular, metade no desktop -->
+          <div class="col-12 col-lg-6">
+            <h2 class="h4 fw-bold">PD Sports</h2>
+            <p>Os melhores produtos para atletas</p>
+
+            <div class="d-flex align-items-center gap-3">
+              <a href="#" class="text-white" aria-label="Instagram">
+                <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="text-white" aria-label="X">
+                <i class="bi bi-twitter-x fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="text-white" aria-label="LinkedIn">
+                <i class="bi bi-linkedin fs-4" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Menu: metade no celular, um quarto no desktop -->
+          <div class="col-6 col-lg-3">
+            <h2 class="h6 fw-bold text-uppercase mb-3">Menu</h2>
+
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+              <li>
+                <a href="../index.html" class="text-white"> Início </a>
+              </li>
+              <li>
+                <a href="#" class="text-white">Produtos</a>
+              </li>
+              <li>
+                <a href="#" class="text-white">Seu carrinho</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Informações -->
+          <div class="col-6 col-lg-3">
+            <h2 class="h6 fw-bold text-uppercase mb-3">Informações</h2>
+
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+              <li>
+                <a href="#" class="text-white"> Política de Privacidade </a>
+              </li>
+              <li>
+                <a href="#" class="text-white"> Informações Legais </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faixa inferior -->
+      <div class="footer-copyright text-center px-3 py-2">
+        <small>© 2026 PD Sports. Todos os direitos reservados.</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="../js/paginas/cadastro.js"></script>
+    <script type="module" src="../js/componentes/navbar.js"></script>
+  </body>
+</html>

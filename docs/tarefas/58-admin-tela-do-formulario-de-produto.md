@@ -1,6 +1,6 @@
 # 58: Admin: tela do formulário de Produto
 
-**Status:** Em andamento
+**Status:** Concluída
 **Dia:** Dia 9 (qui 12/11)
 **Estimativa:** 2h
 
@@ -8,7 +8,7 @@
 
 **Bloqueado por:** 27, 28, 31, 52, 53
 
-- [ ] Erro por campo e toast de sucesso ou erro
-- [ ] Pré-visualização da imagem
-- [ ] Funciona em celular e em desktop (responsivo)
-- [ ] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário
+- [x] Erro por campo e toast de sucesso ou erro
+- [x] Pré-visualização da imagem
+- [x] Funciona em celular e em desktop (responsivo)
+- [x] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário

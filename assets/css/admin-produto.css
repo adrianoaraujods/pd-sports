@@ -1,0 +1,62 @@
+@import url("estilos.css");
+
+.form-control,
+.form-select {
+  border-color: var(--light-card-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--base-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(65, 111, 168, 0.25);
+}
+
+.btn-secondary {
+  background-color: var(--base-secondary);
+  border: none;
+  color: var(--base-secondary-foreground);
+
+  &:hover {
+    background-color: var(--base-secondary-hover);
+    color: var(--base-secondary-foreground);
+  }
+}
+
+.chip-variante {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid var(--base-neutral-foreground);
+  font-size: 0.875rem;
+}
+
+.chip-variante button {
+  border: 0;
+  background: none;
+  line-height: 1;
+  padding: 0;
+}
+
+.previa-imagem {
+  width: 200px;
+  aspect-ratio: 1;
+  border: 1px solid var(--base-neutral-foreground);
+  background-color: var(--light-card-background);
+}
+
+.previa-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.toast.toast-sucesso {
+  background-color: var(--info-success);
+  color: #fff;
+}
+
+.toast.toast-erro {
+  background-color: var(--info-error);
+  color: #fff;
+}
