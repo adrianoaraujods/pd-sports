@@ -51,6 +51,13 @@
     cursor: not-allowed;
 }
 
+.seletor-quantidade-carrinho button.limite-atingido,
+.seletor-quantidade-carrinho button.limite-atingido:hover {
+    background-color: var(--bs-danger-bg-subtle, #f8d7da);
+    color: var(--bs-danger, #dc3545);
+    cursor: not-allowed;
+}
+
 .seletor-quantidade-carrinho span {
     min-width: 36px;
     text-align: center;
