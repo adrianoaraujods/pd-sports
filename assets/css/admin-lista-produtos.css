@@ -1,0 +1,22 @@
+@import url('./variaveis.css');
+
+.inputs {
+    background-color: var(--light-card-background);
+    outline: none;
+    border: 1px solid var(--light-card-border);
+    padding: 10px;
+    color: var(--base-muted-foreground);
+    border-radius: 4px;
+}
+
+@media (max-width:768px) {
+    .filters-wrapper {
+        flex-direction: column;
+    
+    }
+}
+@media (max-width:340px) {
+   .title {
+    flex-direction: column;
+   }
+}

@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 26, 28, 31, 48, 51
 
-- [ ] Lista Produtos de todas as Modalidades
+- [x] Lista Produtos de todas as Modalidades
 - [ ] Cliente e Visitante são barrados
-- [ ] Funciona em celular e em desktop (responsivo)
+- [x] Funciona em celular e em desktop (responsivo)
