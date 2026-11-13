@@ -9,7 +9,7 @@ import { carregarCatalogo } from "../servicos/catalogo.js";
 import { criarProduto, editarProduto } from "../servicos/produtos.js";
 import { validarProduto } from "../servicos/validacao-produto.js";
 
-const PAGINA_LISTA = "./dashboard.html";
+const PAGINA_LISTA = "./admin-lista-produtos.html";
 const ATRASO_REDIRECIONAMENTO_MS = 1200;
 
 if (protegerRotaAdministrativa()) iniciar();

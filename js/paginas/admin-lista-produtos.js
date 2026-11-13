@@ -48,6 +48,9 @@ function criarLinha(produto) {
     const excluir = linha.querySelector(".btn-danger");
 
     editar.setAttribute("aria-label", `Editar ${produto.nome}`);
+    editar.addEventListener("click", () => {
+        location.assign(`./produto.html?id=${encodeURIComponent(produto.id)}`);
+    });
     excluir.setAttribute("aria-label", `Excluir ${produto.nome}`);
 
     return linha;
