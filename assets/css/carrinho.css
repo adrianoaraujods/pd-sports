@@ -64,11 +64,6 @@
     vertical-align: middle;
 }
 
-#secao-carrinho-vazio[hidden],
-#secao-carrinho-conteudo[hidden] {
-    display: none !important;
-}
-
 /* Responsividade no mobile: converte a tabela em cards empilhados sem rolagem horizontal */
 @media (max-width: 768px) {
     .table-responsive {
@@ -142,5 +137,3 @@
         height: 56px;
     }
 }
-
-

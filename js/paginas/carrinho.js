@@ -3,7 +3,6 @@ import {
     detalharCarrinho,
     alterarQuantidadeItem,
     removerItem,
-    esvaziarCarrinho,
     exibirFeedback
 } from "../servicos/carrinho.js";
 import { obterSessao } from "../servicos/sessao.js";
@@ -17,9 +16,6 @@ const badgeTotalItens = document.querySelector("#badge-total-itens");
 const resumoSubtotal = document.querySelector("#resumo-subtotal");
 const resumoQtdItens = document.querySelector("#resumo-qtd-itens");
 const resumoTotal = document.querySelector("#resumo-total");
-
-const btnEsvaziarCarrinho = document.querySelector("#btn-esvaziar-carrinho");
-const btnFinalizarCompra = document.querySelector("#btn-finalizar-compra");
 
 const moeda = new Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -51,17 +47,15 @@ function exibirErro(mensagem) {
             </button>
         </div>
     `;
-    document.querySelector("#btn-tentar-novamente").addEventListener("click", () => carregarCarrinho());
+    document.querySelector("#btn-tentar-novamente")?.addEventListener("click", () => carregarCarrinho());
 }
 
-function limparStatus() {
-    statusCarrinho.replaceChildren();
-}
-
-function criarLinhaItem(item, usuarioId) {
+function criarLinhaItem(item) {
     const tr = document.createElement("tr");
     tr.dataset.produtoId = item.produto_id;
     tr.dataset.variante = item.variante;
+    tr.dataset.quantidade = item.quantidade;
+    tr.dataset.nome = item.produto?.nome || "Produto";
 
     const nome = item.produto?.nome || "Produto";
     const imagem = item.produto?.imagem || "../assets/imagens/logo.png";
@@ -72,11 +66,9 @@ function criarLinhaItem(item, usuarioId) {
         <td data-rotulo="Produto">
             <div class="d-flex align-items-center gap-3">
                 <img src="${imagem}" alt="${nome}" class="item-carrinho-img">
-                <div class="item-carrinho-info">
-                    <a href="./detalhes-produto.html?id=${encodeURIComponent(item.produto_id)}" class="text-decoration-none">
-                        ${nome}
-                    </a>
-                </div>
+                <a href="./detalhes-produto.html?id=${encodeURIComponent(item.produto_id)}" class="item-carrinho-info text-decoration-none fw-semibold">
+                    ${nome}
+                </a>
             </div>
         </td>
         <td data-rotulo="Variante">
@@ -87,74 +79,32 @@ function criarLinhaItem(item, usuarioId) {
         </td>
         <td data-rotulo="Quantidade" class="text-center">
             <div class="seletor-quantidade-carrinho">
-                <button type="button" class="btn-diminuir" aria-label="Diminuir quantidade">−</button>
+                <button type="button" data-acao="diminuir" aria-label="Diminuir quantidade">−</button>
                 <span class="qtd-valor" aria-live="polite">${item.quantidade}</span>
-                <button type="button" class="btn-aumentar" aria-label="Aumentar quantidade">+</button>
+                <button type="button" data-acao="aumentar" aria-label="Aumentar quantidade">+</button>
             </div>
         </td>
         <td data-rotulo="Subtotal" class="text-end fw-bold">
             ${subtotal}
         </td>
         <td data-rotulo="Ações" class="text-center">
-            <button type="button" class="btn btn-outline-danger btn-sm btn-remover" aria-label="Remover ${nome} (${item.variante})">
+            <button type="button" class="btn btn-outline-danger btn-sm" data-acao="remover" aria-label="Remover ${nome} (${item.variante})">
                 <i class="bi bi-trash" aria-hidden="true"></i> <span class="d-md-none ms-1">Remover</span>
             </button>
         </td>
     `;
-
-    const btnDiminuir = tr.querySelector(".btn-diminuir");
-    const btnAumentar = tr.querySelector(".btn-aumentar");
-    const btnRemover = tr.querySelector(".btn-remover");
-
-    const desabilitarBotoes = (desabilitar) => {
-        btnDiminuir.disabled = desabilitar;
-        btnAumentar.disabled = desabilitar;
-        btnRemover.disabled = desabilitar;
-        tr.style.opacity = desabilitar ? "0.5" : "1";
-    };
-
-    async function executarAcao(acao) {
-        try {
-            desabilitarBotoes(true);
-            await acao();
-            await carregarCarrinho(false);
-        } catch {
-            exibirFeedback("Não foi possível atualizar o carrinho.", "erro");
-            desabilitarBotoes(false);
-        }
-    }
-
-    btnAumentar.addEventListener("click", () => {
-        executarAcao(() => alterarQuantidadeItem(usuarioId, item.produto_id, item.variante, item.quantidade + 1));
-    });
-
-    btnDiminuir.addEventListener("click", () => {
-        if (item.quantidade > 1) {
-            executarAcao(() => alterarQuantidadeItem(usuarioId, item.produto_id, item.variante, item.quantidade - 1));
-        } else if (confirm(`Deseja remover "${nome}" (${item.variante}) do carrinho?`)) {
-            executarAcao(() => removerItem(usuarioId, item.produto_id, item.variante));
-        }
-    });
-
-    btnRemover.addEventListener("click", () => {
-        if (confirm(`Remover "${nome}" (${item.variante}) do carrinho?`)) {
-            executarAcao(() => removerItem(usuarioId, item.produto_id, item.variante));
-        }
-    });
-
     return tr;
 }
 
 export async function carregarCarrinho(mostrarSpinner = true) {
     const sessao = obterSessao();
-
     if (!sessao) {
         statusCarrinho.innerHTML = `
             <div class="card border-0 shadow-sm p-5 text-center my-4 mx-auto" style="max-width: 480px;">
                 <i class="bi bi-person-lock display-3 text-secondary mb-3" aria-hidden="true"></i>
                 <h2 class="h4 fw-bold">Faça login para ver seu carrinho</h2>
                 <p class="text-muted mb-4">Entre com sua conta para acessar seus itens salvos e finalizar compras.</p>
-                <a href="../login.html" class="btn btn-primary">Entrar na minha conta</a>
+                <a href="./login.html" class="btn btn-primary">Entrar na minha conta</a>
             </div>
         `;
         secaoCarrinhoVazio.hidden = true;
@@ -169,7 +119,7 @@ export async function carregarCarrinho(mostrarSpinner = true) {
         const carrinho = await obterCarrinho(sessao.id);
         const detalhado = await detalharCarrinho(carrinho);
 
-        limparStatus();
+        statusCarrinho.replaceChildren();
 
         const vazio = detalhado.itens.length === 0;
         secaoCarrinhoVazio.hidden = !vazio;
@@ -184,7 +134,7 @@ export async function carregarCarrinho(mostrarSpinner = true) {
 
         const fragmento = document.createDocumentFragment();
         for (const item of detalhado.itens) {
-            fragmento.appendChild(criarLinhaItem(item, sessao.id));
+            fragmento.appendChild(criarLinhaItem(item));
         }
 
         listaItensCarrinho.replaceChildren(fragmento);
@@ -193,23 +143,44 @@ export async function carregarCarrinho(mostrarSpinner = true) {
     }
 }
 
-btnEsvaziarCarrinho.addEventListener("click", async () => {
+// Delegação de eventos única para ações na tabela de itens
+listaItensCarrinho.addEventListener("click", async (evento) => {
+    const botao = evento.target.closest("button[data-acao]");
+    if (!botao || botao.disabled) return;
+
+    const tr = botao.closest("tr");
+    if (!tr) return;
+
     const sessao = obterSessao();
-    if (!sessao || !confirm("Tem certeza de que deseja esvaziar todos os itens do carrinho?")) return;
+    if (!sessao) return;
+
+    const { produtoId, variante, nome } = tr.dataset;
+    const quantidade = Number(tr.dataset.quantidade) || 1;
+    const acao = botao.dataset.acao;
+
+    const desabilitarBotoes = (desabilitar) => {
+        tr.style.opacity = desabilitar ? "0.5" : "1";
+        tr.querySelectorAll("button").forEach((btn) => (btn.disabled = desabilitar));
+    };
 
     try {
-        btnEsvaziarCarrinho.disabled = true;
-        await esvaziarCarrinho(sessao.id);
+        if (acao === "aumentar") {
+            desabilitarBotoes(true);
+            await alterarQuantidadeItem(sessao.id, produtoId, variante, quantidade + 1);
+        } else if (acao === "diminuir" && quantidade > 1) {
+            desabilitarBotoes(true);
+            await alterarQuantidadeItem(sessao.id, produtoId, variante, quantidade - 1);
+        } else if (acao === "remover" || (acao === "diminuir" && quantidade <= 1)) {
+            if (!confirm(`Remover "${nome}" (${variante}) do carrinho?`)) return;
+            desabilitarBotoes(true);
+            await removerItem(sessao.id, produtoId, variante);
+        }
+
         await carregarCarrinho(false);
     } catch {
-        exibirFeedback("Não foi possível esvaziar o carrinho.", "erro");
-    } finally {
-        btnEsvaziarCarrinho.disabled = false;
+        exibirFeedback("Não foi possível atualizar o carrinho.", "erro");
+        desabilitarBotoes(false);
     }
-});
-
-btnFinalizarCompra.addEventListener("click", () => {
-    exibirFeedback("Redirecionando para finalização de compra...", "sucesso");
 });
 
 carregarCarrinho();

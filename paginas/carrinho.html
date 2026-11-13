@@ -22,73 +22,53 @@
 <body class="d-flex flex-column min-vh-100">
     <header id="navbar">
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-            <div class="container d-flex align-items-center justify-content-between flex-nowrap">
-                <a href="../index.html" class="navbar-brand me-2">
-                    <img src="../assets/imagens/logo.png" alt="logo" class="logo-img">
-                    PD Sports
+            <div class="container" id="navbarConteudo">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../assets/imagens/logo.png" alt="logo" class="logo-img"> PD Sports
                 </a>
 
-                <ul class="navbar-nav me-auto d-none d-lg-flex">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./catalogo.html" class="nav-link">Produtos</a>
-                    </li>
-                </ul>
+                <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+                    <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false"
+                        aria-label="Abrir busca">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                    </button>
+                    <a href="./carrinho.html" class="btn text-white fs-4 lh-1 p-2 active" aria-label="Carrinho" aria-current="page">
+                        <i class="bi bi-cart4" aria-hidden="true"></i>
+                    </a>
+                    <a href="./login.html" class="btn btn-primary ms-1 d-none d-lg-inline-flex">Entrar</a>
+                    <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false"
+                        aria-label="Abrir menu">
+                        <i class="bi bi-list" aria-hidden="true"></i>
+                    </button>
+                </div>
 
-                <div class="d-flex align-items-center gap-1 gap-sm-2 ms-auto ms-lg-0">
+                <div class="collapse navbar-collapse" id="menuNavbar" data-bs-parent="#navbarConteudo">
+                    <ul class="navbar-nav me-lg-auto">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./catalogo.html" class="nav-link">Produtos</a>
+                        </li>
+                    </ul>
+                    <a href="./login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
                     <form class="d-none d-lg-flex" role="search" action="./catalogo.html" method="GET">
                         <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
                             aria-label="Buscar produtos">
                     </form>
+                </div>
 
-                    <button class="btn text-white d-lg-none p-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#buscaMobile" aria-controls="buscaMobile" aria-expanded="false"
-                        aria-label="Abrir busca">
-                        <i class="bi bi-search fs-5" aria-hidden="true"></i>
-                    </button>
-
-                    <a href="./carrinho.html" class="btn text-white p-2 position-relative" aria-label="Carrinho de compras">
-                        <i class="bi bi-cart4 fs-5" aria-hidden="true"></i>
-                    </a>
-
-                    <a href="../login.html" class="btn btn-primary d-none d-lg-inline-flex ms-2">Entrar</a>
-
-                    <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#menuMobile" aria-controls="menuMobile" aria-label="Abrir menu">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
+                    <form class="d-flex gap-2 py-2" role="search" action="./catalogo.html" method="GET">
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
                 </div>
             </div>
         </nav>
-
-        <div class="d-lg-none">
-            <div class="collapse" id="buscaMobile">
-                <form class="container d-flex gap-2 pb-3" role="search" action="./catalogo.html" method="GET">
-                    <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
-                        aria-label="Buscar produtos">
-                    <button type="submit" class="btn btn-primary">Buscar</button>
-                </form>
-            </div>
-        </div>
     </header>
-
-    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuMobile" aria-labelledby="menuMobileTitulo">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="menuMobileTitulo">PD Sports</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar menu"></button>
-        </div>
-
-        <div class="offcanvas-body">
-            <nav class="nav flex-column gap-3 align-items-center w-100" aria-label="Menu mobile">
-                <a href="../index.html" class="nav-link">Início</a>
-                <a href="./catalogo.html" class="nav-link">Produtos</a>
-                <a href="./carrinho.html" class="nav-link active" aria-current="page">Carrinho</a>
-                <a href="../login.html" class="btn btn-primary w-100">Entrar</a>
-            </nav>
-        </div>
-    </div>
 
     <main class="container my-5 flex-grow-1">
         <!-- Navegação estrutural (Breadcrumb) -->
@@ -113,30 +93,30 @@
         <section id="secao-carrinho-vazio" class="text-center py-5 my-4" hidden>
             <div class="card border-0 shadow-sm p-5 mx-auto" style="max-width: 520px;">
                 <i class="bi bi-cart-x display-1 text-muted mb-3" aria-hidden="true"></i>
-                <h2 class="h4 fw-bold mb-2">Seu carrinho está vazio</h2>
-                <p class="text-muted mb-4">Você ainda não escolheu nenhum produto. Explore nosso catálogo para encontrar o melhor para o seu esporte!</p>
-                <a href="./catalogo.html" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-2">
-                    <i class="bi bi-grid-fill"></i> Explorar Catálogo
-                </a>
+                <h2 class="h4 fw-bold">Seu carrinho está vazio</h2>
+                <p class="text-muted mb-4">Você ainda não escolheu nenhum produto esportivo. Navegue pelo nosso catálogo e aproveite as melhores ofertas!</p>
+                <div>
+                    <a href="./catalogo.html" class="btn btn-primary px-4 py-2">Explorar produtos</a>
+                </div>
             </div>
         </section>
 
-        <!-- Seção 2: Conteúdo com itens e resumo -->
+        <!-- Seção 2: Conteúdo do Carrinho (tabela de itens + resumo do pedido) -->
         <section id="secao-carrinho-conteudo" hidden>
             <div class="row g-4">
-                <!-- Coluna Esquerda: Tabela de Itens (Responsiva) -->
+                <!-- Coluna Esquerda: Tabela de Itens -->
                 <div class="col-12 col-lg-8">
                     <div class="card border-0 shadow-sm">
                         <div class="table-responsive">
                             <table class="table align-middle mb-0" id="tabela-carrinho">
                                 <thead class="table-light">
                                     <tr>
-                                        <th scope="col">Produto</th>
-                                        <th scope="col">Variante</th>
-                                        <th scope="col" class="text-end">Preço</th>
-                                        <th scope="col" class="text-center">Quantidade</th>
-                                        <th scope="col" class="text-end">Subtotal</th>
-                                        <th scope="col" class="text-center" style="width: 60px;"><span class="visually-hidden">Ações</span></th>
+                                        <th scope="col" style="min-width: 200px;">Produto</th>
+                                        <th scope="col" style="min-width: 90px;">Variante</th>
+                                        <th scope="col" class="text-end" style="min-width: 100px;">Preço</th>
+                                        <th scope="col" class="text-center" style="min-width: 130px;">Quantidade</th>
+                                        <th scope="col" class="text-end" style="min-width: 100px;">Subtotal</th>
+                                        <th scope="col" class="text-center" style="width: 70px;"><span class="visually-hidden">Ações</span></th>
                                     </tr>
                                 </thead>
                                 <tbody id="lista-itens-carrinho">
@@ -145,13 +125,10 @@
                             </table>
                         </div>
 
-                        <div class="card-footer bg-transparent d-flex justify-content-between align-items-center py-3 flex-wrap gap-2">
+                        <div class="card-footer bg-transparent py-3">
                             <a href="./catalogo.html" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2">
                                 <i class="bi bi-arrow-left"></i> Continuar comprando
                             </a>
-                            <button type="button" id="btn-esvaziar-carrinho" class="btn btn-outline-danger btn-sm d-inline-flex align-items-center gap-1">
-                                <i class="bi bi-trash"></i> Esvaziar carrinho
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -178,7 +155,7 @@
                             <span id="resumo-total" class="h4 fw-bold text-primary mb-0">R$ 0,00</span>
                         </div>
 
-                        <button type="button" id="btn-finalizar-compra" class="btn btn-primary w-100 py-2 fw-semibold d-inline-flex align-items-center justify-content-center gap-2">
+                        <button type="button" class="btn btn-primary w-100 py-2 fw-semibold d-inline-flex align-items-center justify-content-center gap-2">
                             Finalizar Compra <i class="bi bi-arrow-right"></i>
                         </button>
                     </div>
@@ -231,4 +208,3 @@
 </body>
 
 </html>
-

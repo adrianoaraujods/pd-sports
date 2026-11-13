@@ -113,7 +113,7 @@ export function renderizarNavbar() {
   const sessao = obterSessao();
   if (!sessao) return;
 
-  const header = document.getElementById("navbar");
+  const header = document.getElementById("navbar") || document.querySelector("header");
   if (!header) return;
 
   header.innerHTML = montarNavbar(sessao);
@@ -124,4 +124,8 @@ export function renderizarNavbar() {
   });
 }
 
-renderizarNavbar();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", renderizarNavbar);
+} else {
+  renderizarNavbar();
+}
