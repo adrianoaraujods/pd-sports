@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 04
 
-- [ ] Inclui busca, filtro, ordenação e paginação
-- [ ] Prevê a mensagem de busca sem resultado
+- [x] Inclui busca, filtro, ordenação e paginação
+- [x] Prevê a mensagem de busca sem resultado

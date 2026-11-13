@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 01, 02, 03
 
-- [ ] Lista exatamente: home, catálogo, detalhes, carrinho, admin lista, admin dashboard, admin formulário, login, cadastro e resumo da finalização
-- [ ] Não inclui perfil, histórico de pedidos nem página 404
-- [ ] Cada wireframe e cada tela do protótipo tem um responsável
+- [x] Lista exatamente: home, catálogo, detalhes, carrinho, admin lista, admin dashboard, admin formulário, login, cadastro e resumo da finalização
+- [x] Não inclui perfil, histórico de pedidos nem página 404
+- [x] Cada wireframe e cada tela do protótipo tem um responsável

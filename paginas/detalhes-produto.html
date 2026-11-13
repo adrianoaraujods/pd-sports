@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+      integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/card.css" />
+    <link rel="stylesheet" href="../assets/css/detalhesprotudo.css" />
+
+    <title>DetalhesDoProduto</title>
+
+    <script type="module" src="../js/paginas/detalhes-produto.js"></script>
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <header id="navbar">
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container" id="navbarConteudo">
+          <a href="../index.html" class="navbar-brand">
+            <img src="../assets/imagens/logo.png" alt="logo" class="logo-img" /> PD Sports
+          </a>
+
+          <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+            <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
+              <i class="bi bi-search" aria-hidden="true"></i>
+            </button>
+            <a href="./carrinho.html" class="btn text-white fs-4 lh-1 p-2" aria-label="Carrinho">
+              <i class="bi bi-cart4" aria-hidden="true"></i>
+            </a>
+            <a href="./login.html" class="btn btn-primary ms-1 d-none d-lg-inline-flex">Entrar</a>
+            <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
+              <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="menuNavbar" data-bs-parent="#navbarConteudo">
+            <ul class="navbar-nav me-lg-auto">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="./catalogo.html" class="nav-link">Produtos</a>
+              </li>
+            </ul>
+            <a href="./login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
+            <form class="d-none d-lg-flex" role="search" action="./catalogo.html" method="GET">
+              <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+            </form>
+          </div>
+
+          <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
+            <form class="d-flex gap-2 py-2" role="search" action="./catalogo.html" method="GET">
+              <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow-1">
+      <p id="status-produto" role="status"></p>
+      <section class="container" id="detalhes-produto" hidden>
+        <div>
+          <p>Início &gt; Produtos &gt; Modalidade &gt; Produto</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <figure class="imagem-produto my-0 mx-auto">
+              <img
+                id="produto-imagem"
+                src="https://plus.unsplash.com/premium_photo-1666913667023-4bfd0f6cff0a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div class="col-12 col-md-6">
+            <span
+              id="produto-modalidade"
+              class="pd-badge pd-badge-secondary"
+            ></span>
+            <h1 class="my-3" id="produto-nome"></h1>
+            <p id="produto-preco"></p>
+            <p id="produto-descricao"></p>
+            <div id="secao-variantes" class="my-3">
+              <p id="rotulo-variantes" class="mb-2">Variantes:</p>
+              <div
+                id="produto-variantes"
+                class="d-flex flex-wrap gap-2"
+                role="group"
+                aria-labelledby="rotulo-variantes"
+              ></div>
+              <small id="aviso-variante" class="text-muted d-block mt-1"
+                >Selecione uma variante para continuar.</small
+              >
+            </div>
+            <div class="my-3">
+              <p id="rotulo-quantidade" class="mb-2">Quantidade</p>
+              <div
+                class="seletor-quantidade"
+                role="group"
+                aria-labelledby="rotulo-quantidade"
+              >
+                <button
+                  type="button"
+                  id="diminuir-quantidade"
+                  class="quantidade-botao"
+                  aria-label="Diminuir quantidade"
+                  disabled
+                >
+                  −
+                </button>
+                <output
+                  id="quantidade-produto"
+                  name="quantidade"
+                  aria-live="polite"
+                  aria-atomic="true"
+                  aria-label="Quantidade selecionada"
+                  >1</output
+                >
+                <button
+                  type="button"
+                  id="aumentar-quantidade"
+                  class="quantidade-botao"
+                  aria-label="Aumentar quantidade"
+                >
+                  +
+                </button>
+              </div>
+              <small id="produto-estoque"></small>
+            </div>
+
+            <button
+              id="botao-adicionar-carrinho"
+              class="btn btn-primary d-flex align-items-center gap-2"
+            >
+              Adicionar ao Carrinho
+              <i class="bi bi-cart-plus fs-5" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="secao-relacionados" class="container my-5" hidden>
+        <h2>Produtos Relacionados</h2>
+        <div
+          id="produtos-relacionados"
+          class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"
+        ></div>
+      </section>
+    </main>
+
+    <footer class="site-footer text-white">
+      <div class="container py-4">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <h2 class="h4 fw-medium">PD Sports</h2>
+            <p>Os melhores produtos para atletas</p>
+
+            <div class="d-flex align-items-center gap-3">
+              <a href="#" class="text-white" aria-label="Instagram">
+                <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="text-white" aria-label="X">
+                <i class="bi bi-twitter-x fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="text-white" aria-label="LinkedIn">
+                <i class="bi bi-linkedin fs-4" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <h2 class="h6 fw-medium text-uppercase mb-3">Menu</h2>
+
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+              <li>
+                <a href="../index.html" class="text-white"> Início </a>
+              </li>
+              <li>
+                <a href="./catalogo.html" class="text-white">Produtos</a>
+              </li>
+              <li>
+                <a href="./carrinho.html" class="text-white">Seu carrinho</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <h2 class="h6 fw-medium text-uppercase mb-3">Informações</h2>
+
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+              <li>
+                <a href="#" class="text-white"> Política de Privacidade </a>
+              </li>
+              <li>
+                <a href="#" class="text-white"> Informações Legais </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright text-center px-3 py-2">
+        <small>© 2026 PD Sports. Todos os direitos reservados.</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../js/componentes/navbar.js"></script>
+  </body>
+</html>

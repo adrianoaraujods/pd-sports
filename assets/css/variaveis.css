@@ -1,1 +1,76 @@
 /* Tokens de cores (claro/escuro), tipografia e espaçamentos */
+
+:root {
+    /* BASE */
+    --base-primary: #F4BC1D;
+    --base-primary-hover: #FFD55C;
+    --base-primary-foreground: #000000;
+
+    --base-secondary: #416FA8;
+    --base-secondary-hover: #6596D4;
+    --base-secondary-foreground: #FFFFFF;
+
+    --base-neutral: #FFFFFF;
+    --base-neutral-hover: #C4DEFF;
+    --base-neutral-foreground: #000000;
+
+    --base-estrutura: #19222C;
+    --base-navegacao: #263E57;
+    --base-muted-foreground: #878787;
+
+    /* INFORMATIVAS */
+    --info-error: #DC3545;
+    --info-error-hover: #ED5463;
+    --info-warn: #F4BC1D;
+    --info-success: #007E52;
+    --info-info: #6610F2;
+
+    /* CLARO */
+    --light-card-background: #EAEAEA;
+    --light-card-border: #D5DEE8;
+    --light-text-secondary: #607186;
+
+    /* ESCURO */
+    --dark-card-background: #19222C;
+    --dark-card-border: #263E57;
+    --dark-text-secondary: #869AB2;
+
+
+
+
+
+    /* TIPOGRAFIA */
+    --font-titulo: "Anton SC", sans-serif;
+    --font-texto: "Vend Sans", sans-serif;
+
+    --font-peso-regular: 400;
+
+    /* Títulos */
+    --titulo-lg: 2rem;
+    /* 32px */
+    --titulo-md: 1.5rem;
+    /* 24px */
+    --titulo-sm: 1rem;
+    /* 16px */
+
+    /* Textos */
+    --texto-xl: 2rem;
+    /* 32px */
+    --texto-lg: 1.5rem;
+    /* 24px */
+    --texto-md: 1rem;
+    /* 16px */
+    --texto-sm: 0.75rem;
+    /* 12px */
+
+    /* Espaçamento */
+    --font-entrelinha: normal;
+    --font-espacamento: 0;
+}
+
+
+
+h1, h2, h3{
+    font-family: var(--font-titulo);
+    font-size: var(--texto-lg);
+}

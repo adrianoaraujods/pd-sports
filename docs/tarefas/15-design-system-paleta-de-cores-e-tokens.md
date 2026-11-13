@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 05, 06, 07, 08, 09, 10, 11, 12, 13, 14
 
-- [ ] Cores primária, neutras e de feedback (sucesso, erro, aviso)
-- [ ] Tokens de tema claro e escuro definidos
-- [ ] Contraste de texto verificado
+- [x] Cores primária, neutras e de feedback (sucesso, erro, aviso)
+- [x] Tokens de tema claro e escuro definidos
+- [x] Contraste de texto verificado
