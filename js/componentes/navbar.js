@@ -26,7 +26,7 @@ function montarLinks(sessao, base) {
   if (sessao.papel === PAPEL_ADMINISTRADOR) {
     return [
       { texto: "Visão Geral", href: `${base}paginas/admin/dashboard.html` },
-      { texto: "Produtos", href: `${base}paginas/catalogo.html` },
+      { texto: "Produtos", href: `${base}paginas/admin/admin-lista-produtos.html` },
     ];
   }
   return [
@@ -38,6 +38,9 @@ function montarLinks(sessao, base) {
 function ativo(href) {
   if (href === "#") return false;
   const pagina = location.pathname.split("/").pop() || "index.html";
+  if (pagina === "produto.html" && href.includes("admin-lista-produtos.html")) {
+    return true;
+  }
   return href.endsWith(`/${pagina}`);
 }
 

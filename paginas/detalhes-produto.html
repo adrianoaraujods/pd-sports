@@ -33,134 +33,50 @@
   <body class="d-flex flex-column min-vh-100">
     <header id="navbar">
       <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-        <div class="container d-flex align-items-center justify-content-between flex-nowrap">
-          <a href="../index.html" class="navbar-brand me-2">
-            <img src="../assets/imagens/logo.png" alt="logo" class="logo-img" />
-            PD Sports
+        <div class="container" id="navbarConteudo">
+          <a href="../index.html" class="navbar-brand">
+            <img src="../assets/imagens/logo.png" alt="logo" class="logo-img" /> PD Sports
           </a>
 
-          <ul class="navbar-nav me-auto d-none d-lg-flex">
-            <li class="nav-item">
-              <a
-                href="../index.html"
-                class="nav-link"
-              >
-                Início
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./catalogo.html" class="nav-link">Produtos</a>
-            </li>
-          </ul>
+          <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+            <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
+              <i class="bi bi-search" aria-hidden="true"></i>
+            </button>
+            <a href="./carrinho.html" class="btn text-white fs-4 lh-1 p-2" aria-label="Carrinho">
+              <i class="bi bi-cart4" aria-hidden="true"></i>
+            </a>
+            <a href="./login.html" class="btn btn-primary ms-1 d-none d-lg-inline-flex">Entrar</a>
+            <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
+              <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+          </div>
 
-          <div class="d-flex align-items-center gap-1 gap-sm-2 ms-auto ms-lg-0">
+          <div class="collapse navbar-collapse" id="menuNavbar" data-bs-parent="#navbarConteudo">
+            <ul class="navbar-nav me-lg-auto">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="./catalogo.html" class="nav-link">Produtos</a>
+              </li>
+            </ul>
+            <a href="./login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
             <form class="d-none d-lg-flex" role="search" action="./catalogo.html" method="GET">
-              <input
-                type="search"
-                name="q"
-                class="form-control"
-                placeholder="Buscar produtos..."
-                aria-label="Buscar produtos"
-              />
+              <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
             </form>
+          </div>
 
-            <button
-              class="btn text-white d-lg-none p-2"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#buscaMobile"
-              aria-controls="buscaMobile"
-              aria-expanded="false"
-              aria-label="Abrir busca"
-            >
-              <i class="bi bi-search fs-5" aria-hidden="true"></i>
-            </button>
-            <a href="./carrinho.html" class="btn text-white p-2 position-relative" aria-label="Carrinho de compras">
-              <i class="bi bi-cart4 fs-5" aria-hidden="true"></i>
-            </a>
-
-            <a
-              href="./login.html"
-              class="btn btn-primary d-none d-lg-inline-flex ms-2"
-            >
-              Entrar
-            </a>
-            <button
-              class="navbar-toggler border-0 p-2"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#menuMobile"
-              aria-controls="menuMobile"
-              aria-label="Abrir menu"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
+            <form class="d-flex gap-2 py-2" role="search" action="./catalogo.html" method="GET">
+              <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
           </div>
         </div>
       </nav>
-
-      <div class="d-lg-none">
-        <div class="collapse" id="buscaMobile">
-          <form class="container d-flex gap-2 pb-3" role="search" action="./catalogo.html" method="GET">
-            <input
-              type="search"
-              name="q"
-              class="form-control"
-              placeholder="Buscar produtos..."
-              aria-label="Buscar produtos"
-            />
-            <button type="submit" class="btn btn-primary">Buscar</button>
-          </form>
-        </div>
-      </div>
-        </div>
-      </nav>
-
-      <div class="d-lg-none">
-        <div class="collapse" id="buscaMobile">
-          <form class="container d-flex gap-2 pb-3" role="search">
-            <input
-              type="search"
-              name="q"
-              class="form-control"
-              placeholder="Buscar produtos..."
-              aria-label="Buscar produtos"
-            />
-            <button type="submit" class="btn btn-primary">Buscar</button>
-          </form>
-        </div>
-      </div>
     </header>
-
-    <div
-      class="offcanvas offcanvas-end menu-mobile"
-      tabindex="-1"
-      id="menuMobile"
-      aria-labelledby="menuMobileTitulo"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="menuMobileTitulo">PD Sports</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Fechar menu"
-        ></button>
-      </div>
-
-      <div class="offcanvas-body">
-        <nav
-          class="nav flex-column gap-3 align-items-center w-100"
-          aria-label="Menu mobile"
-        >
-          <a href="../index.html" class="nav-link" aria-current="page">
-            Início
-          </a>
-          <a href="./catalogo.html" class="nav-link">Produtos</a>
-          <a href="./login.html" class="btn btn-primary w-100">Entrar</a>
-        </nav>
-      </div>
-    </div>
 
     <main class="flex-grow-1">
       <p id="status-produto" role="status"></p>
