@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras | PD Sports</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"
+        integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap">
+    <link rel="stylesheet" href="../assets/css/carrinho.css">
+
+    <script type="module" src="../js/paginas/carrinho.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header id="navbar">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container" id="navbarConteudo">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../assets/imagens/logo.png" alt="logo" class="logo-img"> PD Sports
+                </a>
+
+                <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+                    <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false"
+                        aria-label="Abrir busca">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                    </button>
+                    <a href="./carrinho.html" class="btn text-white fs-4 lh-1 p-2 active" aria-label="Carrinho" aria-current="page">
+                        <i class="bi bi-cart4" aria-hidden="true"></i>
+                    </a>
+                    <a href="./login.html" class="btn btn-primary ms-1 d-none d-lg-inline-flex">Entrar</a>
+                    <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false"
+                        aria-label="Abrir menu">
+                        <i class="bi bi-list" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="menuNavbar" data-bs-parent="#navbarConteudo">
+                    <ul class="navbar-nav me-lg-auto">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./catalogo.html" class="nav-link">Produtos</a>
+                        </li>
+                    </ul>
+                    <a href="./login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
+                    <form class="d-none d-lg-flex" role="search" action="./catalogo.html" method="GET">
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
+                            aria-label="Buscar produtos">
+                    </form>
+                </div>
+
+                <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
+                    <form class="d-flex gap-2 py-2" role="search" action="./catalogo.html" method="GET">
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+        <!-- Navegação estrutural (Breadcrumb) -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="./catalogo.html">Produtos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Carrinho</li>
+            </ol>
+        </nav>
+
+        <!-- Cabeçalho da página -->
+        <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+            <h1 class="h3 fw-bold mb-0">Seu Carrinho</h1>
+            <span id="badge-total-itens" class="pd-badge pd-badge-secondary">0 itens</span>
+        </div>
+
+        <!-- Área de mensagens e feedback de rede/carregamento -->
+        <div id="status-carrinho" role="status" aria-live="polite"></div>
+
+        <!-- Seção 1: Carrinho vazio (exibido quando não houver itens) -->
+        <section id="secao-carrinho-vazio" class="text-center py-5 my-4" hidden>
+            <div class="card border-0 shadow-sm p-5 mx-auto" style="max-width: 520px;">
+                <i class="bi bi-cart-x display-1 text-muted mb-3" aria-hidden="true"></i>
+                <h2 class="h4 fw-bold">Seu carrinho está vazio</h2>
+                <p class="text-muted mb-4">Você ainda não escolheu nenhum produto esportivo. Navegue pelo nosso catálogo e aproveite as melhores ofertas!</p>
+                <div>
+                    <a href="./catalogo.html" class="btn btn-primary px-4 py-2">Explorar produtos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Conteúdo do Carrinho (tabela de itens + resumo do pedido) -->
+        <section id="secao-carrinho-conteudo" hidden>
+            <div class="row g-4">
+                <!-- Coluna Esquerda: Tabela de Itens -->
+                <div class="col-12 col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="table-responsive">
+                            <table class="table align-middle mb-0" id="tabela-carrinho">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col" style="min-width: 200px;">Produto</th>
+                                        <th scope="col" style="min-width: 90px;">Variante</th>
+                                        <th scope="col" class="text-end" style="min-width: 100px;">Preço</th>
+                                        <th scope="col" class="text-center" style="min-width: 130px;">Quantidade</th>
+                                        <th scope="col" class="text-end" style="min-width: 100px;">Subtotal</th>
+                                        <th scope="col" class="text-center" style="width: 70px;"><span class="visually-hidden">Ações</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="lista-itens-carrinho">
+                                    <!-- Itens renderizados dinamicamente pelo JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="card-footer bg-transparent py-3">
+                            <a href="./catalogo.html" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2">
+                                <i class="bi bi-arrow-left"></i> Continuar comprando
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Resumo do Pedido -->
+                <div class="col-12 col-lg-4">
+                    <div class="card border-0 shadow-sm p-4 sticky-top" style="top: 2rem;">
+                        <h2 class="h5 fw-bold mb-3">Resumo do Pedido</h2>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Subtotal dos produtos</span>
+                            <span id="resumo-subtotal" class="fw-semibold">R$ 0,00</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Total de itens</span>
+                            <span id="resumo-qtd-itens" class="fw-semibold">0</span>
+                        </div>
+
+                        <hr class="my-3">
+
+                        <div class="d-flex justify-content-between align-items-baseline mb-4">
+                            <span class="h6 fw-bold mb-0">Total</span>
+                            <span id="resumo-total" class="h4 fw-bold text-primary mb-0">R$ 0,00</span>
+                        </div>
+
+                        <button type="button" class="btn btn-primary w-100 py-2 fw-semibold d-inline-flex align-items-center justify-content-center gap-2">
+                            Finalizar Compra <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer text-white">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <h2 class="h4 fw-bold">PD Sports</h2>
+                    <p>Os melhores produtos para atletas</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white" aria-label="X"><i class="bi bi-twitter-x fs-4" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h2 class="h6 fw-bold text-uppercase mb-3">Menu</h2>
+                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                        <li><a href="../index.html" class="text-white">Início</a></li>
+                        <li><a href="./catalogo.html" class="text-white">Produtos</a></li>
+                        <li><a href="./carrinho.html" class="text-white">Seu carrinho</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h2 class="h6 fw-bold text-uppercase mb-3">Informações</h2>
+                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                        <li><a href="#" class="text-white">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-white">Informações Legais</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright text-center px-3 py-2">
+            <small>© 2026 PD Sports. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../js/componentes/navbar.js"></script>
+</body>
+
+</html>

@@ -64,7 +64,7 @@ function montarNavbar(sessao) {
               data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
               <i class="bi bi-search" aria-hidden="true"></i>
           </button>
-          ${carrinho ? `<a href="#" class="${BOTAO_ICONE}" aria-label="Carrinho"><i class="bi bi-cart4" aria-hidden="true"></i></a>` : ""}
+          ${carrinho ? `<a href="/paginas/carrinho.html" class="${BOTAO_ICONE}" aria-label="Carrinho"><i class="bi bi-cart4" aria-hidden="true"></i></a>` : ""}
           ${montarMenuUsuario(sessao)}
           <button class="${BOTAO_ICONE} d-lg-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
@@ -102,12 +102,18 @@ export function renderizarNavbar() {
   const sessao = obterSessao();
   if (!sessao) return;
 
-  const header = document.getElementById("navbar");
+  const header = document.getElementById("navbar") || document.querySelector("header");
+  if (!header) return;
+
   header.innerHTML = montarNavbar(sessao);
-  header.querySelector('[data-acao="sair"]').addEventListener("click", () => {
+  header.querySelector('[data-acao="sair"]')?.addEventListener("click", () => {
     sair();
     location.replace("/index.html");
   });
 }
 
-renderizarNavbar();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", renderizarNavbar);
+} else {
+  renderizarNavbar();
+}
