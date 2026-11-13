@@ -1,6 +1,6 @@
 # 54: Serviço de cadastro e validações
 
-**Status:** Em andamento
+**Status:** Concluído
 **Dia:** Dia 9 (qui 12/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31, 41
 
-- [ ] Nome obrigatório, e-mail válido e único, senha com no mínimo 6 caracteres
-- [ ] Não é possível criar Administrador
+- [x] Nome obrigatório, e-mail válido e único, senha com no mínimo 6 caracteres
+- [x] Não é possível criar Administrador

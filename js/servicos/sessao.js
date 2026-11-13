@@ -16,7 +16,7 @@ export const PAPEL_ADMINISTRADOR = "administrador";
 /** @typedef {{ id: string, nome: string, email: string, papel: "cliente"|"administrador" }} Sessao */
 
 /** Busca usuários pelo e-mail. A MockAPI filtra por substring e responde 404 sem resultados. */
-async function buscarUsuariosPorEmail(email) {
+export async function buscarUsuariosPorEmail(email) {
   try {
     const usuarios = await clienteHttp.get(
       `${CONFIG.API_MOCK.USUARIOS}?email=${email}`
