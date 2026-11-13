@@ -1,4 +1,5 @@
 import { carregarCatalogo } from "../servicos/catalogo.js";
+import { protegerRotaAdministrativa } from "../servicos/admin.js";
 
 const tabela = document.querySelector("#lista-produtos")
 const modeloLinha = tabela.querySelector("tr").cloneNode(true)
@@ -131,7 +132,9 @@ async function carregarTabela() {
     }
 }
 
-filtroModalidade.addEventListener("change", aplicarFiltros);
-buscaProduto.addEventListener("input", aplicarFiltros);
+if (protegerRotaAdministrativa()) {
+    filtroModalidade.addEventListener("change", aplicarFiltros);
+    buscaProduto.addEventListener("input", aplicarFiltros);
 
-carregarTabela();
+    carregarTabela();
+}
