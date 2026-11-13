@@ -8,11 +8,14 @@
     flex-shrink: 0;
 }
 
-.item-carrinho-info {
+.item-carrinho-info a {
     color: var(--base-estrutura);
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
-.item-carrinho-info:hover {
+.item-carrinho-info a:hover {
     color: var(--base-secondary);
 }
 

@@ -65,7 +65,7 @@ As tarefas não têm responsável definido; a atribuição é feita no próprio 
 | 57 | ⛔ | [Botão de adicionar ao Carrinho](57-botao-de-adicionar-ao-carrinho.md) | Dia 10 (sex 13/11) | 1h | 28, 31, 40, 47, 50 |
 | 58 | 🔁 | [Admin: tela do formulário de Produto](58-admin-tela-do-formulario-de-produto.md) | Dia 9 (qui 12/11) | 2h | 27, 28, 31, 52, 53 |
 | 59 | ✅ | [Tela de cadastro](59-tela-de-cadastro.md) | Dia 10 (sex 13/11) | 1h30 | 22, 28, 31, 54 |
-| 60 | ⬜ | [Serviço de CEP e Frete (ViaCEP)](60-servico-de-cep-e-frete-viacep.md) | Dia 10 (sex 13/11) | 2h30 | 28, 31, 40 |
+| 60 | ✅ | [Serviço de CEP e Frete (ViaCEP)](60-servico-de-cep-e-frete-viacep.md) | Dia 10 (sex 13/11) | 2h30 | 28, 31, 40 |
 | 61 | ⛔ | [Paginação: controles](61-paginacao-controles.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 62 |
 | 62 | ⬜ | [Paginação: estado e URL](62-paginacao-estado-e-url.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 43, 44, 45 |
 | 63 | ⛔ | [Admin: exclusão de Produto](63-admin-exclusao-de-produto.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 52 |

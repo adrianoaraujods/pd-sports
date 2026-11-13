@@ -1,6 +1,6 @@
 # 60: Serviço de CEP e Frete (ViaCEP)
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 10 (sex 13/11)
 **Estimativa:** 2h30
 
@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 28, 31, 40
 
-- [ ] Mesma UF R$ 15,00, mesma região R$ 25,00, outras regiões R$ 40,00, grátis acima de R$ 300,00
-- [ ] Valores e prazos em arquivo de configuração
-- [ ] CEP inválido ou inexistente gera erro claro
+- [x] Mesma UF R$ 15,00, mesma região R$ 25,00, outras regiões R$ 40,00, grátis acima de R$ 300,00
+- [x] Valores e prazos em arquivo de configuração
+- [x] CEP inválido ou inexistente gera erro claro

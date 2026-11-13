@@ -8,9 +8,10 @@ header {
 
 .logo-img,
 .navbar-brand img {
-    width: 100px;
+    width: 90px;
     height: auto;
     object-fit: contain;
+    transition: width 0.2s ease;
 }
 
 header p,
@@ -21,4 +22,66 @@ header a {
 .menu-mobile a {
     color: var(--base-estrutura);
     border-bottom: 1px solid var(--base-muted-foreground);
+}
+
+/* Garante alinhamento e responsividade perfeita no mobile sem quebra de linha */
+@media (max-width: 991.98px) {
+    header .navbar > .container,
+    header .navbar > .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        white-space: nowrap;
+        max-width: calc(100% - 130px);
+    }
+
+    header .navbar .d-flex.align-items-center {
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    header .navbar > .container,
+    header .navbar > .container-fluid {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .logo-img,
+    .navbar-brand img {
+        width: 55px;
+    }
+
+    .navbar-brand {
+        font-size: 1.05rem;
+        margin-right: 0.25rem;
+        max-width: calc(100% - 110px);
+    }
+
+    /* Reduz o tamanho dos botões de ação e ícones no mobile para caber perfeitamente sem quebrar */
+    header .navbar .btn,
+    header .navbar a.btn {
+        padding: 0.25rem 0.35rem !important;
+    }
+
+    header .navbar .btn.fs-4,
+    header .navbar a.btn.fs-4 {
+        font-size: 1.25rem !important;
+        line-height: 1 !important;
+    }
+
+    header .navbar .navbar-toggler {
+        padding: 0.25rem 0.35rem !important;
+    }
+
+    header .navbar .d-flex.align-items-center {
+        gap: 0.25rem !important;
+    }
 }
