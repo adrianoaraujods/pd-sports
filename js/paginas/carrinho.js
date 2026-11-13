@@ -96,6 +96,28 @@ function criarLinhaItem(item) {
     return tr;
 }
 
+/**
+ * Atualiza os valores do resumo do pedido e do badge do cabeçalho.
+ * @param {{ valorTotal?: number, totalItens?: number }} [resumo]
+ */
+export function atualizarResumo(resumo = {}) {
+    const totalItensNum = Number(resumo?.totalItens) || 0;
+    const valorTotalNum = Number(resumo?.valorTotal) || 0;
+
+    if (badgeTotalItens) {
+        badgeTotalItens.textContent = `${totalItensNum} ${totalItensNum === 1 ? "item" : "itens"}`;
+    }
+    if (resumoSubtotal) {
+        resumoSubtotal.textContent = moeda.format(valorTotalNum);
+    }
+    if (resumoQtdItens) {
+        resumoQtdItens.textContent = String(totalItensNum);
+    }
+    if (resumoTotal) {
+        resumoTotal.textContent = moeda.format(valorTotalNum);
+    }
+}
+
 export async function carregarCarrinho(mostrarSpinner = true) {
     const sessao = obterSessao();
     if (!sessao) {
@@ -109,7 +131,7 @@ export async function carregarCarrinho(mostrarSpinner = true) {
         `;
         secaoCarrinhoVazio.hidden = true;
         secaoCarrinhoConteudo.hidden = true;
-        badgeTotalItens.textContent = "0 itens";
+        atualizarResumo({ valorTotal: 0, totalItens: 0 });
         return;
     }
 
@@ -124,13 +146,13 @@ export async function carregarCarrinho(mostrarSpinner = true) {
         const vazio = detalhado.itens.length === 0;
         secaoCarrinhoVazio.hidden = !vazio;
         secaoCarrinhoConteudo.hidden = vazio;
-        badgeTotalItens.textContent = `${detalhado.totalItens} ${detalhado.totalItens === 1 ? "item" : "itens"}`;
 
-        if (vazio) return;
+        atualizarResumo(detalhado);
 
-        resumoSubtotal.textContent = moeda.format(detalhado.valorTotal);
-        resumoQtdItens.textContent = String(detalhado.totalItens);
-        resumoTotal.textContent = moeda.format(detalhado.valorTotal);
+        if (vazio) {
+            listaItensCarrinho.replaceChildren();
+            return;
+        }
 
         const fragmento = document.createDocumentFragment();
         for (const item of detalhado.itens) {

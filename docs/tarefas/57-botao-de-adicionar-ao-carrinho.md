@@ -1,6 +1,6 @@
 # 57: Botão de adicionar ao Carrinho
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 10 (sex 13/11)
 **Estimativa:** 1h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31, 40, 47, 50
 
-- [ ] Sem login, leva ao login e volta ao Produto
-- [ ] Mostra toast de sucesso ou erro
+- [x] Sem login, leva ao login e volta ao Produto
+- [x] Mostra toast de sucesso ou erro
