@@ -144,3 +144,54 @@
         height: 56px;
     }
 }
+
+/* Frete: formulário de CEP e resultado */
+#form-frete .form-control {
+    border-color: var(--light-card-border);
+}
+
+#form-frete .form-control:focus {
+    border-color: var(--base-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(65, 111, 168, 0.25);
+}
+
+#form-frete .form-control.is-invalid {
+    border-color: var(--bs-danger, #dc3545);
+}
+
+#form-frete .btn-secondary {
+    background-color: var(--base-secondary);
+    border: none;
+    color: var(--base-secondary-foreground);
+}
+
+#form-frete .btn-secondary:hover:not(:disabled) {
+    background-color: var(--base-secondary-hover);
+    color: var(--base-secondary-foreground);
+}
+
+#form-frete a {
+    color: var(--base-secondary);
+}
+
+.resultado-frete {
+    padding: 0.75rem;
+    border: 1px solid var(--light-card-border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.resultado-frete .endereco-frete {
+    color: var(--light-text-secondary);
+}
+
+.pd-badge-sucesso {
+    background-color: var(--bs-success-bg-subtle, #d1e7dd);
+    color: var(--bs-success-text-emphasis, #0a3622);
+    border: 1px solid var(--bs-success, #198754);
+}
+
+.frete-gratis {
+    color: var(--bs-success, #198754);
+}
