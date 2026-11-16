@@ -1,5 +1,7 @@
 import { buscarProdutoPorId, listarProdutos } from "../servicos/catalogo.js";
 import { criarCard } from "../componentes/card-produto.js";
+import { adicionarItem, exibirFeedback } from "../servicos/carrinho.js";
+import { obterSessao, PAPEL_ADMINISTRADOR } from "../servicos/sessao.js";
 
 const quantidadeProduto = document.querySelector("#quantidade-produto");
 const diminuirQuantidade = document.querySelector("#diminuir-quantidade");
@@ -41,9 +43,11 @@ export function obterVarianteSelecionada() {
 }
 
 function atualizarQuantidade(valor) {
-    quantidade = Math.max(1, valor);
+    const limite = produtoAtual?.estoque > 0 ? produtoAtual.estoque : Infinity;
+    quantidade = Math.min(limite, Math.max(1, valor));
     quantidadeProduto.value = String(quantidade);
-    diminuirQuantidade.disabled = quantidade === 1;
+    diminuirQuantidade.disabled = quantidade <= 1;
+    aumentarQuantidade.disabled = quantidade >= limite;
 }
 
 diminuirQuantidade.addEventListener("click", () => {
@@ -52,6 +56,61 @@ diminuirQuantidade.addEventListener("click", () => {
 
 aumentarQuantidade.addEventListener("click", () => {
     atualizarQuantidade(quantidade + 1);
+});
+
+botaoAdicionarCarrinho.addEventListener("click", async () => {
+    if (!produtoAtual) return;
+
+    if (produtoAtual.estoque <= 0) {
+        exibirFeedback("Este produto está indisponível no momento.", "erro");
+        return;
+    }
+
+    const temVariantes = produtoTemVariantes(produtoAtual);
+    const variante = obterVarianteSelecionada();
+    if (temVariantes && !variante) {
+        avisoVariante.textContent = "Selecione uma variante para continuar.";
+        avisoVariante.className = "text-danger d-block mt-1";
+        exibirFeedback("Selecione uma variante antes de adicionar ao carrinho.", "erro");
+        return;
+    }
+
+    const sessao = obterSessao();
+    if (!sessao) {
+        const destino = window.location.pathname + window.location.search;
+        window.location.assign(`./login.html?redirect=${encodeURIComponent(destino)}`);
+        return;
+    }
+
+    if (sessao.papel === PAPEL_ADMINISTRADOR) {
+        exibirFeedback("Administradores não realizam compras.", "info");
+        return;
+    }
+
+    const conteudoOriginal = botaoAdicionarCarrinho.innerHTML;
+    botaoAdicionarCarrinho.disabled = true;
+    botaoAdicionarCarrinho.innerHTML = `
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+        Adicionando...
+    `;
+
+    try {
+        await adicionarItem(sessao.id, {
+            produto_id: produtoAtual.id,
+            modalidade_id: produtoAtual.modalidade_id,
+            variante: variante || "Único",
+            quantidade: quantidade,
+        });
+    } catch (erro) {
+        exibirFeedback(
+            erro.message || "Não foi possível adicionar o produto ao carrinho. Tente novamente.",
+            "erro"
+        );
+        console.error("Erro ao adicionar ao carrinho:", erro);
+    } finally {
+        botaoAdicionarCarrinho.innerHTML = conteudoOriginal;
+        botaoAdicionarCarrinho.disabled = false;
+    }
 });
 
 function configurarVariantes(produto) {

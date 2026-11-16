@@ -20,6 +20,7 @@ export function exibirFeedback(mensagem, tipo = "info") {
     container = document.createElement("div");
     container.id = "toast-container";
     container.className = "toast-container position-fixed top-0 end-0 p-3";
+    container.style.zIndex = "1100";
     document.body.appendChild(container);
   }
 
@@ -38,6 +39,44 @@ export function exibirFeedback(mensagem, tipo = "info") {
   const toast = new bootstrap.Toast(el, { delay: 4000 });
   toast.show();
   el.addEventListener("hidden.bs.toast", () => el.remove());
+}
+
+/** Erro lançado quando a quantidade pedida ultrapassa o estoque do Produto. */
+export class EstoqueInsuficienteError extends Error {
+  constructor(mensagem, disponivel) {
+    super(mensagem);
+    this.name = "EstoqueInsuficienteError";
+    this.disponivel = disponivel;
+  }
+}
+
+/**
+ * Valida se a nova quantidade de uma Variante cabe no estoque do Produto.
+ * O estoque é do Produto, então a soma das Variantes no carrinho não pode ultrapassá-lo.
+ * @param {object} carrinho
+ * @param {string} produto_id
+ * @param {string} variante
+ * @param {number} novaQuantidade Quantidade final desejada para essa Variante
+ * @throws {EstoqueInsuficienteError}
+ */
+async function validarEstoque(carrinho, produto_id, variante, novaQuantidade) {
+  const produto = await buscarProdutoPorId(produto_id);
+  if (!produto) return;
+
+  const estoque = Math.max(0, Number(produto.estoque) || 0);
+  const outras = carrinho.itens
+    .filter((i) => i.produto_id === produto_id && i.variante !== variante)
+    .reduce((soma, i) => soma + (Number(i.quantidade) || 0), 0);
+
+  if (outras + novaQuantidade <= estoque) return;
+
+  const restante = Math.max(0, estoque - outras);
+  const mensagem =
+    estoque === 0
+      ? `"${produto.nome}" está sem estoque.`
+      : `Limite de estoque atingido: só há ${estoque} ${estoque === 1 ? "unidade" : "unidades"} de "${produto.nome}" disponíveis.`;
+  exibirFeedback(mensagem, "erro");
+  throw new EstoqueInsuficienteError(mensagem, restante);
 }
 
 /** Formata a variante garantindo "Único" como padrão. */
@@ -106,6 +145,13 @@ export async function adicionarItem(
     (i) => i.produto_id === produto_id && i.variante === varianteFinal
   );
 
+  await validarEstoque(
+    carrinho,
+    produto_id,
+    varianteFinal,
+    (existente?.quantidade ?? 0) + qtd
+  );
+
   if (existente) {
     existente.quantidade += qtd;
   } else {
@@ -144,6 +190,9 @@ export async function alterarQuantidadeItem(
   );
 
   if (item) {
+    if (qtd > item.quantidade) {
+      await validarEstoque(carrinho, produto_id, varianteFinal, qtd);
+    }
     item.quantidade = qtd;
     const resultado = await salvarCarrinho(carrinho);
     exibirFeedback("Quantidade atualizada!", "info");
@@ -182,6 +231,35 @@ export async function esvaziarCarrinho(usuarioId) {
 }
 
 /**
+ * Finaliza a compra do usuário:
+ * Valida o carrinho, captura os dados detalhados para confirmação e esvazia o carrinho na MockAPI.
+ * @param {string|number} usuarioId
+ * @returns {Promise<{ sucesso: boolean, itens: Array, totalItens: number, valorTotal: number, data: string }>}
+ */
+export async function finalizarCompra(usuarioId) {
+  const carrinho = await obterCarrinho(usuarioId);
+
+  if (!carrinho.itens || carrinho.itens.length === 0) {
+    throw new Error("Não é possível finalizar a compra com o carrinho vazio.");
+  }
+
+  const detalhado = await detalharCarrinho(carrinho);
+  const resumoConfirmacao = {
+    sucesso: true,
+    itens: detalhado.itens,
+    totalItens: detalhado.totalItens,
+    valorTotal: detalhado.valorTotal,
+    data: new Date().toISOString(),
+  };
+
+  carrinho.itens = [];
+  await salvarCarrinho(carrinho);
+
+  exibirFeedback("Compra finalizada com sucesso! O carrinho foi esvaziado.", "sucesso");
+  return resumoConfirmacao;
+}
+
+/**
  * Calcula o total do carrinho a partir dos preços atuais no catálogo.
  * @param {object|object[]} carrinhoOuItens
  * @returns {Promise<number>}
@@ -209,6 +287,14 @@ export async function detalharCarrinho(carrinhoOuItens) {
   let valorTotal = 0;
   let totalItens = 0;
 
+  const totalPorProduto = new Map();
+  for (const item of itens) {
+    totalPorProduto.set(
+      item.produto_id,
+      (totalPorProduto.get(item.produto_id) ?? 0) + (Number(item.quantidade) || 0)
+    );
+  }
+
   const itensDetalhados = await Promise.all(
     itens.map(async (item) => {
       const produto = await buscarProdutoPorId(item.produto_id);
@@ -224,6 +310,9 @@ export async function detalharCarrinho(carrinhoOuItens) {
         produto: produto ?? null,
         preco_unitario: preco,
         subtotal,
+        limite_atingido: produto
+          ? totalPorProduto.get(item.produto_id) >= (Number(produto.estoque) || 0)
+          : false,
       };
     })
   );
