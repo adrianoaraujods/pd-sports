@@ -13,7 +13,7 @@ const status = document.querySelector("#status-produtos");
 const ordenacao = document.querySelector("#ordenacao");
 
 function renderizarProdutos(produtos) {
-    const fragmento = document.createDocumentFragment();////////////!!!!!!!!!!///////////
+    const fragmento = document.createDocumentFragment();
 
     for (const produto of produtos) {
         fragmento.appendChild(criarCard(produto));
@@ -25,7 +25,7 @@ function renderizarProdutos(produtos) {
 async function iniciarCatalogo() {
 
     camposBusca.forEach((campo) => {
-        campo.disabled = true;////////////!!!!!!!!!!///////////
+        campo.disabled = true;
     });
 
     status.textContent = "Carregando produtos...";
@@ -73,7 +73,7 @@ function aplicarBusca() {
 
         const correspondeAModalidade =
             modalidadeSelecionada === "" ||
-            String(produto.modalidade_id) === modalidadeSelecionada;////////////!!!!!!!!!!///////////
+            String(produto.modalidade_id) === modalidadeSelecionada;
 
         return correspondeAoNome && correspondeAModalidade;
     });
