@@ -87,6 +87,28 @@ function renderizarProdutos(produtos) {
     lista.replaceChildren(fragmento);
 }
 
+/**
+ * Retorna os itens da paginação: a primeira página, a atual com uma vizinha
+ * de cada lado e a última. Nas pontas, a janela mantém três páginas.
+ * Ex.: atual 1 de 12  → [1, 2, 3, "...", 12]
+ *      atual 6 de 12  → [1, "...", 5, 6, 7, "...", 12]
+ *      atual 12 de 12 → [1, "...", 10, 11, 12]
+ */
+function calcularPaginasVisiveis(atual, total) {
+    let inicio = Math.max(2, Math.min(atual - 1, total - 2));
+    let fim = Math.min(total - 1, Math.max(atual + 1, 3));
+
+    if (inicio === 3) inicio = 2;
+    if (fim === total - 2) fim = total - 1;
+
+    const resultado = [1];
+    if (inicio > 2) resultado.push("...");
+    for (let p = inicio; p <= fim; p++) resultado.push(p);
+    if (fim < total - 1) resultado.push("...");
+    if (total > 1) resultado.push(total);
+    return resultado;
+}
+
 function renderizarPaginacao(totalPaginas) {
     if (totalPaginas <= 1) {
         navPaginacao.innerHTML = "";
@@ -99,10 +121,17 @@ function renderizarPaginacao(totalPaginas) {
         <button class="page-link" data-pagina="${paginaAtual - 1}" ${paginaAtual <= 1 ? "disabled" : ""}>Anterior</button>
     </li>`;
 
-    for (let i = 1; i <= totalPaginas; i++) {
-        const ativo = i === paginaAtual;
+    for (const pagina of calcularPaginasVisiveis(paginaAtual, totalPaginas)) {
+        if (pagina === "...") {
+            itens += `<li class="page-item disabled" aria-hidden="true">
+                <span class="page-link">…</span>
+            </li>`;
+            continue;
+        }
+
+        const ativo = pagina === paginaAtual;
         itens += `<li class="page-item ${ativo ? "active" : ""}">
-            <button class="page-link" data-pagina="${i}" ${ativo ? 'aria-current="page"' : ""}>${i}</button>
+            <button class="page-link" data-pagina="${pagina}" ${ativo ? 'aria-current="page"' : ""}>${pagina}</button>
         </li>`;
     }
 
