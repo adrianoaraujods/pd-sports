@@ -107,21 +107,21 @@ function criarLinhaItem(item) {
  * @param {{ valorTotal?: number, totalItens?: number }} [resumo]
  */
 export function atualizarResumo(resumo = {}) {
-    const totalItensNum = Number(resumo?.totalItens) || 0;
-    const valorTotalNum = Number(resumo?.valorTotal) || 0;
+  const totalItensNum = Number(resumo?.totalItens) || 0;
+  const valorTotalNum = Number(resumo?.valorTotal) || 0;
 
-    if (badgeTotalItens) {
-        badgeTotalItens.textContent = `${totalItensNum} ${totalItensNum === 1 ? "item" : "itens"}`;
-    }
-    if (resumoSubtotal) {
-        resumoSubtotal.textContent = moeda.format(valorTotalNum);
-    }
-    if (resumoQtdItens) {
-        resumoQtdItens.textContent = String(totalItensNum);
-    }
-    if (resumoTotal) {
-        resumoTotal.textContent = moeda.format(valorTotalNum);
-    }
+  if (badgeTotalItens) {
+    badgeTotalItens.textContent = `${totalItensNum} ${totalItensNum === 1 ? "item" : "itens"}`;
+  }
+  if (resumoSubtotal) {
+    resumoSubtotal.textContent = moeda.format(valorTotalNum);
+  }
+  if (resumoQtdItens) {
+    resumoQtdItens.textContent = String(totalItensNum);
+  }
+  if (resumoTotal) {
+    resumoTotal.textContent = moeda.format(valorTotalNum);
+  }
 }
 
 export async function carregarCarrinho(mostrarSpinner = true) {
@@ -237,36 +237,19 @@ listaItensCarrinho.addEventListener("click", async (evento) => {
 });
 
 const btnFinalizarCompra = document.querySelector("#btn-finalizar-compra");
-if (btnFinalizarCompra) {
-  btnFinalizarCompra.addEventListener("click", async () => {
-    const sessao = obterSessao();
-    if (!sessao) {
-      const destino = window.location.pathname + window.location.search;
-      window.location.assign(`./login.html?redirect=${encodeURIComponent(destino)}`);
-      return;
-    }
 
-    if (!confirm("Deseja confirmar e finalizar a sua compra?")) {
-      return;
-    }
+btnFinalizarCompra?.addEventListener("click", () => {
+  const sessao = obterSessao();
 
-    const textoOriginal = btnFinalizarCompra.innerHTML;
-    btnFinalizarCompra.disabled = true;
-    btnFinalizarCompra.innerHTML = `
-      <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-      Finalizando...
-    `;
+  if (!sessao) {
+    location.assign(
+      "./login.html?redirect=" +
+      encodeURIComponent("/paginas/finalizacao.html")
+    );
+    return;
+  }
 
-    try {
-      await finalizarCompra(sessao.id);
-      await carregarCarrinho(false);
-    } catch (erro) {
-      exibirFeedback(erro.message || "Não foi possível finalizar a compra.", "erro");
-    } finally {
-      btnFinalizarCompra.innerHTML = textoOriginal;
-      btnFinalizarCompra.disabled = false;
-    }
-  });
-}
+  location.assign("./finalizacao.html");
+});
 
 carregarCarrinho();
