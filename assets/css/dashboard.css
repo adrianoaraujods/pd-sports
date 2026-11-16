@@ -1,0 +1,36 @@
+/* Dashboard administrativo (Visão Geral) */
+
+.titulo-dashboard {
+    font-family: var(--font-titulo);
+    font-size: var(--titulo-lg);
+}
+
+/* Cards de métrica */
+.metrica {
+    padding: 16px;
+    border: 1px solid var(--base-estrutura);
+    border-radius: 4px;
+    background-color: var(--base-neutral);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: var(--font-texto);
+}
+
+.metrica-rotulo {
+    margin: 0 0 4px;
+    font-family: var(--font-texto);
+    font-size: var(--texto-md);
+    font-weight: var(--font-peso-regular);
+}
+
+.metrica-valor {
+    margin: 0;
+    font-family: var(--font-titulo);
+    font-size: var(--texto-lg);
+    color: var(--base-estrutura);
+    overflow-wrap: anywhere;
+}
+
+/* `d-flex` do Bootstrap sobrescreveria o atributo `hidden` do alerta de erro. */
+#erro-dashboard[hidden] {
+    display: none !important;
+}

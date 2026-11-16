@@ -13,6 +13,8 @@
         integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/navbar.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/estilos.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -63,7 +65,48 @@
         </nav>
     </header>
 
-    <main class="container my-5 flex-grow-1"></main>
+    <main class="container my-5 flex-grow-1">
+        <h1 class="titulo-dashboard mb-4">Visão Geral</h1>
+
+        <div id="erro-dashboard" class="alert alert-danger d-flex align-items-center justify-content-between gap-3" role="alert" hidden>
+            <span id="erro-dashboard-mensagem"></span>
+            <button type="button" class="btn btn-outline-danger btn-sm" id="tentar-novamente">Tentar novamente</button>
+        </div>
+
+        <!-- Métricas -->
+        <section aria-label="Métricas" class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3" aria-busy="true" id="metricas">
+            <div class="col">
+                <article class="metrica h-100">
+                    <h2 class="metrica-rotulo">Total de produtos</h2>
+                    <p class="metrica-valor" data-metrica="totalProdutos">—</p>
+                </article>
+            </div>
+            <div class="col">
+                <article class="metrica h-100">
+                    <h2 class="metrica-rotulo">Itens em destaque</h2>
+                    <p class="metrica-valor" data-metrica="totalDestaques">—</p>
+                </article>
+            </div>
+            <div class="col">
+                <article class="metrica h-100">
+                    <h2 class="metrica-rotulo">Usuários</h2>
+                    <p class="metrica-valor" data-metrica="totalUsuarios">—</p>
+                </article>
+            </div>
+            <div class="col">
+                <article class="metrica h-100">
+                    <h2 class="metrica-rotulo">Valor em carrinhos</h2>
+                    <p class="metrica-valor" data-metrica="valorEmCarrinhos">—</p>
+                </article>
+            </div>
+            <div class="col">
+                <article class="metrica h-100">
+                    <h2 class="metrica-rotulo">Carrinhos em aberto</h2>
+                    <p class="metrica-valor" data-metrica="carrinhosEmAberto">—</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer text-white">
         <div class="container py-4">
