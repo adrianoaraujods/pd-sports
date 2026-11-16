@@ -231,6 +231,35 @@ export async function esvaziarCarrinho(usuarioId) {
 }
 
 /**
+ * Finaliza a compra do usuário:
+ * Valida o carrinho, captura os dados detalhados para confirmação e esvazia o carrinho na MockAPI.
+ * @param {string|number} usuarioId
+ * @returns {Promise<{ sucesso: boolean, itens: Array, totalItens: number, valorTotal: number, data: string }>}
+ */
+export async function finalizarCompra(usuarioId) {
+  const carrinho = await obterCarrinho(usuarioId);
+
+  if (!carrinho.itens || carrinho.itens.length === 0) {
+    throw new Error("Não é possível finalizar a compra com o carrinho vazio.");
+  }
+
+  const detalhado = await detalharCarrinho(carrinho);
+  const resumoConfirmacao = {
+    sucesso: true,
+    itens: detalhado.itens,
+    totalItens: detalhado.totalItens,
+    valorTotal: detalhado.valorTotal,
+    data: new Date().toISOString(),
+  };
+
+  carrinho.itens = [];
+  await salvarCarrinho(carrinho);
+
+  exibirFeedback("Compra finalizada com sucesso! O carrinho foi esvaziado.", "sucesso");
+  return resumoConfirmacao;
+}
+
+/**
  * Calcula o total do carrinho a partir dos preços atuais no catálogo.
  * @param {object|object[]} carrinhoOuItens
  * @returns {Promise<number>}
