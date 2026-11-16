@@ -25,6 +25,12 @@ function obterBusca() {
     return document.querySelector('input[name="q"]')?.value ?? "";
 }
 
+function definirBuscaHabilitada(habilitada) {
+    document.querySelectorAll('input[name="q"]').forEach((campo) => {
+        campo.disabled = !habilitada;
+    });
+}
+
 function preencherBusca(termo) {
     document.querySelectorAll('input[name="q"]').forEach((campo) => {
         campo.value = termo;
@@ -236,6 +242,7 @@ window.addEventListener("popstate", () => {
 });
 
 async function iniciarCatalogo() {
+    definirBuscaHabilitada(false);
     status.textContent = "Carregando produtos...";
     lista.setAttribute("aria-busy", "true");
 
@@ -248,6 +255,7 @@ async function iniciarCatalogo() {
         paginaAtual = estado.pagina;
 
         preencherBusca(estado.q);
+        definirBuscaHabilitada(true);
         ordenacao.value = estado.ordem;
         ordenacao.disabled = false;
 
