@@ -1,6 +1,6 @@
 # 62: Paginação: estado e URL
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 13 (seg 16/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31, 43, 44, 45
 
-- [ ] Mudar filtro, busca ou ordenação volta à primeira página
-- [ ] Compartilhar a URL reabre a mesma página
+- [x] Mudar filtro, busca ou ordenação volta à primeira página
+- [x] Compartilhar a URL reabre a mesma página

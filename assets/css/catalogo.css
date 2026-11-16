@@ -40,3 +40,34 @@
     background-color: var(--light-card-background);
     border-color: var(--light-text-secondary);
 }
+
+/* Paginação */
+.pagination {
+    --bs-pagination-color: var(--base-estrutura);
+    --bs-pagination-bg: var(--base-neutral);
+    --bs-pagination-border-color: var(--light-card-border);
+    --bs-pagination-hover-color: var(--base-estrutura);
+    --bs-pagination-hover-bg: var(--base-neutral-hover);
+    --bs-pagination-hover-border-color: var(--light-card-border);
+    --bs-pagination-focus-color: var(--base-estrutura);
+    --bs-pagination-focus-bg: var(--base-neutral-hover);
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(244, 188, 29, 0.25);
+    --bs-pagination-active-color: var(--base-primary-foreground);
+    --bs-pagination-active-bg: var(--base-primary);
+    --bs-pagination-active-border-color: var(--base-primary);
+    --bs-pagination-disabled-color: var(--base-muted-foreground);
+    --bs-pagination-disabled-bg: transparent;
+    --bs-pagination-disabled-border-color: var(--light-card-border);
+}
+
+.pagination .page-link {
+    border-radius: 4px;
+    font-family: var(--font-texto);
+    font-size: var(--texto-md);
+    min-width: 40px;
+    text-align: center;
+}
+
+.pagination .page-item.active .page-link {
+    font-weight: 600;
+}
