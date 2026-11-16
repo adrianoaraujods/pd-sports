@@ -1,5 +1,6 @@
 import { carregarCatalogo } from "../servicos/catalogo.js";
 import { protegerRotaAdministrativa } from "../servicos/admin.js";
+import { excluirProduto } from "../servicos/produtos.js";
 
 const tabela = document.querySelector("#lista-produtos")
 const modeloLinha = tabela.querySelector("tr").cloneNode(true)
@@ -8,6 +9,41 @@ const filtroModalidade = document.querySelector("#filtro-modalidade");
 const buscaProduto = document.querySelector("#busca-produto");
 
 let todosProdutos = [];
+
+let produtoParaExcluir = null;
+let excluindo = false;
+
+const elementoModal = document.querySelector("#modalExcluir");
+const modalExcluir = new bootstrap.Modal(elementoModal);
+const nomeProdutoExcluir = document.querySelector("#nomeProdutoExcluir");
+const erroExcluir = document.querySelector("#erroExcluir");
+const confirmarExclusão = document.querySelector("#confirmarExclusao");
+const botoesFechar = elementoModal.querySelectorAll('[data-bs-dismiss="modal"]');
+
+const toastExclusao = new bootstrap.Toast(document.querySelector("#toastExclusao"));
+
+
+function abrirExclusao(produto) {
+    produtoParaExcluir = produto;
+    nomeProdutoExcluir.textContent = produto.nome;
+    erroExcluir.textContent = "";
+    erroExcluir.classList.add("d-none");
+    modalExcluir.show();
+}
+
+
+elementoModal.addEventListener("hide.bs.modal", (evento) => {
+    if (excluindo) evento.preventDefault();
+});
+
+
+elementoModal.addEventListener("hidden.bs.modal", () => {
+    produtoParaExcluir = null;
+})
+
+
+
+
 
 const moeda = new Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -52,6 +88,10 @@ function criarLinha(produto) {
         location.assign(`./produto.html?id=${encodeURIComponent(produto.id)}`);
     });
     excluir.setAttribute("aria-label", `Excluir ${produto.nome}`);
+
+    excluir.addEventListener("click", () => {
+        abrirExclusao(produto);
+    })
 
     return linha;
 }
@@ -135,9 +175,58 @@ async function carregarTabela() {
     }
 }
 
+
+
+
+
+
+async function confirmarExclusaoProduto() {
+    if (!produtoParaExcluir || excluindo) return;
+
+    const produto = produtoParaExcluir;
+
+    excluindo = true;
+    confirmarExclusão.disabled = true;
+    confirmarExclusão.textContent = "Excluindo...";
+    botoesFechar.forEach((botao) => {
+        botao.disabled = true;
+    });
+    erroExcluir.classList.add("d-none");
+
+    try {
+        await excluirProduto(produto.id);
+    } catch (erro) {
+        erroExcluir.textContent = erro.message || "Não foi possível excluir o produto.";
+        erroExcluir.classList.remove("d-none");
+        return;
+    } finally {
+        excluindo = false;
+        confirmarExclusão.disabled = false;
+        confirmarExclusão.textContent = "Excluir";
+        botoesFechar.forEach((botao) => {
+            botao.disabled = false;
+        });
+    }
+
+    todosProdutos = todosProdutos.filter((p) => p.id !== produto.id);
+    aplicarFiltros();
+
+    modalExcluir.hide();
+    toastExclusao.show();
+
+}
+
+
+
+
+
+
+
 if (protegerRotaAdministrativa()) {
     filtroModalidade.addEventListener("change", aplicarFiltros);
     buscaProduto.addEventListener("input", aplicarFiltros);
+
+    confirmarExclusao.addEventListener("click", confirmarExclusaoProduto);
 
     carregarTabela();
 }
