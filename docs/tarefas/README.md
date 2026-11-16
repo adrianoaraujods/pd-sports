@@ -70,7 +70,7 @@ As tarefas não têm responsável definido; a atribuição é feita no próprio 
 | 62 | ⬜ | [Paginação: estado e URL](62-paginacao-estado-e-url.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 43, 44, 45 |
 | 63 | ⬜ | [Admin: exclusão de Produto](63-admin-exclusao-de-produto.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 52 |
 | 64 | ⬜ | [Limite de estoque no Carrinho](64-limite-de-estoque-no-carrinho.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 40, 55 |
-| 65 | ⛔ | [Finalização: esvaziar Carrinho e confirmar](65-finalizacao-esvaziar-carrinho-e-confirmar.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 56 |
+| 65 | ✅ | [Finalização: esvaziar Carrinho e confirmar](65-finalizacao-esvaziar-carrinho-e-confirmar.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 56 |
 | 66 | ⛔ | [Frete na tela do Carrinho](66-frete-na-tela-do-carrinho.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 56, 60 |
 | 67 | ⛔ | [Tela de resumo da Finalização da Compra](67-tela-de-resumo-da-finalizacao-da-compra.md) | Dia 14 (ter 17/11) | 2h | 28, 30, 31, 65, 66 |
 | 68 | ⬜ | [Dashboard: cálculo das métricas](68-dashboard-calculo-das-metricas.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 51 |
