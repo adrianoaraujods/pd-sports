@@ -54,8 +54,8 @@ header a {
 }
 
 .menu-mobile a {
-    color: var(--base-estrutura);
-    border-bottom: 1px solid var(--base-muted-foreground);
+    color: var(--texto-principal);
+    border-bottom: 1px solid var(--card-borda);
 }
 
 /* Garante alinhamento e responsividade perfeita no mobile sem quebra de linha */

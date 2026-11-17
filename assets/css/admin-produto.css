@@ -2,7 +2,7 @@
 
 .form-control,
 .form-select {
-  border-color: var(--light-card-border);
+  border-color: var(--card-borda);
 }
 
 .form-control:focus,
@@ -27,13 +27,14 @@
   align-items: center;
   gap: 0.25rem;
   padding: 0.125rem 0.5rem;
-  border: 1px solid var(--base-neutral-foreground);
+  border: 1px solid var(--texto-principal);
   font-size: 0.875rem;
 }
 
 .chip-variante button {
   border: 0;
   background: none;
+  color: inherit;
   line-height: 1;
   padding: 0;
 }
@@ -41,8 +42,8 @@
 .previa-imagem {
   width: 200px;
   aspect-ratio: 1;
-  border: 1px solid var(--base-neutral-foreground);
-  background-color: var(--light-card-background);
+  border: 1px solid var(--texto-principal);
+  background-color: var(--card-fundo);
 }
 
 .previa-imagem img {

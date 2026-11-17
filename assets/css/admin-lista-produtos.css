@@ -1,11 +1,11 @@
 @import url('./variaveis.css');
 
 .inputs {
-    background-color: var(--light-card-background);
+    background-color: var(--card-fundo);
     outline: none;
-    border: 1px solid var(--light-card-border);
+    border: 1px solid var(--card-borda);
     padding: 10px;
-    color: var(--base-muted-foreground);
+    color: var(--texto-principal);
     border-radius: 4px;
 }
 
