@@ -40,7 +40,7 @@
 /* Tipografia e espaçamento dos textos do card no Figma. */
 .product-card {
     font-family: 'Vend Sans', sans-serif;
-    color: var(--base-primary-foreground);
+    color: var(--texto-principal);
     gap: 9px;
 }
 

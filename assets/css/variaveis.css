@@ -66,11 +66,32 @@
     /* Espaçamento */
     --font-entrelinha: normal;
     --font-espacamento: 0;
+
+
+
+
+
+
+    --pagina-fundo: #FFFFFF;
+    --texto-principal: #19222C;
+    --card-fundo: var(--light-card-background);
+    --card-borda: var(--light-card-border);
+    --texto-secundario: var(--light-text-secondary);
 }
 
 
+:root[data-bs-theme="dark"] {
+    --pagina-fundo: #101820;
+    --texto-principal: #F5F5F5;
+    --card-fundo: var(--dark-card-background);
+    --card-borda: var(--dark-card-border);
+    --texto-secundario: var(--dark-text-secondary);
+}
 
-h1, h2, h3{
+
+h1,
+h2,
+h3 {
     font-family: var(--font-titulo);
     font-size: var(--texto-lg);
 }

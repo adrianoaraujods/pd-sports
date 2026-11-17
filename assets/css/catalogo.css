@@ -26,7 +26,7 @@
 }
 
 .outer-container {
-    border-bottom: 2px solid var(--light-card-border);
+    border-bottom: 2px solid var(--card-borda);
 }
 
 
@@ -37,27 +37,27 @@
 
 
 .ordering-dropdown {
-    background-color: var(--light-card-background);
-    border-color: var(--light-text-secondary);
+    background-color: var(--card-fundo);
+    border-color: var(--texto-secundario);
 }
 
 /* Paginação */
 .pagination {
-    --bs-pagination-color: var(--base-estrutura);
-    --bs-pagination-bg: var(--base-neutral);
-    --bs-pagination-border-color: var(--light-card-border);
-    --bs-pagination-hover-color: var(--base-estrutura);
-    --bs-pagination-hover-bg: var(--base-neutral-hover);
-    --bs-pagination-hover-border-color: var(--light-card-border);
-    --bs-pagination-focus-color: var(--base-estrutura);
-    --bs-pagination-focus-bg: var(--base-neutral-hover);
+    --bs-pagination-color: var(--texto-principal);
+    --bs-pagination-bg: var(--pagina-fundo);
+    --bs-pagination-border-color: var(--card-borda);
+    --bs-pagination-hover-color: var(--texto-principal);
+    --bs-pagination-hover-bg: var(--bs-tertiary-bg);
+    --bs-pagination-hover-border-color: var(--card-borda);
+    --bs-pagination-focus-color: var(--texto-principal);
+    --bs-pagination-focus-bg: var(--bs-tertiary-bg);
     --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(244, 188, 29, 0.25);
     --bs-pagination-active-color: var(--base-primary-foreground);
     --bs-pagination-active-bg: var(--base-primary);
     --bs-pagination-active-border-color: var(--base-primary);
-    --bs-pagination-disabled-color: var(--base-muted-foreground);
+    --bs-pagination-disabled-color: var(--texto-secundario);
     --bs-pagination-disabled-bg: transparent;
-    --bs-pagination-disabled-border-color: var(--light-card-border);
+    --bs-pagination-disabled-border-color: var(--card-borda);
 }
 
 .pagination .page-link {
