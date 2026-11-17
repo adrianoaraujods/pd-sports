@@ -1,0 +1,19 @@
+/* Detalhes da identidade visual que não têm utilitário equivalente no Bootstrap. */
+.finalizacao,
+.finalizacao .font-texto {
+    font-family: var(--font-texto);
+}
+
+.finalizacao .pedido-resumo {
+    background-color: var(--light-card-background);
+}
+
+.finalizacao .btn-secondary {
+    --bs-btn-bg: var(--base-secondary);
+    --bs-btn-border-color: var(--base-secondary);
+    --bs-btn-hover-bg: var(--base-secondary-hover);
+    --bs-btn-hover-border-color: var(--base-secondary-hover);
+    --bs-btn-active-bg: var(--base-secondary);
+    --bs-btn-active-border-color: var(--base-secondary);
+    --bs-btn-color: var(--base-secondary-foreground);
+}
