@@ -14,11 +14,11 @@
 .seletor-quantidade {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--light-card-border);
+    border: 1px solid var(--card-borda);
     border-radius: 4px;
     overflow: hidden;
-    background-color: var(--base-neutral);
-    color: var(--base-neutral-foreground);
+    background-color: var(--pagina-fundo);
+    color: var(--texto-principal);
 }
 
 .quantidade-botao {
@@ -33,6 +33,7 @@
 
 .quantidade-botao:hover:not(:disabled) {
     background-color: var(--base-primary-hover);
+    color: var(--base-primary-foreground);
 }
 
 .quantidade-botao:focus-visible {

@@ -2,6 +2,7 @@
 <html lang="pt-br" hidden>
   <head>
     <meta charset="UTF-8" />
+    <script src="../../js/tema.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produto | PD Sports</title>
     <link rel="icon" type="image/png" href="../../assets/imagens/logo.png" />
@@ -35,6 +36,10 @@
           <div
             class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last"
           >
+            <button type="button" class="btn text-white" data-alternar-tema
+                aria-label="Alternar tema claro e escuro">
+                <i class="bi bi-circle-half" aria-hidden="true"></i>
+            </button>
             <button
               class="btn text-white fs-4 lh-1 p-2 d-lg-none"
               type="button"
@@ -292,7 +297,7 @@
         <div class="d-flex justify-content-end gap-2 mt-4">
           <a
             href="./admin-lista-produtos.html"
-            class="btn btn-outline-dark"
+            class="btn btn-outline-tema"
             id="botaoCancelar"
             >Cancelar</a
           >

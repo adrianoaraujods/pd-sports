@@ -74,6 +74,10 @@ function montarNavbar(sessao) {
         </a>
 
         <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+          <button type="button" class="btn text-white" data-alternar-tema
+              aria-label="Alternar tema claro e escuro">
+              <i class="bi bi-circle-half" aria-hidden="true"></i>
+          </button>
           <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
               data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
               <i class="bi bi-search" aria-hidden="true"></i>

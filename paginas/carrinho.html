@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="../js/tema.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras | PD Sports</title>
     <link rel="icon" type="image/png" href="../assets/imagens/logo.png">
@@ -29,6 +30,10 @@
                 </a>
 
                 <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+                  <button type="button" class="btn text-white" data-alternar-tema
+                      aria-label="Alternar tema claro e escuro">
+                      <i class="bi bi-circle-half" aria-hidden="true"></i>
+                  </button>
                     <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false"
                         aria-label="Abrir busca">
@@ -110,7 +115,7 @@
                     <div class="card border-0 shadow-sm">
                         <div class="table-responsive">
                             <table class="table align-middle mb-0" id="tabela-carrinho">
-                                <thead class="table-light">
+                                <thead>
                                     <tr>
                                         <th scope="col" style="min-width: 200px;">Produto</th>
                                         <th scope="col" style="min-width: 90px;">Variante</th>

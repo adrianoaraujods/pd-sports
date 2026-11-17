@@ -66,9 +66,9 @@ ul li {
 
 /* Branca com borda preta */
 .pd-badge-neutral {
-    background-color: var(--base-neutral);
-    color: var(--base-neutral-foreground);
-    border: 1px solid var(--base-neutral-foreground);
+    background-color: var(--pagina-fundo);
+    color: var(--texto-principal);
+    border: 1px solid var(--texto-principal);
 }
 
 /* Modalidade: azul-claro, borda azul e cantos retos */
@@ -77,6 +77,57 @@ ul li {
     gap: 10px;
     border: 1px solid var(--base-secondary);
     border-radius: 0;
-    background-color: var(--base-neutral-hover);
-    color: var(--base-neutral-foreground);
+    background-color: var(--bs-tertiary-bg);
+    color: var(--texto-principal);
+}
+/* Liga os componentes Bootstrap aos tokens do tema da página. */
+:root,
+:root[data-bs-theme="light"],
+:root[data-bs-theme="dark"] {
+    --bs-body-bg: var(--pagina-fundo);
+    --bs-body-color: var(--texto-principal);
+    --bs-secondary-color: var(--texto-secundario);
+    --bs-border-color: var(--card-borda);
+}
+
+body {
+    background-color: var(--pagina-fundo);
+    color: var(--texto-principal);
+}
+
+.card {
+    --bs-card-bg: var(--card-fundo);
+    --bs-card-color: var(--texto-principal);
+    --bs-card-border-color: var(--card-borda);
+}
+
+.table {
+    --bs-table-bg: var(--pagina-fundo);
+    --bs-table-color: var(--texto-principal);
+    --bs-table-border-color: var(--card-borda);
+}
+
+.table thead {
+    --bs-table-bg: var(--card-fundo);
+    --bs-table-color: var(--texto-principal);
+}
+
+.modal-content {
+    --bs-modal-bg: var(--pagina-fundo);
+    --bs-modal-color: var(--texto-principal);
+    --bs-modal-border-color: var(--card-borda);
+}
+
+/* Ações neutras que precisam acompanhar o contraste do tema. */
+.btn-outline-tema {
+    --bs-btn-color: var(--texto-principal);
+    --bs-btn-border-color: var(--texto-principal);
+    --bs-btn-hover-color: var(--pagina-fundo);
+    --bs-btn-hover-bg: var(--texto-principal);
+    --bs-btn-hover-border-color: var(--texto-principal);
+    --bs-btn-active-color: var(--pagina-fundo);
+    --bs-btn-active-bg: var(--texto-principal);
+    --bs-btn-active-border-color: var(--texto-principal);
+    --bs-btn-disabled-color: var(--texto-secundario);
+    --bs-btn-disabled-border-color: var(--card-borda);
 }
