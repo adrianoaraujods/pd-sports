@@ -1,7 +1,7 @@
 # 64: Limite de estoque no Carrinho
 
 **Status:** Concluído
-**Dia:** Dia 12 (sex 163/11)
+**Dia:** Dia 12 (sex 13/11)
 **Estimativa:** 2h
 
 **O que construir:** A quantidade no Carrinho fica limitada ao estoque do Produto, somado entre Variantes. Primeiro candidato a corte.
