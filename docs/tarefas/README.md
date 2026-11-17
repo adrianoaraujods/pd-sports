@@ -75,7 +75,7 @@ As tarefas não têm responsável definido; a atribuição é feita no próprio 
 | 67 | ⛔ | [Tela de resumo da Finalização da Compra](67-tela-de-resumo-da-finalizacao-da-compra.md) | Dia 14 (ter 17/11) | 2h | 28, 30, 31, 65, 66 |
 | 68 | ⬜ | [Dashboard: cálculo das métricas](68-dashboard-calculo-das-metricas.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 51 |
 | 69 | ⛔ | [Dashboard: tela e gráfico](69-dashboard-tela-e-grafico.md) | Dia 14 (ter 17/11) | 4h | 23, 28, 31, 52, 68 |
-| 70 | ⬜ | [Carrinho do Visitante em localStorage](70-carrinho-do-visitante-em-localstorage.md) | Dia 15 (qua 18/11) | 2h | 28, 31, 40, 55 |
+| 70 | ✅ | [Carrinho do Visitante em localStorage](70-carrinho-do-visitante-em-localstorage.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 40, 55 |
 | 71 | ⛔ | [Mesclagem do Carrinho no login](71-mesclagem-do-carrinho-no-login.md) | Dia 15 (qua 18/11) | 2h | 28, 31, 41, 70 |
 | 72 | ⬜ | [Dark mode: tokens e alternância](72-dark-mode-tokens-e-alternancia.md) | Dia 15 (qua 18/11) | 2h | 15, 28, 31, 37 |
 | 73 | ⛔ | [Conferência do fluxo de compra](73-conferencia-do-fluxo-de-compra.md) | Dia 16 (qui 19/11) | 1h - cada membro | 61, 67, 71 |

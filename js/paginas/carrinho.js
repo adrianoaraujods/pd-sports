@@ -319,26 +319,13 @@ if (estadoFrete.endereco) {
 }
 
 export async function carregarCarrinho(mostrarSpinner = true) {
-  const sessao = obterSessao();
-  if (!sessao) {
-    statusCarrinho.innerHTML = `
-            <div class="card border-0 shadow-sm p-5 text-center my-4 mx-auto" style="max-width: 480px;">
-                <i class="bi bi-person-lock display-3 text-secondary mb-3" aria-hidden="true"></i>
-                <h2 class="h4 fw-bold">Faça login para ver seu carrinho</h2>
-                <p class="text-muted mb-4">Entre com sua conta para acessar seus itens salvos e finalizar compras.</p>
-                <a href="./login.html" class="btn btn-primary">Entrar na minha conta</a>
-            </div>
-        `;
-    secaoCarrinhoVazio.hidden = true;
-    secaoCarrinhoConteudo.hidden = true;
-    atualizarResumo({ valorTotal: 0, totalItens: 0 });
-    return;
-  }
+  // Sem sessão é o Carrinho vem do localStorage então o usuarioId é null
+  const usuarioId = obterSessao()?.id ?? null;
 
   if (mostrarSpinner) exibirCarregando();
 
   try {
-    const carrinho = await obterCarrinho(sessao.id);
+    const carrinho = await obterCarrinho(usuarioId);
     const detalhado = await detalharCarrinho(carrinho);
 
     statusCarrinho.replaceChildren();
@@ -376,8 +363,7 @@ listaItensCarrinho.addEventListener("click", async (evento) => {
   const tr = botao.closest("tr");
   if (!tr) return;
 
-  const sessao = obterSessao();
-  if (!sessao) return;
+  const usuarioId = obterSessao()?.id ?? null;
 
   const { produtoId, variante, nome } = tr.dataset;
   const quantidade = Number(tr.dataset.quantidade) || 1;
@@ -399,7 +385,7 @@ listaItensCarrinho.addEventListener("click", async (evento) => {
     if (acao === "aumentar") {
       desabilitarBotoes(true);
       await alterarQuantidadeItem(
-        sessao.id,
+        usuarioId,
         produtoId,
         variante,
         quantidade + 1,
@@ -407,7 +393,7 @@ listaItensCarrinho.addEventListener("click", async (evento) => {
     } else if (acao === "diminuir" && quantidade > 1) {
       desabilitarBotoes(true);
       await alterarQuantidadeItem(
-        sessao.id,
+        usuarioId,
         produtoId,
         variante,
         quantidade - 1,
@@ -415,7 +401,7 @@ listaItensCarrinho.addEventListener("click", async (evento) => {
     } else if (acao === "remover" || (acao === "diminuir" && quantidade <= 1)) {
       if (!confirm(`Remover "${nome}" (${variante}) do carrinho?`)) return;
       desabilitarBotoes(true);
-      await removerItem(sessao.id, produtoId, variante);
+      await removerItem(usuarioId, produtoId, variante);
     }
 
     await carregarCarrinho(false);
