@@ -5,6 +5,11 @@
     font-size: var(--titulo-lg);
 }
 
+.titulo-dashboard-secao {
+    font-family: var(--font-titulo);
+    font-size: var(--titulo-md);
+}
+
 /* Cards de métrica */
 .metrica {
     padding: 16px;
@@ -30,7 +35,78 @@
     overflow-wrap: anywhere;
 }
 
+/* Painéis dos gráficos */
+.painel-grafico {
+    padding: 24px;
+    border: 1px solid var(--base-estrutura);
+    border-radius: 4px;
+    background-color: var(--base-neutral);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-grafico {
+    margin-bottom: 16px;
+    font-family: var(--font-titulo);
+    font-size: var(--titulo-sm);
+}
+
+.area-grafico {
+    position: relative;
+    height: 360px;
+}
+
+@media (max-width: 576px) {
+    .painel-grafico {
+        padding: 16px;
+    }
+
+    .area-grafico {
+        height: 300px;
+    }
+}
+
 /* `d-flex` do Bootstrap sobrescreveria o atributo `hidden` do alerta de erro. */
 #erro-dashboard[hidden] {
     display: none !important;
+}
+
+/* Cards dos itens mais vendidos: um botão a mais que o card padrão */
+#mais-vendidos .card {
+    height: 100%;
+    max-width: none;
+    width: 100%;
+    background-color: var(--light-card-background);
+    border: 0;
+}
+
+#mais-vendidos .card-bottom {
+    width: 100%;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+/* Alinha os botões no rodapé mesmo com nomes de tamanhos diferentes. */
+#mais-vendidos .card-bottom .btn-primary {
+    margin-top: auto;
+}
+
+#mais-vendidos .card-bottom .btn + .btn {
+    margin-top: 5px;
+}
+
+.product-card .btn-editar {
+    width: 100%;
+    background-color: var(--base-neutral);
+    border: 1px solid var(--base-primary-foreground);
+    color: var(--base-primary-foreground);
+
+    &:hover {
+        background-color: var(--base-neutral-hover);
+    }
+}
+
+.metrica-quantidade {
+    margin: 0;
+    font-size: var(--texto-sm);
+    color: var(--light-text-secondary);
 }

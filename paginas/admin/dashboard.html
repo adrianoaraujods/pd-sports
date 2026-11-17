@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../assets/css/navbar.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/estilos.css">
+    <link rel="stylesheet" href="../../assets/css/card.css">
     <link rel="stylesheet" href="../../assets/css/dashboard.css">
 </head>
 
@@ -74,7 +75,7 @@
         </div>
 
         <!-- Métricas -->
-        <section aria-label="Métricas" class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3" aria-busy="true" id="metricas">
+        <section aria-label="Métricas" class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3 mb-4" aria-busy="true" id="metricas">
             <div class="col">
                 <article class="metrica h-100">
                     <h2 class="metrica-rotulo">Total de produtos</h2>
@@ -104,6 +105,38 @@
                     <h2 class="metrica-rotulo">Carrinhos em aberto</h2>
                     <p class="metrica-valor" data-metrica="carrinhosEmAberto">—</p>
                 </article>
+            </div>
+        </section>
+
+        <!-- Gráficos -->
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-lg-6">
+                <section class="painel-grafico h-100">
+                    <h2 class="titulo-grafico">Produtos por modalidade</h2>
+                    <div class="area-grafico">
+                        <canvas id="grafico-modalidades" role="img"
+                            aria-label="Gráfico de barras com a quantidade de produtos, destaques e itens em carrinhos por modalidade"></canvas>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12 col-lg-6">
+                <section class="painel-grafico h-100">
+                    <h2 class="titulo-grafico">Preço médio por modalidade</h2>
+                    <div class="area-grafico">
+                        <canvas id="grafico-preco-medio" role="img"
+                            aria-label="Gráfico de linha com o preço médio dos produtos por modalidade"></canvas>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Itens mais vendidos -->
+        <section aria-labelledby="titulo-mais-vendidos">
+            <h2 id="titulo-mais-vendidos" class="titulo-dashboard-secao mb-3">Itens mais vendidos</h2>
+            <p id="status-mais-vendidos" class="text-body-secondary" role="status">Carregando...</p>
+            <div id="mais-vendidos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3"></div>
+            <div class="d-flex justify-content-end mt-4">
+                <a href="./admin-lista-produtos.html" class="btn btn-primary px-4">Ver Todos</a>
             </div>
         </section>
     </main>
@@ -181,6 +214,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script type="module" src="../../js/paginas/dashboard.js"></script>
     <script type="module" src="../../js/componentes/navbar.js"></script>
 </body>
