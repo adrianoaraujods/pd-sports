@@ -4,6 +4,9 @@
 /* O resto da navbar usa classes nativas do Bootstrap; aqui só a cor da marca. */
 header {
     background-color: var(--base-navegacao);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .navbar-brand {
