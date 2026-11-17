@@ -6,6 +6,10 @@ header {
     background-color: var(--base-navegacao);
 }
 
+.navbar-brand {
+    font-family: var(--font-titulo);
+}
+
 .logo-img,
 .navbar-brand img {
     width: 90px;
