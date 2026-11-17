@@ -6,3 +6,9 @@
     background-color: var(--base-estrutura);
     color: var(--base-muted-foreground);
 }
+
+.footer-logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
