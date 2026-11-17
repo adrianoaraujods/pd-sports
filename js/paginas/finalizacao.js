@@ -1,34 +1,10 @@
 /** Interações locais da prévia; não altera o carrinho nem realiza compras. */
 import { obterCarrinho, detalharCarrinho, finalizarCompra } from "../servicos/carrinho.js";
 import { obterSessao } from "../servicos/sessao.js";
+import { calcularFrete } from "../servicos/frete.js";
 
-const modal = document.getElementById('modalEditar');
-const campo = document.getElementById('valor-editar');
-const rotulos = { endereco: 'Endereço de entrega', pagamento: 'Forma de pagamento', entrega: 'Entrega' };
-
-let destino;
-
-
-modal.addEventListener('show.bs.modal', (evento) => {
-    const tipo = evento.relatedTarget.dataset.editar;
-    destino = document.getElementById(`resumo-${tipo}`);
-    document.getElementById('titulo-editar').textContent = `Editar ${rotulos[tipo].toLowerCase()}`;
-    document.getElementById('rotulo-editar').textContent = rotulos[tipo];
-    campo.value = destino.textContent;
-    campo.setCustomValidity('');
-});
-
-
-modal.addEventListener('shown.bs.modal', () => campo.focus());
-campo.addEventListener('input', () => campo.setCustomValidity(''));
-document.getElementById('form-editar-resumo').addEventListener('submit', (evento) => {
-    evento.preventDefault();
-    if (!campo.value.trim()) { campo.setCustomValidity('Preencha este campo.'); campo.reportValidity(); return; }
-    destino.textContent = campo.value.trim();
-    bootstrap.Modal.getInstance(modal).hide();
-});
-
-
+const formaPagamento = document.querySelector("#forma-pagamento");
+let resumoPronto = false;
 
 const lista = document.querySelector("#resumo-itens");
 const modelo = document.querySelector("#modelo-item-resumo");
@@ -67,12 +43,23 @@ const botoesFechar = modalFinalizar.querySelectorAll(
 
 let finalizando = false;
 
-modalFinalizar.addEventListener("show.bs.modal", () => {
+function atualizarConfirmacao() {
+    confirmarCompra.disabled = !resumoPronto || !formaPagamento.value || finalizando;
+}
+
+formaPagamento.addEventListener("change", atualizarConfirmacao);
+
+modalFinalizar.addEventListener("show.bs.modal", (evento) => {
+    if (!formaPagamento.reportValidity()) {
+        evento.preventDefault();
+        return;
+    }
+    atualizarConfirmacao();
     erroFinalizacao.classList.add("d-none");
 });
 
 confirmarCompra.addEventListener("click", async () => {
-    if (finalizando) return;
+    if (finalizando || !resumoPronto || !formaPagamento.reportValidity()) return;
 
     const sessao = obterSessao();
 
@@ -85,6 +72,7 @@ confirmarCompra.addEventListener("click", async () => {
     }
 
     finalizando = true;
+    formaPagamento.disabled = true;
     confirmarCompra.disabled = true;
     confirmarCompra.textContent = "Finalizando...";
     botoesFechar.forEach((botao) => {
@@ -100,7 +88,8 @@ confirmarCompra.addEventListener("click", async () => {
         erroFinalizacao.classList.remove("d-none");
 
         finalizando = false;
-        confirmarCompra.disabled = false;
+        formaPagamento.disabled = false;
+        atualizarConfirmacao();
         confirmarCompra.textContent = "Confirmar compra";
         botoesFechar.forEach((botao) => {
             botao.disabled = false;
@@ -113,6 +102,23 @@ confirmarCompra.addEventListener("click", async () => {
         location.replace("./catalogo.html");
     }, 1500);
 });
+
+
+
+
+function lerEnderecoSalvo() {
+    try {
+        const endereco = JSON.parse(sessionStorage.getItem("pd-sports:frete-endereco"));
+
+        return endereco?.uf ? endereco : null;
+
+    } catch {
+        return null;
+    }
+}
+
+
+
 
 async function carregarResumo() {
     const sessao = obterSessao();
@@ -155,13 +161,35 @@ async function carregarResumo() {
             moeda.format(resumo.valorTotal);
 
         // Ainda não existe uma entrega definida para esta página.
-        document.querySelector("#resumo-frete").textContent = "A calcular";
-        document.querySelector("#resumo-total").textContent = "A calcular";
-        document.querySelector("#resumo-endereco").textContent =
-            "Endereço ainda não informado.";
-        document.querySelector("#resumo-entrega").textContent =
-            "Entrega ainda não definida.";
+        const endereco = lerEnderecoSalvo();
 
+        if (!endereco) {
+            status.textContent =
+                "Volte ao carrinho e calcule o frete antes de finalizar.";
+            return;
+        }
+
+        const frete = calcularFrete(endereco.uf, resumo.valorTotal);
+
+        document.querySelector("#resumo-frete").textContent =
+            frete.gratis ? "Grátis" : moeda.format(frete.valor);
+
+        document.querySelector("#resumo-total").textContent =
+            moeda.format(resumo.valorTotal + frete.valor);
+
+        document.querySelector("#resumo-endereco").textContent = [
+            endereco.logradouro,
+            endereco.bairro,
+            endereco.cidade,
+            endereco.uf,
+            endereco.cep
+        ].filter(Boolean).join(", ");
+
+        document.querySelector("#resumo-entrega").textContent =
+            `Entrega em até ${frete.prazo} dias úteis`;
+
+        resumoPronto = true;
+        atualizarConfirmacao();
         status.textContent = "";
     } catch (erro) {
         status.textContent =

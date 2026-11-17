@@ -89,39 +89,27 @@
                                             class="border border-warning rounded px-2">Casa</span></div>
                                 </div>
                                 <div class="col-12 col-md-4 d-grid">
-                                    <button type="button" class="btn btn-secondary py-2" data-editar="endereco"
-                                        data-bs-toggle="modal" data-bs-target="#modalEditar"
-                                        aria-label="Editar Endereço de entrega">Editar</button>
+                                    <a href="./carrinho.html#campo-cep" class="btn btn-secondary py-2"
+                                        aria-label="Editar CEP no carrinho">Editar</a>
                                 </div>
                             </div>
                         </article>
                         <article class="border border-dark rounded p-3 p-md-4">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-12 col-md-8">
-                                    <h2 class="font-texto fs-4 fw-normal mb-2">Forma de pagamento</h2>
-                                    <p id="resumo-pagamento" class="mb-2 text-break">Cartão de crédito 6x sem juros</p>
-                                    <div class="d-flex align-items-center justify-content-between px-2">
-                                        <span>xxxx</span><i class="bi bi-credit-card"></i>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 d-grid">
-                                    <button type="button" class="btn btn-secondary py-2" data-editar="pagamento"
-                                        data-bs-toggle="modal" data-bs-target="#modalEditar"
-                                        aria-label="Editar Forma de pagamento">Editar</button>
-                                </div>
-                            </div>
+                            <h2 class="font-texto fs-4 fw-normal mb-2">
+                                <label for="forma-pagamento">Forma de pagamento</label>
+                            </h2>
+                            <select id="forma-pagamento" name="formaPagamento" class="form-select" required>
+                                <option value="">Selecione uma forma de pagamento</option>
+                                <option value="pix">Pix</option>
+                                <option value="cartao">Cartão de crédito</option>
+                                <option value="boleto">Boleto</option>
+                            </select>
                         </article>
                         <article class="border border-dark rounded p-3 p-md-4">
                             <div class="row g-3 align-items-center">
-                                <div class="col-12 col-md-8">
+                                <div class="col-12">
                                     <h2 class="font-texto fs-4 fw-normal mb-2">Entrega</h2>
-                                    <p id="resumo-entrega" class="mb-2 text-break">Frete via Sedex 10 dias úteis</p>
-
-                                </div>
-                                <div class="col-12 col-md-4 d-grid">
-                                    <button type="button" class="btn btn-secondary py-2" data-editar="entrega"
-                                        data-bs-toggle="modal" data-bs-target="#modalEditar"
-                                        aria-label="Editar Entrega">Editar</button>
+                                    <p id="resumo-entrega" class="mb-2 text-break">Entrega ainda não definida.</p>
                                 </div>
                             </div>
                         </article>
@@ -239,26 +227,6 @@
     </footer>
 
 
-    <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="titulo-editar" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <form id="form-editar-resumo">
-                    <div class="modal-header">
-                        <h2 class="modal-title fs-5" id="titulo-editar">Editar informações</h2><button type="button"
-                            class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <label class="form-label" id="rotulo-editar" for="valor-editar">Informações</label>
-                        <input class="form-control" id="valor-editar" required maxlength="180"
-                            aria-describedby="aviso-edicao">
-                    </div>
-                    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary"
-                            data-bs-dismiss="modal">Cancelar</button><button type="submit"
-                            class="btn btn-primary">Salvar</button></div>
-                </form>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="modalFinalizar" tabindex="-1" aria-labelledby="titulo-confirmacao" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -278,7 +246,7 @@
                         Cancelar
                     </button>
 
-                    <button type="button" class="btn btn-primary" id="confirmar-compra">
+                    <button type="button" class="btn btn-primary" id="confirmar-compra" disabled>
                         Confirmar compra
                     </button>
                 </div>
