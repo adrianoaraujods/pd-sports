@@ -1,6 +1,6 @@
 # 66: Frete na tela do Carrinho
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 14 (ter 17/11)
 **Estimativa:** 2h
 
@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 28, 31, 56, 60
 
-- [ ] Mostra valor, prazo e Frete grátis
-- [ ] Mostra erro de CEP
-- [ ] Funciona em celular e em desktop (responsivo)
+- [x] Mostra valor, prazo e Frete grátis
+- [x] Mostra erro de CEP
+- [x] Funciona em celular e em desktop (responsivo)

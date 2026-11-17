@@ -8,6 +8,13 @@ import {
   EstoqueInsuficienteError,
 } from "../servicos/carrinho.js";
 import { obterSessao } from "../servicos/sessao.js";
+import {
+  consultarCep,
+  calcularFrete,
+  formatarCep,
+  normalizarCep,
+} from "../servicos/frete.js";
+import { CONFIG } from "../api/config.js";
 
 const statusCarrinho = document.querySelector("#status-carrinho");
 const secaoCarrinhoVazio = document.querySelector("#secao-carrinho-vazio");
@@ -20,6 +27,23 @@ const badgeTotalItens = document.querySelector("#badge-total-itens");
 const resumoSubtotal = document.querySelector("#resumo-subtotal");
 const resumoQtdItens = document.querySelector("#resumo-qtd-itens");
 const resumoTotal = document.querySelector("#resumo-total");
+const resumoFrete = document.querySelector("#resumo-frete");
+const avisoFreteGratis = document.querySelector("#aviso-frete-gratis");
+
+const formFrete = document.querySelector("#form-frete");
+const campoCep = document.querySelector("#campo-cep");
+const erroCep = document.querySelector("#erro-cep");
+const btnCalcularFrete = document.querySelector("#btn-calcular-frete");
+const resultadoFrete = document.querySelector("#resultado-frete");
+
+/** Chave do endereço de entrega guardado na sessão do navegador. */
+const CHAVE_ENDERECO_FRETE = "pd-sports:frete-endereco";
+
+/** Estado do Frete na tela: endereço consultado e subtotal atual. */
+const estadoFrete = {
+  endereco: lerEnderecoSalvo(),
+  subtotal: 0,
+};
 
 const moeda = new Intl.NumberFormat("pt-BR", {
   style: "currency",
@@ -104,11 +128,13 @@ function criarLinhaItem(item) {
 
 /**
  * Atualiza os valores do resumo do pedido e do badge do cabeçalho.
+ * O total inclui o Frete quando já houver um CEP consultado.
  * @param {{ valorTotal?: number, totalItens?: number }} [resumo]
  */
 export function atualizarResumo(resumo = {}) {
   const totalItensNum = Number(resumo?.totalItens) || 0;
   const valorTotalNum = Number(resumo?.valorTotal) || 0;
+  estadoFrete.subtotal = valorTotalNum;
 
   if (badgeTotalItens) {
     badgeTotalItens.textContent = `${totalItensNum} ${totalItensNum === 1 ? "item" : "itens"}`;
@@ -119,9 +145,177 @@ export function atualizarResumo(resumo = {}) {
   if (resumoQtdItens) {
     resumoQtdItens.textContent = String(totalItensNum);
   }
+
+  const frete = freteAtual();
+  renderizarFrete(frete);
+
   if (resumoTotal) {
-    resumoTotal.textContent = moeda.format(valorTotalNum);
+    resumoTotal.textContent = moeda.format(valorTotalNum + (frete?.valor ?? 0));
   }
+}
+
+/* ---------- Frete ---------- */
+
+function lerEnderecoSalvo() {
+  try {
+    const salvo = JSON.parse(sessionStorage.getItem(CHAVE_ENDERECO_FRETE));
+    return salvo?.uf ? salvo : null;
+  } catch {
+    return null;
+  }
+}
+
+function salvarEndereco(endereco) {
+  try {
+    if (endereco) {
+      sessionStorage.setItem(CHAVE_ENDERECO_FRETE, JSON.stringify(endereco));
+    } else {
+      sessionStorage.removeItem(CHAVE_ENDERECO_FRETE);
+    }
+  } catch {
+    // Sem sessionStorage (modo privado/bloqueado): o Frete vale só nesta tela.
+  }
+}
+
+/** Recalcula o Frete com o subtotal atual (ou null se não houver CEP). */
+function freteAtual() {
+  if (!estadoFrete.endereco) return null;
+  try {
+    return calcularFrete(estadoFrete.endereco.uf, estadoFrete.subtotal);
+  } catch {
+    return null;
+  }
+}
+
+const textoPrazo = (dias) => `${dias} ${dias === 1 ? "dia útil" : "dias úteis"}`;
+
+/** Mostra o endereço, valor e prazo do Frete (ou o estado "a calcular"). */
+function renderizarFrete(frete) {
+  const { endereco } = estadoFrete;
+  const limiteGratis = moeda.format(CONFIG.FRETE.GRATIS_ACIMA_DE);
+
+  if (!endereco || !frete) {
+    resultadoFrete.hidden = true;
+    resultadoFrete.replaceChildren();
+    resumoFrete.textContent = "A calcular";
+    resumoFrete.classList.remove("frete-gratis");
+    avisoFreteGratis.textContent = `Frete grátis em compras acima de ${limiteGratis}.`;
+    avisoFreteGratis.hidden = false;
+    return;
+  }
+
+  const linhaEndereco = [endereco.logradouro, endereco.bairro]
+    .filter(Boolean)
+    .join(", ");
+
+  const titulo = document.createElement("div");
+  titulo.className = "d-flex justify-content-between align-items-center gap-2 mb-1";
+  const cep = document.createElement("strong");
+  cep.textContent = `CEP ${endereco.cep}`;
+  titulo.append(cep);
+  if (frete.gratis) {
+    const badge = document.createElement("span");
+    badge.className = "pd-badge pd-badge-sucesso";
+    badge.innerHTML = '<i class="bi bi-truck" aria-hidden="true"></i> Frete grátis';
+    titulo.append(badge);
+  }
+
+  const enderecoEl = document.createElement("p");
+  enderecoEl.className = "endereco-frete mb-2";
+  enderecoEl.textContent = [linhaEndereco, `${endereco.cidade}/${endereco.uf}`]
+    .filter(Boolean)
+    .join(" · ");
+
+  const detalhes = document.createElement("div");
+  detalhes.className = "d-flex justify-content-between flex-wrap gap-2";
+  const valor = document.createElement("span");
+  valor.className = frete.gratis ? "fw-semibold frete-gratis" : "fw-semibold";
+  valor.textContent = frete.gratis ? "Grátis" : moeda.format(frete.valor);
+  const prazo = document.createElement("span");
+  prazo.className = "text-muted";
+  prazo.textContent = `Entrega em até ${textoPrazo(frete.prazo)}`;
+  detalhes.append(valor, prazo);
+
+  resultadoFrete.replaceChildren(titulo, enderecoEl, detalhes);
+  resultadoFrete.hidden = false;
+
+  resumoFrete.textContent = frete.gratis ? "Grátis" : moeda.format(frete.valor);
+  resumoFrete.classList.toggle("frete-gratis", frete.gratis);
+
+  if (frete.gratis) {
+    avisoFreteGratis.hidden = true;
+  } else {
+    const falta = CONFIG.FRETE.GRATIS_ACIMA_DE - estadoFrete.subtotal;
+    avisoFreteGratis.textContent =
+      falta > 0
+        ? `Faltam ${moeda.format(falta)} para ganhar Frete grátis (acima de ${limiteGratis}).`
+        : `Frete grátis em compras acima de ${limiteGratis}.`;
+    avisoFreteGratis.hidden = false;
+  }
+}
+
+function mostrarErroCep(mensagem) {
+  campoCep.classList.add("is-invalid");
+  campoCep.setAttribute("aria-invalid", "true");
+  erroCep.textContent = mensagem;
+}
+
+function limparErroCep() {
+  campoCep.classList.remove("is-invalid");
+  campoCep.removeAttribute("aria-invalid");
+  erroCep.textContent = "";
+}
+
+// Máscara 00000-000 enquanto digita
+campoCep.addEventListener("input", () => {
+  const digitos = normalizarCep(campoCep.value).slice(0, 8);
+  campoCep.value =
+    digitos.length > 5 ? `${digitos.slice(0, 5)}-${digitos.slice(5)}` : digitos;
+  limparErroCep();
+});
+
+let consultaAtual = 0;
+
+formFrete.addEventListener("submit", async (evento) => {
+  evento.preventDefault();
+  limparErroCep();
+
+  const consulta = ++consultaAtual;
+  const textoOriginal = btnCalcularFrete.textContent;
+  btnCalcularFrete.disabled = true;
+  btnCalcularFrete.innerHTML =
+    '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span><span class="visually-hidden">Calculando...</span>';
+
+  try {
+    const endereco = await consultarCep(campoCep.value);
+    if (consulta !== consultaAtual) return;
+    estadoFrete.endereco = endereco;
+    salvarEndereco(endereco);
+    campoCep.value = endereco.cep;
+    atualizarResumo({
+      valorTotal: estadoFrete.subtotal,
+      totalItens: Number(resumoQtdItens.textContent) || 0,
+    });
+  } catch (erro) {
+    if (consulta !== consultaAtual) return;
+    estadoFrete.endereco = null;
+    salvarEndereco(null);
+    atualizarResumo({
+      valorTotal: estadoFrete.subtotal,
+      totalItens: Number(resumoQtdItens.textContent) || 0,
+    });
+    mostrarErroCep(erro?.message || "Não foi possível calcular o frete.");
+    campoCep.focus();
+  } finally {
+    if (consulta === consultaAtual) {
+      btnCalcularFrete.disabled = false;
+      btnCalcularFrete.textContent = textoOriginal;
+    }
+  }
+});
+
+if (estadoFrete.endereco) {
+  campoCep.value = formatarCep(estadoFrete.endereco.cep);
 }
 
 export async function carregarCarrinho(mostrarSpinner = true) {

@@ -151,6 +151,31 @@
 
                         <hr class="my-3">
 
+                        <!-- Cálculo do Frete pelo CEP (ViaCEP) -->
+                        <form id="form-frete" class="mb-3" novalidate>
+                            <label for="campo-cep" class="form-label fw-semibold">Calcular frete</label>
+                            <div class="input-group has-validation">
+                                <input type="text" id="campo-cep" name="cep" class="form-control"
+                                    placeholder="00000-000" inputmode="numeric" autocomplete="postal-code"
+                                    maxlength="9" aria-describedby="erro-cep" required>
+                                <button type="submit" id="btn-calcular-frete" class="btn btn-secondary">Calcular</button>
+                                <div id="erro-cep" class="invalid-feedback" role="alert"></div>
+                            </div>
+                            <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank"
+                                rel="noopener" class="small d-inline-block mt-1">Não sei meu CEP</a>
+                        </form>
+
+                        <div id="resultado-frete" class="resultado-frete mb-3" aria-live="polite" hidden></div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Frete</span>
+                            <span id="resumo-frete" class="fw-semibold">A calcular</span>
+                        </div>
+
+                        <p id="aviso-frete-gratis" class="small text-muted mb-0" hidden></p>
+
+                        <hr class="my-3">
+
                         <div class="d-flex justify-content-between align-items-baseline mb-4">
                             <span class="h6 fw-bold mb-0">Total</span>
                             <span id="resumo-total" class="h4 fw-bold text-primary mb-0">R$ 0,00</span>
