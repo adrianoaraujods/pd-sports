@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/estilos.css" />
+    <link rel="stylesheet" href="../assets/css/breadcrumb.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap"
@@ -92,9 +93,14 @@
     <main class="flex-grow-1">
       <p id="status-produto" role="status"></p>
       <section class="container" id="detalhes-produto" hidden>
-        <div>
-          <a href="../index.html">Início</a> &gt; <a href="./catalogo.html">Catálogo</a> &gt; <a href="">Produto</a>
-        </div>
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Início</a></li>
+            <li class="breadcrumb-item"><a href="./catalogo.html">Produtos</a></li>
+            <li class="breadcrumb-item"><a href="./catalogo.html" id="breadcrumb-modalidade">Modalidade</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-produto">Produto</li>
+          </ol>
+        </nav>
         <div class="row g-4">
           <div class="col-12 col-md-6">
             <figure class="imagem-produto my-0 mx-auto">
