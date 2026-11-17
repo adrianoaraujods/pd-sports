@@ -125,7 +125,7 @@ function configurarVariantes(produto) {
     }
 
     varianteSelecionada = null;
-    botaoAdicionarCarrinho.disabled = true;
+    botaoAdicionarCarrinho.disabled = produto.estoque <= 0;
     avisoVariante.textContent = "Selecione uma variante para continuar.";
     avisoVariante.className = "text-muted d-block mt-1";
 
