@@ -158,6 +158,11 @@ function preencherProduto(produto) {
     document.querySelector("#produto-modalidade").textContent =
         produto.modalidade_nome;
 
+    const breadcrumbModalidade = document.querySelector("#breadcrumb-modalidade");
+    breadcrumbModalidade.textContent = produto.modalidade_nome;
+    breadcrumbModalidade.href = `./catalogo.html?modalidade=${encodeURIComponent(produto.modalidade_id)}`;
+    document.querySelector("#breadcrumb-produto").textContent = produto.nome;
+
     document.querySelector("#produto-preco").textContent =
         moeda.format(produto.preco);
 

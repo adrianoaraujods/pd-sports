@@ -73,7 +73,11 @@ function criarLinha(produto) {
     imagem.src = produto.imagem;
     imagem.alt = produto.nome;
 
-    celulas[1].textContent = produto.nome;
+    const linkDetalhes = document.createElement("a");
+    linkDetalhes.href = `../detalhes-produto.html?id=${encodeURIComponent(produto.id)}`;
+    linkDetalhes.className = "link-body-emphasis";
+    linkDetalhes.textContent = produto.nome;
+    celulas[1].replaceChildren(linkDetalhes);
     celulas[2].textContent = produto.modalidade_nome;
     celulas[3].textContent = moeda.format(produto.preco);
     celulas[4].textContent = produto.destaque ? "Sim" : "Não";

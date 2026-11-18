@@ -60,16 +60,19 @@
                     </ul>
                     <a href="./login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
                     <form class="d-none d-lg-flex" role="search" action="./catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
-                            aria-label="Buscar produtos" />
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
 
                 <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
-                    <form class="d-flex gap-2 py-2" role="search" action="./catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
-                            aria-label="Buscar produtos" />
-                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    <form class="py-2" role="search" action="./catalogo.html" method="GET">
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
             </div>
@@ -80,7 +83,7 @@
         <div class="container">
             <div class="row g-4 g-xl-5 align-items-start">
                 <section class="left-section col-12 col-lg-6" aria-labelledby="titulo-finalizacao">
-                    <h1 id="titulo-finalizacao" class="fs-2 mb-2 text-center text-md-start">Resumo da finalização da
+                    <h1 id="titulo-finalizacao" class="fs-2 mb-2 text-center text-md-start titulo-secao justify-content-center justify-content-md-start">Resumo da finalização da
                         compra</h1>
                     <p class="mb-3 mb-md-4">Confira os detalhes do seu pedido antes de finalizar.</p>
                     <div class="left-cards-wrapper d-flex flex-column gap-3 gap-md-4">
@@ -179,7 +182,7 @@
         <div class="container py-4">
             <div class="row g-4">
                 <div class="col-12 col-lg-6">
-                    <h2 class="h4 fw-medium">PD Sports</h2>
+                    <h2 class="h4 fw-medium d-flex align-items-center gap-2"><a href="../index.html" class="footer-brand d-flex align-items-center gap-2 text-white text-decoration-none"><img src="../assets/imagens/logo.png" alt="" class="footer-logo" /> PD Sports</a></h2>
                     <p>Os melhores produtos para atletas</p>
 
                     <div class="d-flex align-items-center gap-3">
