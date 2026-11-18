@@ -111,6 +111,262 @@
           <i class="bi bi-chevron-right fs-1" aria-hidden="true"></i>
         </button>
       </div>
+
+      <div class="text-center my-4">
+        <a href="./paginas/catalogo.html" class="btn btn-primary px-4 py-2">
+          Ver Todos
+        </a>
+      </div>
+    </section>
+
+    <!-- Carrossel de Promoções por Categoria -->
+    <section class="my-5" aria-label="Promoções em destaque">
+      <div
+        id="carrosselPromocoes"
+        class="carousel slide carrossel-promocoes shadow-sm"
+        data-bs-ride="carousel"
+        data-bs-interval="4500"
+      >
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Ofertas especiais"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="1"
+            aria-label="Promoção de Futebol"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="2"
+            aria-label="Promoção de Basquete"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="3"
+            aria-label="Promoção de Corrida"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="4"
+            aria-label="Promoção de Academia"
+          ></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <!-- Slide 1: Ofertas Gerais -->
+          <div class="carousel-item active">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-ofertas.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Ofertas <span class="text-warning">Especiais</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 40% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Equipamentos, roupas e acessórios com condições exclusivas para impulsionar seus treinos.
+                </p>
+
+                <a href="./paginas/catalogo.html" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Todas as Ofertas <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Futebol -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-futebol.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Kit Futebol <span class="text-warning">Profissional</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 50% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Chuteiras, bolas, luvas de goleiro e caneleiras para você entrar em campo para vencer.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=4" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Futebol <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Basquete -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-basquete.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Coleção <span class="text-warning">Basquete</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 40% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Tênis cano alto de alta tração, bolas oficiais e acessórios para brilhar nas quadras.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=9" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Basquete <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Corrida -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-corrida.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Corrida &amp; <span class="text-warning">Performance</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 45% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Tênis com amortecimento responsivo, mochilas de hidratação e relógios para superar seus recordes.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=1" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Corrida <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Academia -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-academia.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Treino Pesado &amp; <span class="text-warning">Academia</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 40% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Halteres hexagonais, kettlebells, coqueteleiras e luvas para elevar o nível da sua musculação.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=3" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Academia <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carrosselPromocoes"
+          data-bs-slide="prev"
+          aria-label="Banner anterior"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carrosselPromocoes"
+          data-bs-slide="next"
+          aria-label="Próximo banner"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
     </section>
   </main>
 
