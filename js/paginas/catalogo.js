@@ -185,6 +185,17 @@ function mudarPagina(novaPagina) {
     lista.scrollIntoView({ behavior: "smooth" });
 }
 
+function resolverModalidade(valor, modalidades) {
+    if (!valor) return "";
+    const encontrada = modalidades.find(
+        (m) =>
+            String(m.id) === valor ||
+            normalizarTexto(m.nome) === normalizarTexto(valor) ||
+            normalizarTexto(m.nome).includes(normalizarTexto(valor))
+    );
+    return encontrada ? String(encontrada.id) : valor;
+}
+
 function renderizarModalidades(modalidades) {
     filtroModalidades.replaceChildren();
 
@@ -201,6 +212,9 @@ function renderizarModalidades(modalidades) {
         const selecionado = botao.dataset.modalidade === modalidadeSelecionada;
         botao.classList.toggle("border-bot", selecionado);
         botao.setAttribute("aria-pressed", String(selecionado));
+        if (selecionado && modalidade.id) {
+            botao.scrollIntoView({ block: "nearest", inline: "center" });
+        }
 
         botao.addEventListener("click", () => {
             modalidadeSelecionada = botao.dataset.modalidade;
@@ -280,7 +294,7 @@ async function iniciarCatalogo() {
         const modalidades = await listarModalidades();
 
         const estado = lerParametrosUrl();
-        modalidadeSelecionada = estado.modalidade;
+        modalidadeSelecionada = resolverModalidade(estado.modalidade, modalidades);
         paginaAtual = estado.pagina;
 
         preencherBusca(estado.q);
