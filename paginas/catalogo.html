@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <script src="../js/tema.js"></script>
@@ -99,35 +99,108 @@
         ></div>
       </div>
       <section class="container py-4">
-        <div class="d-flex justify-content-between">
-          <h1 class="titulo-secao">CATÁLOGO DE PRODUTOS</h1>
-          <div class="d-flex justify-content-end align-items-center gap-2 mb-3">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4"
+        >
+          <h1 class="titulo-secao titulo-catalogo mb-0">Catálogo de produtos</h1>
+          <div class="d-flex align-items-center gap-2">
             <label for="ordenacao" class="text-nowrap">Ordenar por:</label>
-
             <select
               id="ordenacao"
               class="form-select w-auto ordering-dropdown"
               disabled
             >
-              <option value="">Padrão</option>
+              <option value="">Mais relevantes</option>
               <option value="menor-preco">Menor preço</option>
               <option value="maior-preco">Maior preço</option>
             </select>
           </div>
         </div>
 
-        <p id="status-produtos" role="status"></p>
+        <!-- Celular: categorias em chips e botão que abre o painel de filtros -->
+        <div class="d-lg-none mb-3">
+          <div
+            id="chips-categorias"
+            class="chips-categorias d-flex gap-2 mb-3"
+            role="group"
+            aria-label="Filtrar por categoria"
+          ></div>
+          <button
+            type="button"
+            class="btn botao-abrir-filtros d-inline-flex align-items-center gap-2 px-0"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#painel-filtros"
+            aria-controls="painel-filtros"
+          >
+            <i class="bi bi-filter fs-4" aria-hidden="true"></i>
+            Filtrar
+            <span class="contador-filtros" id="contador-filtros" hidden></span>
+          </button>
+        </div>
 
         <div
-          id="lista-produtos"
-          class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4"
-        ></div>
+          id="filtros-ativos"
+          class="filtros-ativos d-flex flex-wrap align-items-center gap-2 mb-4"
+          hidden
+        >
+          <span class="me-2">Filtros ativos:</span>
+          <ul id="lista-filtros-ativos" class="d-flex flex-wrap gap-2 m-0 p-0"></ul>
+          <button type="button" class="btn btn-link botao-limpar-filtros ms-lg-4" id="limpar-filtros">
+            <i class="bi bi-trash3" aria-hidden="true"></i> Limpar todos os filtros
+          </button>
+        </div>
 
-        <nav
-          id="paginacao"
-          class="d-flex justify-content-center mt-5"
-          aria-label="Navegação de páginas"
-        ></nav>
+        <div class="row g-4">
+          <aside class="col-lg-3">
+            <div
+              class="offcanvas-lg offcanvas-start painel-filtros-offcanvas"
+              id="painel-filtros"
+              tabindex="-1"
+              aria-labelledby="titulo-filtros"
+            >
+              <form id="form-filtros" class="painel-filtros" novalidate>
+                <div class="painel-filtros-cabecalho">
+                  <h2 class="painel-filtros-titulo" id="titulo-filtros">
+                    <i class="bi bi-filter" aria-hidden="true"></i> Filtrar por
+                  </h2>
+                  <button type="button" class="btn btn-link p-0" id="redefinir-filtros">
+                    Redefinir
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white d-lg-none ms-2"
+                    data-bs-dismiss="offcanvas"
+                    data-bs-target="#painel-filtros"
+                    aria-label="Fechar filtros"
+                  ></button>
+                </div>
+
+                <div class="painel-filtros-corpo" id="secoes-filtros"></div>
+
+                <div class="painel-filtros-rodape">
+                  <button type="submit" class="btn btn-primary w-100">
+                    Aplicar filtros
+                  </button>
+                </div>
+              </form>
+            </div>
+          </aside>
+
+          <div class="col-lg-9">
+            <p id="status-produtos" role="status"></p>
+
+            <div
+              id="lista-produtos"
+              class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-xxl-4 g-4"
+            ></div>
+
+            <nav
+              id="paginacao"
+              class="d-flex justify-content-center mt-5"
+              aria-label="Navegação de páginas"
+            ></nav>
+          </div>
+        </div>
       </section>
     </main>
 
