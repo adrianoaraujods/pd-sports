@@ -102,6 +102,19 @@ function filtrosDoFormulario(modalidade) {
   };
 }
 
+/** Converte o valor da URL (id ou nome da modalidade) no id correspondente. */
+function resolverModalidade(valor, modalidades) {
+  if (!valor) return "";
+  const alvo = normalizarTexto(valor);
+  const encontrada = modalidades.find(
+    (m) =>
+      String(m.id) === valor ||
+      normalizarTexto(m.nome) === alvo ||
+      normalizarTexto(m.nome).includes(alvo),
+  );
+  return encontrada ? String(encontrada.id) : valor;
+}
+
 // ---------- Renderização ----------
 
 /** Restaura busca, ordem e filtros a partir da URL (início e voltar/avançar). */
@@ -355,7 +368,18 @@ async function iniciarCatalogo() {
       )
       .join("");
 
+    // Aceita ?modalidade=<id> ou ?modalidade=<nome> (ex.: links da home) e normaliza para o id
+    const params = new URLSearchParams(location.search);
+    const modalidade = resolverModalidade(params.get("modalidade"), modalidades);
+    if (modalidade !== (params.get("modalidade") ?? "")) {
+      params.set("modalidade", modalidade);
+      history.replaceState(null, "", `?${params}`);
+    }
+
     restaurarDaUrl();
+    filtroModalidades
+      .querySelector('button[aria-pressed="true"]:not([data-modalidade=""])')
+      ?.scrollIntoView({ block: "nearest", inline: "center" });
     definirBuscaHabilitada(true);
     ordenacao.disabled = false;
   } catch (erro) {

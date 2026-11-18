@@ -40,30 +40,57 @@ function preencherMetricas(metricas) {
   secaoMetricas.setAttribute("aria-busy", "false");
 }
 
+function obterCoresTema() {
+  const isDark = document.documentElement.dataset.bsTheme === "dark";
+  return {
+    texto: isDark ? "#F5F5F5" : "#19222C",
+    secundario: isDark ? "#869AB2" : "#607186",
+    grade: isDark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.08)",
+    pontoFundo: isDark ? "#19222C" : "#FFFFFF",
+  };
+}
+
 /** Cria o gráfico ou substitui o anterior (ao tentar novamente). */
 function desenharGrafico(id, configuracao) {
   graficos[id]?.destroy();
   graficos[id] = new Chart(document.getElementById(id), configuracao);
 }
 
-const opcoesBase = {
-  responsive: true,
-  maintainAspectRatio: false,
-  interaction: { mode: "index", intersect: false },
-  plugins: {
-    legend: { position: "bottom", labels: { usePointStyle: true, boxWidth: 8 } },
-  },
-  scales: {
-    x: { grid: { color: CORES.grade }, ticks: { autoSkip: false, maxRotation: 60 } },
-    y: { beginAtZero: true, grid: { color: CORES.grade } },
-  },
-};
+function criarOpcoesBase(coresTema) {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: "index", intersect: false },
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: { usePointStyle: true, boxWidth: 8, color: coresTema.texto },
+      },
+    },
+    scales: {
+      x: {
+        grid: { color: coresTema.grade },
+        ticks: { color: coresTema.secundario, autoSkip: false, maxRotation: 60 },
+      },
+      y: {
+        beginAtZero: true,
+        grid: { color: coresTema.grade },
+        ticks: { color: coresTema.secundario },
+      },
+    },
+  };
+}
+
+let cachePorModalidade = null;
 
 function desenharGraficos(porModalidade) {
   if (typeof Chart === "undefined") {
     throw new Error("Não foi possível carregar a biblioteca de gráficos.");
   }
 
+  cachePorModalidade = porModalidade;
+  const coresTema = obterCoresTema();
+  const opcoesBase = criarOpcoesBase(coresTema);
   const rotulos = porModalidade.map((m) => m.nome);
 
   desenharGrafico("grafico-modalidades", {
@@ -78,7 +105,10 @@ function desenharGraficos(porModalidade) {
     },
     options: {
       ...opcoesBase,
-      scales: { ...opcoesBase.scales, y: { ...opcoesBase.scales.y, ticks: { precision: 0 } } },
+      scales: {
+        ...opcoesBase.scales,
+        y: { ...opcoesBase.scales.y, ticks: { ...opcoesBase.scales.y.ticks, precision: 0 } },
+      },
     },
   });
 
@@ -91,7 +121,7 @@ function desenharGraficos(porModalidade) {
           label: "Preço médio",
           data: porModalidade.map((m) => m.precoMedio),
           borderColor: CORES.roxo,
-          backgroundColor: "#FFFFFF",
+          backgroundColor: coresTema.pontoFundo,
           pointBorderColor: CORES.roxo,
           pointRadius: 4,
           tension: 0,
@@ -106,7 +136,10 @@ function desenharGraficos(porModalidade) {
       },
       scales: {
         ...opcoesBase.scales,
-        y: { ...opcoesBase.scales.y, ticks: { callback: (valor) => moeda.format(valor) } },
+        y: {
+          ...opcoesBase.scales.y,
+          ticks: { ...opcoesBase.scales.y.ticks, callback: (valor) => moeda.format(valor) },
+        },
       },
     },
   });
@@ -169,4 +202,10 @@ async function iniciar() {
 if (protegerRotaAdministrativa()) {
   botaoTentarNovamente.addEventListener("click", iniciar);
   iniciar();
+
+  new MutationObserver(() => {
+    if (cachePorModalidade) {
+      desenharGraficos(cachePorModalidade);
+    }
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-bs-theme"] });
 }

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="../assets/css/breadcrumb.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap">
     <link rel="stylesheet" href="../assets/css/carrinho.css">
 
@@ -61,15 +62,19 @@
                     </ul>
                     <a href="./login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
                     <form class="d-none d-lg-flex" role="search" action="./catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
-                            aria-label="Buscar produtos">
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
 
                 <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
-                    <form class="d-flex gap-2 py-2" role="search" action="./catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
-                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    <form class="py-2" role="search" action="./catalogo.html" method="GET">
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
             </div>
@@ -88,7 +93,7 @@
 
         <!-- Cabeçalho da página -->
         <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
-            <h1 class="h3 fw-bold mb-0">Seu Carrinho</h1>
+            <h1 class="h3 fw-bold mb-0 titulo-secao">Seu Carrinho</h1>
             <span id="badge-total-itens" class="pd-badge pd-badge-secondary">0 itens</span>
         </div>
 
@@ -199,7 +204,7 @@
         <div class="container py-4">
             <div class="row g-4">
                 <div class="col-12 col-lg-6">
-                    <h2 class="h4 fw-medium">PD Sports</h2>
+                    <h2 class="h4 fw-medium d-flex align-items-center gap-2"><a href="../index.html" class="footer-brand d-flex align-items-center gap-2 text-white text-decoration-none"><img src="../assets/imagens/logo.png" alt="" class="footer-logo" /> PD Sports</a></h2>
                     <p>Os melhores produtos para atletas</p>
                     <div class="d-flex align-items-center gap-3">
                         <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a>

@@ -33,8 +33,6 @@ main [hidden] {
 }
 
 .titulo-catalogo {
-  border-left: 6px solid var(--base-primary);
-  padding-left: 16px;
   font-size: var(--titulo-lg);
   text-transform: uppercase;
 }

@@ -3,20 +3,22 @@
 .titulo-dashboard {
     font-family: var(--font-titulo);
     font-size: var(--titulo-lg);
+    color: var(--texto-principal);
 }
 
 .titulo-dashboard-secao {
     font-family: var(--font-titulo);
     font-size: var(--titulo-md);
+    color: var(--texto-principal);
 }
 
 /* Cards de métrica */
 .metrica {
     padding: 16px;
-    border: 1px solid var(--base-estrutura);
+    border: 1px solid var(--card-borda);
     border-radius: 4px;
-    background-color: var(--base-neutral);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--card-fundo);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     font-family: var(--font-texto);
 }
 
@@ -25,29 +27,31 @@
     font-family: var(--font-texto);
     font-size: var(--texto-md);
     font-weight: var(--font-peso-regular);
+    color: var(--texto-secundario);
 }
 
 .metrica-valor {
     margin: 0;
     font-family: var(--font-titulo);
     font-size: var(--texto-lg);
-    color: var(--base-estrutura);
+    color: var(--texto-principal);
     overflow-wrap: anywhere;
 }
 
 /* Painéis dos gráficos */
 .painel-grafico {
     padding: 24px;
-    border: 1px solid var(--base-estrutura);
+    border: 1px solid var(--card-borda);
     border-radius: 4px;
-    background-color: var(--base-neutral);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--card-fundo);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .titulo-grafico {
     margin-bottom: 16px;
     font-family: var(--font-titulo);
     font-size: var(--titulo-sm);
+    color: var(--texto-principal);
 }
 
 .area-grafico {
@@ -75,8 +79,8 @@
     height: 100%;
     max-width: none;
     width: 100%;
-    background-color: var(--light-card-background);
-    border: 0;
+    background-color: var(--card-fundo);
+    border: 1px solid var(--card-borda);
 }
 
 #mais-vendidos .card-bottom {
@@ -96,17 +100,20 @@
 
 .product-card .btn-editar {
     width: 100%;
-    background-color: var(--base-neutral);
-    border: 1px solid var(--base-primary-foreground);
-    color: var(--base-primary-foreground);
+    background-color: transparent;
+    border: 1px solid var(--texto-principal);
+    color: var(--texto-principal);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
 
-    &:hover {
-        background-color: var(--base-neutral-hover);
-    }
+.product-card .btn-editar:hover {
+    background-color: var(--base-primary);
+    border-color: var(--base-primary);
+    color: #19222C;
 }
 
 .metrica-quantidade {
     margin: 0;
     font-size: var(--texto-sm);
-    color: var(--light-text-secondary);
+    color: var(--texto-secundario);
 }

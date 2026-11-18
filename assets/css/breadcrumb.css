@@ -1,0 +1,17 @@
+/* Breadcrumb com separador "›" */
+
+.breadcrumb {
+  --bs-breadcrumb-divider: "›";
+  --bs-breadcrumb-divider-color: var(--bs-secondary-color);
+  --bs-breadcrumb-item-active-color: var(--bs-secondary-color);
+}
+
+.breadcrumb-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover,
+.breadcrumb-item a:focus-visible {
+  text-decoration: underline;
+}

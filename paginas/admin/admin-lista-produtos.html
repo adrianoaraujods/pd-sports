@@ -58,16 +58,19 @@
                     </ul>
                     <a href="../login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
                     <form class="d-none d-lg-flex" role="search" action="../catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
-                            aria-label="Buscar produtos">
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
 
                 <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
-                    <form class="d-flex gap-2 py-2" role="search" action="../catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
-                            aria-label="Buscar produtos">
-                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    <form class="py-2" role="search" action="../catalogo.html" method="GET">
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
             </div>
@@ -77,20 +80,20 @@
     <main class="flex-grow-1">
         <section class="container my-4">
             <div class="d-flex justify-content-between align-items-center mb-4 title">
-                <h1 class="h3 fw-bold mb-0">Produtos</h1>
+                <h1 class="h3 fw-bold mb-0 titulo-secao">Produtos</h1>
                 <a href="./produto.html" class="btn btn-primary d-inline-flex align-items-center gap-1">
                     <i class="bi bi-plus fs-5"></i> Adicionar Produto
                 </a>
             </div>
 
-            <div class="d-flex w-100 justify-content-between gap-3 my-3 filters-wrapper">
-                <div class="d-flex flex-column">
+            <div class="row g-3 my-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <label for="filtro-modalidade" class="form-label mb-1">Modalidade</label>
                     <select id="filtro-modalidade" name="modalidade" class="inputs form-select">
                         <option value="">Todas as modalidades</option>
                     </select>
                 </div>
-                <div class="d-flex flex-column w-100">
+                <div class="col-12 col-md-8 col-lg-9">
                     <label for="busca-produto" class="form-label mb-1">Pesquisar produto por nome</label>
                     <input type="search" id="busca-produto" class="inputs form-control" name="busca"
                         placeholder="Digite o nome do produto">
@@ -139,7 +142,7 @@
         <div class="container py-4">
             <div class="row g-4">
                 <div class="col-12 col-lg-6">
-                    <h2 class="h4 fw-medium">PD Sports</h2>
+                    <h2 class="h4 fw-medium d-flex align-items-center gap-2"><a href="../../index.html" class="footer-brand d-flex align-items-center gap-2 text-white text-decoration-none"><img src="../../assets/imagens/logo.png" alt="" class="footer-logo" /> PD Sports</a></h2>
                     <p>Os melhores produtos para atletas</p>
                     <div class="d-flex align-items-center gap-3">
                         <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
