@@ -1,6 +1,7 @@
 /** Tela de login: valida, autentica via serviço de sessão e volta à página de origem. */
 
-import { entrar, estaLogado } from "../servicos/sessao.js";
+import { entrar, estaLogado, sair, PAPEL_CLIENTE } from "../servicos/sessao.js";
+import { mesclarCarrinhoVisitante } from "../servicos/carrinho.js";
 
 const PAGINA_PADRAO = "/index.html";
 
@@ -65,8 +66,23 @@ form.addEventListener("submit", async (evento) => {
   botao.textContent = "Entrando...";
 
   try {
-    await entrar(email, senha);
+    // await entrar(email, senha);
+    // location.assign(obterDestino());
+    const sessao = await entrar(email, senha);
+    if (sessao.papel === PAPEL_CLIENTE) {
+      botao.textContent = "Atualizando carrinho...";
+
+      try {
+        await mesclarCarrinhoVisitante(sessao.id);
+      } catch (erro) {
+        sair();
+
+        throw new Error(`Não foi possível juntar os carrinhos: ${erro.message}`);
+      }
+    }
+
     location.assign(obterDestino());
+
   } catch (erro) {
     mostrarErro(erro.message || "Não foi possível entrar. Tente novamente.");
     botao.disabled = false;

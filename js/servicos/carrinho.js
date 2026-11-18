@@ -186,6 +186,65 @@ export async function salvarCarrinho(carrinho) {
   return await clienteHttp.post(CONFIG.API_MOCK.CARRINHOS, payload);
 }
 
+
+
+
+export async function mesclarCarrinhoVisitante(usuarioId) {
+  if (ehVisitante(usuarioId)) {
+    throw new Error("É necessário entrar para mesclar os carrinhos.");
+  }
+
+  const visitante = obterCarrinhoVisitante();
+
+  if (visitante.itens.length === 0) return;
+
+  const carrinho = await obterCarrinho(usuarioId);
+
+  // Cria uma cópia normalizada dos itens da conta.
+  carrinho.itens = normalizarItens(carrinho.itens);
+
+  for (const item of visitante.itens) {
+    const existente = carrinho.itens.find(
+      (salvo) =>
+        salvo.produto_id === item.produto_id &&
+        salvo.variante === item.variante
+    );
+
+    if (existente) {
+      existente.quantidade += item.quantidade;
+    } else {
+      carrinho.itens.push({ ...item });
+    }
+  }
+
+  // Confere o estoque considerando todas as variantes do produto.
+  for (const item of carrinho.itens) {
+    const produto = await buscarProdutoPorId(item.produto_id);
+
+    if (!produto) {
+      throw new Error(
+        "Há um produto indisponível no carrinho. Revise os itens."
+      );
+    }
+
+    await validarEstoque(
+      carrinho,
+      item.produto_id,
+      item.variante,
+      item.quantidade
+    );
+  }
+
+  await salvarCarrinho(carrinho);
+
+  // Só limpa os itens locais após a gravação ter sucesso.
+  limparCarrinhoVisitante();
+}
+
+
+
+
+
 /**
  * Adiciona um item ao carrinho. Soma a quantidade se a variante for igual.
  * @param {string|number} usuarioId
