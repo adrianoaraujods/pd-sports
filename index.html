@@ -98,6 +98,31 @@
     </section>
 
 
+    <section class="categorias my-5">
+      <h2 id="titulo-categorias" class="text-start titulo-secao mb-3">
+        Categorias
+      </h2>
+
+      <p id="status-categorias" role="status"></p>
+
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" id="categorias-anterior" class="btn d-none d-md-inline-flex"
+          aria-label="Categorias anteriores" aria-controls="lista-categorias">
+          <i class="bi bi-chevron-left fs-1" aria-hidden="true"></i>
+        </button>
+
+        <div id="lista-categorias" class="d-flex align-items-stretch gap-3 overflow-x-auto pb-3 flex-grow-1"
+          tabindex="0" aria-label="Categorias de esportes">
+        </div>
+
+        <button type="button" id="categorias-proximo" class="btn d-none d-md-inline-flex"
+          aria-label="Próximas categorias" aria-controls="lista-categorias">
+          <i class="bi bi-chevron-right fs-1" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+
+
     <section class="">
       <h2 class="text-start my-3 titulo-secao">Produtos em alta</h2>
       <p id="status-destaques" role="status"></p>
@@ -176,6 +201,7 @@
 
   <script type="module" src="./js/componentes/navbar.js"></script>
   <script type="module" src="./js/componentes/carrossel-destaques.js"></script>
+  <script type="module" src="./js/componentes/categoriasHome.js"></script>
 </body>
 
 </html>

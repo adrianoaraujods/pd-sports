@@ -1,5 +1,15 @@
 @import url('variaveis.css');
 
+/* Largura fixa sem utilitário equivalente no Bootstrap; a altura acompanha a maior categoria. */
+.categoria-link {
+    width: 140px;
+}
+
+.categoria-circulo {
+    width: 110px;
+    height: 110px;
+}
+
 
 .hero {
     height: 450px;
@@ -33,6 +43,15 @@
     }
 }
 
+#lista-categorias {
+    min-width: 0;
+    scrollbar-width: none;
+}
+
+#lista-categorias::-webkit-scrollbar {
+    display: none;
+}
+
 .titulo-secao {
     display: flex;
     align-items: center;
@@ -44,7 +63,7 @@
     width: 8px;
     height: 1.5em;
     background-color: #ffc107;
-    
+
     flex-shrink: 0;
 }
 
@@ -86,21 +105,21 @@
 }
 
 @media (min-width: 576px) {
-    .cards-wrapper > .card {
+    .cards-wrapper>.card {
         flex-basis: calc((100% - 16px) / 2);
     }
 }
 
 /* A partir de 992px: três cards */
 @media (min-width: 992px) {
-    .cards-wrapper > .card {
+    .cards-wrapper>.card {
         flex-basis: calc((100% - 32px) / 3);
     }
 }
 
 /* A partir de 1200px: quatro cards */
 @media (min-width: 1200px) {
-    .cards-wrapper > .card {
+    .cards-wrapper>.card {
         flex-basis: calc((100% - 48px) / 4);
     }
 }
