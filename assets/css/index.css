@@ -52,6 +52,14 @@
     display: none;
 }
 
+#categorias-anterior,
+#categorias-proximo {
+    align-self: flex-start;
+    margin-top: 55px;
+    transform: translateY(-50%);
+    border: none;
+}
+
 .titulo-secao {
     display: flex;
     align-items: center;
