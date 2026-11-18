@@ -9,12 +9,6 @@
     border-radius: 4px;
 }
 
-@media (max-width:768px) {
-    .filters-wrapper {
-        flex-direction: column;
-    
-    }
-}
 @media (max-width:340px) {
    .title {
     flex-direction: column;

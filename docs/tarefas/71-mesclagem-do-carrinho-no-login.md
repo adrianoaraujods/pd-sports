@@ -1,6 +1,6 @@
 # 71: Mesclagem do Carrinho no login
 
-**Status:** Não iniciado
+**Status:** Concluída
 **Dia:** Dia 15 (qua 18/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31, 41, 70
 
-- [ ] Itens com mesmo Produto e Variante somam as quantidades
-- [ ] O `localStorage` é limpo depois da Mesclagem
+- [x] Itens com mesmo Produto e Variante somam as quantidades
+- [x] O `localStorage` é limpo depois da Mesclagem
