@@ -3,7 +3,7 @@
  * Função pura: recebe os dados digitados e devolve as mensagens de erro por campo.
  */
 
-import { GENEROS, MAPA_CORES, SEPARADOR_CORES } from "./catalogo.js";
+import { CATEGORIAS, GENEROS, MAPA_CORES, SEPARADOR_CORES } from "./catalogo.js";
 
 export const LIMITES = {
   NOME_MIN: 3,
@@ -58,7 +58,7 @@ function validarCor(cor) {
 
 /**
  * Valida os dados do formulário de Produto.
- * @param {{ nome?: string, descricao?: string, preco?: number|string, imagem?: string, estoque?: number|string, genero?: string, marca?: string, cor?: string }} dados
+ * @param {{ nome?: string, descricao?: string, preco?: number|string, imagem?: string, estoque?: number|string, categoria?: string, genero?: string, marca?: string, cor?: string }} dados
  * @param {{ produtosDaModalidade?: {id: string, nome: string}[], idAtual?: string }} [contexto]
  *   `produtosDaModalidade`: Produtos da Modalidade escolhida (para checar nome único);
  *   `idAtual`: id do Produto em edição (ele não conta como duplicado de si mesmo).
@@ -92,6 +92,8 @@ export function validarProduto(dados, { produtosDaModalidade = [], idAtual } = {
   if (!Number.isInteger(estoque) || estoque < 0) {
     erros.estoque = "O estoque deve ser um número inteiro maior ou igual a zero.";
   }
+
+  if (!Object.hasOwn(CATEGORIAS, String(dados.categoria ?? ""))) erros.categoria = "Selecione a categoria do produto.";
 
   if (!Object.hasOwn(GENEROS, String(dados.genero ?? ""))) erros.genero = "Selecione o gênero do produto.";
 

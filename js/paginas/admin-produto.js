@@ -7,6 +7,7 @@
 import { protegerRotaAdministrativa } from "../servicos/admin.js";
 import {
   carregarCatalogo,
+  CATEGORIAS,
   MAPA_CORES,
   SEPARADOR_CORES,
 } from "../servicos/catalogo.js";
@@ -130,6 +131,7 @@ async function iniciar() {
   const campoPreco = document.getElementById("campoPreco");
   const campoEstoque = document.getElementById("campoEstoque");
   const campoDestaque = document.getElementById("campoDestaque");
+  const campoCategoria = document.getElementById("campoCategoria");
   const campoGenero = document.getElementById("campoGenero");
   const campoMarca = document.getElementById("campoMarca");
   const campoCorPrincipal = document.getElementById("campoCorPrincipal");
@@ -140,6 +142,11 @@ async function iniciar() {
       ...catalogo.modalidades.map((m) => new Option(m.nome, m.id)),
     );
   }
+
+  // Opções vindas de CATEGORIAS, a mesma lista usada nos filtros do catálogo.
+  campoCategoria.append(
+    ...Object.entries(CATEGORIAS).map(([valor, rotulo]) => new Option(rotulo, valor)),
+  );
 
   /** Marcas já cadastradas viram sugestões, para manter a mesma grafia. */
   function marcasCadastradas() {
@@ -189,6 +196,7 @@ async function iniciar() {
     campoPreco.value = String(produto.preco ?? "").replace(".", ",");
     campoEstoque.value = produto.estoque ?? "";
     campoDestaque.checked = Boolean(produto.destaque);
+    campoCategoria.value = produto.categoria ?? "";
     campoGenero.value = produto.genero ?? "";
     campoMarca.value = produto.marca ?? "";
     const [corPrincipal = "", corSecundaria = ""] = String(produto.cor ?? "")
@@ -244,6 +252,7 @@ async function iniciar() {
       estoque: estoque === "" || estoque == null ? NaN : Number(estoque),
       imagem: campoImagem.value.trim(),
       destaque: campoDestaque.checked,
+      categoria: campoCategoria.value,
       genero: campoGenero.value,
       marca: marcaPadronizada(campoMarca.value),
       cor: cores.join(SEPARADOR_CORES),
@@ -276,6 +285,7 @@ async function iniciar() {
         preco: campoPreco,
         estoque: campoEstoque,
         imagem: campoImagem,
+        categoria: campoCategoria,
         genero: campoGenero,
         marca: campoMarca,
         cor: campoCorPrincipal,
