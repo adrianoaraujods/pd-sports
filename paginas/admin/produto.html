@@ -175,6 +175,62 @@
               <div class="invalid-feedback"></div>
             </div>
 
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <label for="campoGenero" class="form-label">Gênero</label>
+                <select class="form-select" id="campoGenero" name="genero">
+                  <option value="">Selecione...</option>
+                  <option value="masc">Masculino</option>
+                  <option value="fem">Feminino</option>
+                  <option value="unissex">Unissex</option>
+                </select>
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-6">
+                <label for="campoMarca" class="form-label">Marca</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="campoMarca"
+                  name="marca"
+                  placeholder="Adidas..."
+                  maxlength="40"
+                  autocomplete="off"
+                  list="listaMarcas"
+                />
+                <datalist id="listaMarcas"></datalist>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <label for="campoCorPrincipal" class="form-label">Cor</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">
+                    <span class="amostra-cor" id="amostraCorPrincipal" aria-hidden="true"></span>
+                  </span>
+                  <select class="form-select" id="campoCorPrincipal" name="cor">
+                    <option value="">Selecione...</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="campoCorSecundaria" class="form-label"
+                  >Segunda cor <span class="text-body-secondary">(opcional)</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <span class="amostra-cor" id="amostraCorSecundaria" aria-hidden="true"></span>
+                  </span>
+                  <select class="form-select" id="campoCorSecundaria" name="corSecundaria">
+                    <option value="">Nenhuma</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
             <div class="mb-3">
               <label for="campoDescricao" class="form-label">Descrição</label>
               <textarea
@@ -247,7 +303,7 @@
                   type="text"
                   class="form-control"
                   id="campoVariante"
-                  placeholder="Branca..."
+                  placeholder="40, M..."
                   maxlength="30"
                   autocomplete="off"
                 />
@@ -265,7 +321,8 @@
                 aria-label="Variantes adicionadas"
               ></ul>
               <div class="form-text">
-                Deixe sem nenhuma variante caso só tenha um tipo de produto.
+                Tamanhos ou numerações (ex.: 38, 39, P, M). Deixe sem nenhuma
+                variante caso o produto tenha tamanho único.
               </div>
             </div>
 

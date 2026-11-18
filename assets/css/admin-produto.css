@@ -39,6 +39,15 @@
   padding: 0;
 }
 
+.amostra-cor {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--texto-principal);
+  border-radius: 50%;
+  background: transparent;
+}
+
 .previa-imagem {
   width: 200px;
   aspect-ratio: 1;
