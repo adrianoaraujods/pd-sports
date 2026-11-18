@@ -113,6 +113,14 @@ export const MAPA_CORES = {
 /** Valores aceitos em `Produto.genero` → rótulo exibido. */
 export const GENEROS = { masc: "Masculino", fem: "Feminino", unissex: "Unissex" };
 
+/** Valores de `Produto.categoria` → rótulo exibido nos filtros (na ordem exibida). */
+export const CATEGORIAS = {
+  calçado: "Calçados",
+  roupa: "Roupas",
+  acessório: "Acessórios",
+  equipamento: "Equipamentos",
+};
+
 /** Separador das cores em `Produto.cor` ("Preto/Branco"). */
 export const SEPARADOR_CORES = "/";
 
@@ -120,7 +128,7 @@ export const SEPARADOR_CORES = "/";
 const ORDEM_TAMANHOS_LETRA = ["PP", "P", "M", "G", "GG", "XG"];
 
 /** Faixas de preço fixas da sidebar (`max` exclusivo). */
-const FAIXAS_PRECO = [
+export const FAIXAS_PRECO = [
   { valor: "ate-200", rotulo: "Até R$ 199,99", min: 0, max: 200 },
   { valor: "200-400", rotulo: "R$ 200,00 - R$ 399,99", min: 200, max: 400 },
   { valor: "400-700", rotulo: "R$ 400,00 - R$ 699,99", min: 400, max: 700 },
@@ -156,6 +164,7 @@ export function extrairAtributos(produto) {
 
   return {
     modalidade: produto.modalidade_id != null ? String(produto.modalidade_id) : null,
+    categoria: CATEGORIAS[produto.categoria] ? produto.categoria : null,
     genero: GENEROS[produto.genero] ? produto.genero : null,
     marca: produto.marca?.trim() || null,
     cores: [...new Set(cores)],
@@ -176,7 +185,7 @@ function contar(mapa, valor, rotulo, extra) {
  * Cada Produto conta uma vez por opção (um "Preto/Branco" conta em Preto e em Branco).
  * @param {object[]} produtos lista única de Produtos (ver `listarProdutos`)
  * @returns {{
- *   modalidades: { valor: string, rotulo: string, quantidade: number }[],
+ *   categorias: { valor: string, rotulo: string, quantidade: number }[],
  *   generos: { valor: string, rotulo: string, quantidade: number }[],
  *   tamanhos: { valor: string, rotulo: string, quantidade: number }[],
  *   precos: { min: number, max: number, faixas: { valor: string, rotulo: string, min: number, max: number, quantidade: number }[] },
@@ -185,7 +194,7 @@ function contar(mapa, valor, rotulo, extra) {
  * }}
  */
 export function extrairFiltros(produtos) {
-  const modalidades = new Map();
+  const categorias = new Map();
   const generos = new Map();
   const tamanhos = new Map();
   const marcas = new Map();
@@ -197,7 +206,7 @@ export function extrairFiltros(produtos) {
   for (const produto of produtos) {
     const a = extrairAtributos(produto);
 
-    contar(modalidades, a.modalidade, produto.modalidade_nome ?? a.modalidade);
+    contar(categorias, a.categoria, CATEGORIAS[a.categoria]);
     contar(generos, a.genero, GENEROS[a.genero]);
     contar(marcas, a.marca, a.marca);
     a.tamanhos.forEach((t) => contar(tamanhos, t, t));
@@ -213,7 +222,7 @@ export function extrairFiltros(produtos) {
   const porQuantidade = (x, y) => y.quantidade - x.quantidade || porRotulo(x, y);
 
   return {
-    modalidades: [...modalidades.values()].sort(porRotulo),
+    categorias: Object.keys(CATEGORIAS).map((c) => categorias.get(c)).filter(Boolean),
     generos: Object.keys(GENEROS).map((g) => generos.get(g)).filter(Boolean),
     tamanhos: [...tamanhos.values()].sort((x, y) => compararTamanhos(x.valor, y.valor)),
     precos: {
@@ -224,4 +233,52 @@ export function extrairFiltros(produtos) {
     marcas: [...marcas.values()].sort(porQuantidade),
     cores: [...cores.values()].sort(porQuantidade),
   };
+}
+
+/**
+ * Filtros selecionados no catálogo. Dentro de um grupo vale qualquer opção (OU);
+ * entre grupos, o Produto precisa atender a todos (E). Grupo vazio não filtra.
+ * @typedef {{
+ *   modalidade?: string,
+ *   categorias?: string[], generos?: string[], tamanhos?: string[],
+ *   marcas?: string[], cores?: string[], faixas?: string[],
+ *   precoMin?: number|null, precoMax?: number|null,
+ * }} FiltrosSelecionados
+ */
+
+/** Preço atende se cair em uma das faixas marcadas ou no intervalo digitado. */
+function atendePreco(preco, { faixas = [], precoMin = null, precoMax = null }) {
+  const temIntervalo = precoMin != null || precoMax != null;
+  if (faixas.length === 0 && !temIntervalo) return true;
+
+  const naFaixa = FAIXAS_PRECO.some(
+    (f) => faixas.includes(f.valor) && preco >= f.min && preco < f.max
+  );
+  const noIntervalo =
+    temIntervalo && preco >= (precoMin ?? 0) && preco <= (precoMax ?? Infinity);
+  return naFaixa || noIntervalo;
+}
+
+/**
+ * @param {object[]} produtos
+ * @param {FiltrosSelecionados} filtros
+ * @returns {object[]} Produtos que atendem a todos os filtros.
+ */
+export function filtrarProdutos(produtos, filtros) {
+  const { modalidade, categorias = [], generos = [], tamanhos = [], marcas = [], cores = [] } =
+    filtros;
+  const algum = (lista, valores) => lista.length === 0 || valores.some((v) => lista.includes(v));
+
+  return produtos.filter((produto) => {
+    const a = extrairAtributos(produto);
+    return (
+      (!modalidade || a.modalidade === String(modalidade)) &&
+      algum(categorias, [a.categoria]) &&
+      algum(generos, [a.genero]) &&
+      algum(marcas, [a.marca]) &&
+      algum(tamanhos, a.tamanhos) &&
+      algum(cores, a.cores) &&
+      atendePreco(a.preco, filtros)
+    );
+  });
 }
