@@ -33,21 +33,6 @@
     }
 }
 
-.titulo-secao {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.titulo-secao::before {
-    content: "";
-    width: 8px;
-    height: 1.5em;
-    background-color: #ffc107;
-    
-    flex-shrink: 0;
-}
-
 .cards-wrapper {
     display: flex;
     gap: 16px;
