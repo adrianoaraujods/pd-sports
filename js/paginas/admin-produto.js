@@ -5,7 +5,12 @@
  */
 
 import { protegerRotaAdministrativa } from "../servicos/admin.js";
-import { carregarCatalogo } from "../servicos/catalogo.js";
+import {
+  carregarCatalogo,
+  CATEGORIAS,
+  MAPA_CORES,
+  SEPARADOR_CORES,
+} from "../servicos/catalogo.js";
 import { criarProduto, editarProduto } from "../servicos/produtos.js";
 import { validarProduto } from "../servicos/validacao-produto.js";
 
@@ -126,12 +131,63 @@ async function iniciar() {
   const campoPreco = document.getElementById("campoPreco");
   const campoEstoque = document.getElementById("campoEstoque");
   const campoDestaque = document.getElementById("campoDestaque");
+  const campoCategoria = document.getElementById("campoCategoria");
+  const campoGenero = document.getElementById("campoGenero");
+  const campoMarca = document.getElementById("campoMarca");
+  const campoCorPrincipal = document.getElementById("campoCorPrincipal");
+  const campoCorSecundaria = document.getElementById("campoCorSecundaria");
 
   function preencherModalidades() {
     campoModalidade.replaceChildren(
       ...catalogo.modalidades.map((m) => new Option(m.nome, m.id)),
     );
   }
+
+  // Opções vindas de CATEGORIAS, a mesma lista usada nos filtros do catálogo.
+  campoCategoria.append(
+    ...Object.entries(CATEGORIAS).map(([valor, rotulo]) => new Option(rotulo, valor)),
+  );
+
+  /** Marcas já cadastradas viram sugestões, para manter a mesma grafia. */
+  function marcasCadastradas() {
+    const marcas = catalogo.produtos.map((p) => p.marca?.trim()).filter(Boolean);
+    return [...new Set(marcas)].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }
+
+  function preencherMarcas() {
+    document
+      .getElementById("listaMarcas")
+      .replaceChildren(...marcasCadastradas().map((m) => new Option(m)));
+  }
+
+  /** "adidas" vira "Adidas" se essa marca já existir; senão fica como digitada. */
+  function marcaPadronizada(texto) {
+    const marca = texto.trim();
+    return (
+      marcasCadastradas().find(
+        (m) => m.toLowerCase() === marca.toLowerCase(),
+      ) ?? marca
+    );
+  }
+
+  function preencherCores() {
+    const cores = Object.keys(MAPA_CORES).sort((a, b) =>
+      a.localeCompare(b, "pt-BR"),
+    );
+    for (const campo of [campoCorPrincipal, campoCorSecundaria]) {
+      campo.append(...cores.map((cor) => new Option(cor, cor)));
+    }
+  }
+
+  function atualizarAmostrasCor() {
+    document.getElementById("amostraCorPrincipal").style.background =
+      MAPA_CORES[campoCorPrincipal.value] ?? "transparent";
+    document.getElementById("amostraCorSecundaria").style.background =
+      MAPA_CORES[campoCorSecundaria.value] ?? "transparent";
+  }
+
+  campoCorPrincipal.addEventListener("change", atualizarAmostrasCor);
+  campoCorSecundaria.addEventListener("change", atualizarAmostrasCor);
 
   function preencherFormulario(produto) {
     campoNome.value = produto.nome ?? "";
@@ -140,6 +196,16 @@ async function iniciar() {
     campoPreco.value = String(produto.preco ?? "").replace(".", ",");
     campoEstoque.value = produto.estoque ?? "";
     campoDestaque.checked = Boolean(produto.destaque);
+    campoCategoria.value = produto.categoria ?? "";
+    campoGenero.value = produto.genero ?? "";
+    campoMarca.value = produto.marca ?? "";
+    const [corPrincipal = "", corSecundaria = ""] = String(produto.cor ?? "")
+      .split(SEPARADOR_CORES)
+      .map((c) => c.trim());
+    // Cor fora do MAPA_CORES fica sem seleção e a validação pede para escolher.
+    campoCorPrincipal.value = corPrincipal;
+    campoCorSecundaria.value = corSecundaria;
+    atualizarAmostrasCor();
     campoImagem.value = produto.imagem ?? "";
     variantes = [...(produto.variantes ?? [])];
     desenharVariantes();
@@ -150,6 +216,8 @@ async function iniciar() {
   try {
     catalogo = await carregarCatalogo({ forcar: true });
     preencherModalidades();
+    preencherMarcas();
+    preencherCores();
 
     if (produtoId) {
       original = catalogo.produtos.find((p) => p.id === produtoId);
@@ -174,6 +242,9 @@ async function iniciar() {
   function lerDados() {
     const preco = campoPreco.value.trim().replace(",", ".");
     const estoque = original ? original.estoque : campoEstoque.value.trim();
+    const cores = [campoCorPrincipal.value, campoCorSecundaria.value].filter(
+      Boolean,
+    );
     return {
       nome: campoNome.value.trim(),
       descricao: campoDescricao.value.trim(),
@@ -181,6 +252,10 @@ async function iniciar() {
       estoque: estoque === "" || estoque == null ? NaN : Number(estoque),
       imagem: campoImagem.value.trim(),
       destaque: campoDestaque.checked,
+      categoria: campoCategoria.value,
+      genero: campoGenero.value,
+      marca: marcaPadronizada(campoMarca.value),
+      cor: cores.join(SEPARADOR_CORES),
       variantes,
     };
   }
@@ -210,6 +285,10 @@ async function iniciar() {
         preco: campoPreco,
         estoque: campoEstoque,
         imagem: campoImagem,
+        categoria: campoCategoria,
+        genero: campoGenero,
+        marca: campoMarca,
+        cor: campoCorPrincipal,
       };
       camposComErro.forEach((chave) =>
         mostrarErroCampo(camposDoFormulario[chave], erros[chave]),

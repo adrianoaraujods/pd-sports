@@ -1,6 +1,6 @@
 # 72: Dark mode: tokens e alternância
 
-**Status:** Não iniciado
+**Status:** Concluída 
 **Dia:** Dia 15 (qua 18/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 15, 28, 31, 37
 
-- [ ] Preferência persiste entre visitas
-- [ ] Contraste legível nos dois temas
+- [x] Preferência persiste entre visitas
+- [x] Contraste legível nos dois temas

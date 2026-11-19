@@ -1,6 +1,6 @@
 # 65: Finalização: esvaziar Carrinho e confirmar
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 13 (seg 16/11)
 **Estimativa:** 2h
 
@@ -8,4 +8,4 @@
 
 **Bloqueado por:** 28, 31, 56
 
-- [ ] O Carrinho é esvaziado na API
+- [x] O Carrinho é esvaziado na API

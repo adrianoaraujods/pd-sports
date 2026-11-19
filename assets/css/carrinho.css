@@ -8,23 +8,23 @@
     flex-shrink: 0;
 }
 
-.item-carrinho-info a {
-    color: var(--base-estrutura);
+a.item-carrinho-info {
+    color: var(--texto-principal);
     font-weight: 500;
     overflow-wrap: anywhere;
     word-break: break-word;
 }
 
-.item-carrinho-info a:hover {
-    color: var(--base-secondary);
+a.item-carrinho-info:hover {
+    color: var(--bs-link-color);
 }
 
 .seletor-quantidade-carrinho {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--light-card-border);
+    border: 1px solid var(--card-borda);
     border-radius: 6px;
-    background-color: var(--base-neutral);
+    background-color: var(--pagina-fundo);
     overflow: hidden;
 }
 
@@ -38,12 +38,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--base-estrutura);
+    color: var(--texto-principal);
     transition: background-color 0.2s;
 }
 
 .seletor-quantidade-carrinho button:hover:not(:disabled) {
     background-color: var(--base-primary-hover);
+    color: var(--base-primary-foreground);
 }
 
 .seletor-quantidade-carrinho button:disabled {
@@ -54,7 +55,7 @@
 .seletor-quantidade-carrinho button.limite-atingido,
 .seletor-quantidade-carrinho button.limite-atingido:hover {
     background-color: var(--bs-danger-bg-subtle, #f8d7da);
-    color: var(--bs-danger, #dc3545);
+    color: var(--bs-danger-text-emphasis);
     cursor: not-allowed;
 }
 
@@ -91,9 +92,9 @@
     #tabela-carrinho tr {
         padding: 1rem;
         margin-bottom: 0.75rem;
-        border: 1px solid var(--light-card-border);
+        border: 1px solid var(--card-borda);
         border-radius: 8px;
-        background-color: var(--base-neutral);
+        background-color: var(--pagina-fundo);
     }
 
     #tabela-carrinho td {
@@ -109,7 +110,7 @@
     #tabela-carrinho td::before {
         content: attr(data-rotulo);
         font-weight: 600;
-        color: var(--base-muted-foreground);
+        color: var(--texto-secundario);
         font-size: 0.85rem;
         text-align: left;
     }
@@ -118,7 +119,7 @@
     #tabela-carrinho td[data-rotulo="Produto"] {
         display: block;
         padding-bottom: 0.75rem;
-        border-bottom: 1px solid var(--light-card-border);
+        border-bottom: 1px solid var(--card-borda);
         margin-bottom: 0.5rem;
         text-align: left;
     }
@@ -132,7 +133,7 @@
         justify-content: flex-end;
         padding-top: 0.75rem;
         margin-top: 0.5rem;
-        border-top: 1px dashed var(--light-card-border);
+        border-top: 1px dashed var(--card-borda);
     }
 
     #tabela-carrinho td[data-rotulo="Ações"]::before {
@@ -143,4 +144,55 @@
         width: 56px;
         height: 56px;
     }
+}
+
+/* Frete: formulário de CEP e resultado */
+#form-frete .form-control {
+    border-color: var(--card-borda);
+}
+
+#form-frete .form-control:focus {
+    border-color: var(--bs-link-color);
+    box-shadow: 0 0 0 0.2rem rgba(65, 111, 168, 0.25);
+}
+
+#form-frete .form-control.is-invalid {
+    border-color: var(--bs-danger, #dc3545);
+}
+
+#form-frete .btn-secondary {
+    background-color: var(--bs-link-color);
+    border: none;
+    color: var(--base-secondary-foreground);
+}
+
+#form-frete .btn-secondary:hover:not(:disabled) {
+    background-color: var(--base-secondary-hover);
+    color: var(--base-secondary-foreground);
+}
+
+#form-frete a {
+    color: var(--bs-link-color);
+}
+
+.resultado-frete {
+    padding: 0.75rem;
+    border: 1px solid var(--card-borda);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.resultado-frete .endereco-frete {
+    color: var(--texto-secundario);
+}
+
+.pd-badge-sucesso {
+    background-color: var(--bs-success-bg-subtle, #d1e7dd);
+    color: var(--bs-success-text-emphasis, #0a3622);
+    border: 1px solid var(--bs-success, #198754);
+}
+
+.frete-gratis {
+    color: var(--bs-success-text-emphasis);
 }

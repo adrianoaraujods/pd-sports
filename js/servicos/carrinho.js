@@ -1,6 +1,6 @@
 /**
  * Serviço do Carrinho (API e regras)
- * Gerencia o Carrinho do Cliente gravado na MockAPI.
+ * Gerencia o Carrinho do Cliente gravado na MockAPI e o Carrinho do Visitante guardado no `localStorage`.
  */
 
 import clienteHttp from "../api/cliente-http.js";
@@ -80,14 +80,76 @@ async function validarEstoque(carrinho, produto_id, variante, novaQuantidade) {
 }
 
 /** Formata a variante garantindo "Único" como padrão. */
-const formatarVariante = (variante) => variante?.trim() || "Único";
+function formatarVariante(variante) {
+  return String(variante ?? "").trim() || "Único";
+}
+
+/** Chave do Carrinho do Visitante no `localStorage`. */
+export const CHAVE_CARRINHO_VISITANTE = "pd-sports:carrinho-visitante";
+
+const ehVisitante = (usuarioId) =>
+  usuarioId === null || usuarioId === undefined || usuarioId === "";
+
+/** Mantém só itens válidos (com produto_id e quantidade positiva). */
+function normalizarItens(itens) {
+  if (!Array.isArray(itens)) return [];
+  return itens
+    .filter((i) => i && i.produto_id && Number(i.quantidade) > 0)
+    .map((i) => ({
+      produto_id: String(i.produto_id),
+      modalidade_id: i.modalidade_id ?? null,
+      variante: formatarVariante(i.variante),
+      quantidade: Math.floor(Number(i.quantidade)),
+    }));
+}
+
+/**
+ * Lê o Carrinho do Visitante do `localStorage`. Dados ausentes ou corrompidos viram Carrinho vazio.
+ * @returns {{ id: null, usuario_id: null, itens: object[] }}
+ */
+export function obterCarrinhoVisitante() {
+  try {
+    const bruto = localStorage.getItem(CHAVE_CARRINHO_VISITANTE);
+    const salvo = bruto ? JSON.parse(bruto) : null;
+    return { id: null, usuario_id: null, itens: normalizarItens(salvo?.itens) };
+  } catch {
+    return { id: null, usuario_id: null, itens: [] };
+  }
+}
+
+/** Grava o Carrinho do Visitante no `localStorage` (remove a chave se estiver vazio). */
+function salvarCarrinhoVisitante(carrinho) {
+  const itens = normalizarItens(carrinho.itens);
+  try {
+    if (itens.length === 0) {
+      localStorage.removeItem(CHAVE_CARRINHO_VISITANTE);
+    } else {
+      localStorage.setItem(CHAVE_CARRINHO_VISITANTE, JSON.stringify({ itens }));
+    }
+  } catch (erro) {
+    throw new Error("Não foi possível salvar o carrinho neste navegador.", { cause: erro });
+  }
+  return { id: null, usuario_id: null, itens };
+}
+
+/** Apaga o Carrinho do Visitante (usado depois da Mesclagem no login). */
+export function limparCarrinhoVisitante() {
+  try {
+    localStorage.removeItem(CHAVE_CARRINHO_VISITANTE);
+  } catch {
+    // localStorage indisponível: não há o que limpar
+  }
+}
 
 /**
  * Busca o carrinho do usuário na MockAPI (ou cria um novo se não existir).
- * @param {string|number} usuarioId
+ * Sem usuário (Visitante), lê o Carrinho do `localStorage`.
+ * @param {string|number|null} usuarioId
  * @returns {Promise<object>} Carrinho { id, usuario_id, itens }
  */
 export async function obterCarrinho(usuarioId) {
+  if (ehVisitante(usuarioId)) return obterCarrinhoVisitante();
+
   const carrinhos = await clienteHttp.get(CONFIG.API_MOCK.CARRINHOS);
   const idStr = String(usuarioId);
 
@@ -106,10 +168,12 @@ export async function obterCarrinho(usuarioId) {
 }
 
 /**
- * Persiste as alterações do carrinho na MockAPI.
+ * Persiste as alterações do carrinho na MockAPI (ou no `localStorage`, se for do Visitante).
  * @param {object} carrinho
  */
 export async function salvarCarrinho(carrinho) {
+  if (ehVisitante(carrinho.usuario_id)) return salvarCarrinhoVisitante(carrinho);
+
   const payload = {
     usuario_id: String(carrinho.usuario_id),
     itens: carrinho.itens ?? [],
@@ -121,6 +185,65 @@ export async function salvarCarrinho(carrinho) {
 
   return await clienteHttp.post(CONFIG.API_MOCK.CARRINHOS, payload);
 }
+
+
+
+
+export async function mesclarCarrinhoVisitante(usuarioId) {
+  if (ehVisitante(usuarioId)) {
+    throw new Error("É necessário entrar para mesclar os carrinhos.");
+  }
+
+  const visitante = obterCarrinhoVisitante();
+
+  if (visitante.itens.length === 0) return;
+
+  const carrinho = await obterCarrinho(usuarioId);
+
+  // Cria uma cópia normalizada dos itens da conta.
+  carrinho.itens = normalizarItens(carrinho.itens);
+
+  for (const item of visitante.itens) {
+    const existente = carrinho.itens.find(
+      (salvo) =>
+        salvo.produto_id === item.produto_id &&
+        salvo.variante === item.variante
+    );
+
+    if (existente) {
+      existente.quantidade += item.quantidade;
+    } else {
+      carrinho.itens.push({ ...item });
+    }
+  }
+
+  // Confere o estoque considerando todas as variantes do produto.
+  for (const item of carrinho.itens) {
+    const produto = await buscarProdutoPorId(item.produto_id);
+
+    if (!produto) {
+      throw new Error(
+        "Há um produto indisponível no carrinho. Revise os itens."
+      );
+    }
+
+    await validarEstoque(
+      carrinho,
+      item.produto_id,
+      item.variante,
+      item.quantidade
+    );
+  }
+
+  await salvarCarrinho(carrinho);
+
+  // Só limpa os itens locais após a gravação ter sucesso.
+  limparCarrinhoVisitante();
+}
+
+
+
+
 
 /**
  * Adiciona um item ao carrinho. Soma a quantidade se a variante for igual.
@@ -228,6 +351,35 @@ export async function esvaziarCarrinho(usuarioId) {
   const resultado = await salvarCarrinho(carrinho);
   exibirFeedback("Carrinho esvaziado.", "info");
   return resultado;
+}
+
+/**
+ * Finaliza a compra do usuário:
+ * Valida o carrinho, captura os dados detalhados para confirmação e esvazia o carrinho na MockAPI.
+ * @param {string|number} usuarioId
+ * @returns {Promise<{ sucesso: boolean, itens: Array, totalItens: number, valorTotal: number, data: string }>}
+ */
+export async function finalizarCompra(usuarioId) {
+  const carrinho = await obterCarrinho(usuarioId);
+
+  if (!carrinho.itens || carrinho.itens.length === 0) {
+    throw new Error("Não é possível finalizar a compra com o carrinho vazio.");
+  }
+
+  const detalhado = await detalharCarrinho(carrinho);
+  const resumoConfirmacao = {
+    sucesso: true,
+    itens: detalhado.itens,
+    totalItens: detalhado.totalItens,
+    valorTotal: detalhado.valorTotal,
+    data: new Date().toISOString(),
+  };
+
+  carrinho.itens = [];
+  await salvarCarrinho(carrinho);
+
+  exibirFeedback("Compra finalizada com sucesso! O carrinho foi esvaziado.", "sucesso");
+  return resumoConfirmacao;
 }
 
 /**

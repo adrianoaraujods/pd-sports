@@ -12,6 +12,13 @@ import { obterSessao, sair, PAPEL_ADMINISTRADOR } from "../servicos/sessao.js";
 
 const BOTAO_ICONE = "btn text-white fs-4 lh-1 p-2";
 
+// Busca: Enter ou clique na lupa envia o form (GET) para o catálogo com ?q=<termo>.
+const CAMPO_BUSCA = `
+            <div class="input-group">
+              <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+              <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            </div>`;
+
 function obterPrefixoBase() {
   const segmentos = location.pathname.split("/").filter(Boolean);
   const idxPaginas = segmentos.indexOf("paginas");
@@ -74,6 +81,10 @@ function montarNavbar(sessao) {
         </a>
 
         <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+          <button type="button" class="btn text-white" data-alternar-tema
+              aria-label="Alternar tema claro e escuro">
+              <i class="bi bi-circle-half" aria-hidden="true"></i>
+          </button>
           <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
               data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
               <i class="bi bi-search" aria-hidden="true"></i>
@@ -98,15 +109,14 @@ function montarNavbar(sessao) {
               .join("")}
           </ul>
           <form class="d-none d-lg-flex" role="search" action="${base}paginas/catalogo.html" method="GET">
-            <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            ${CAMPO_BUSCA}
           </form>
         </div>
 
         <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
-            <form class="d-flex gap-2 py-2" role="search" action="${base}paginas/catalogo.html" method="GET">
-                <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </form>
+          <form class="py-2" role="search" action="${base}paginas/catalogo.html" method="GET">
+            ${CAMPO_BUSCA}
+          </form>
         </div>
       </div>
     </nav>`;

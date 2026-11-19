@@ -1,6 +1,6 @@
 # 69: Dashboard: tela e gráfico
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 14 (ter 17/11)
 **Estimativa:** 4h
 
@@ -8,7 +8,7 @@
 
 **Bloqueado por:** 23, 28, 31, 52, 68
 
-- [ ] Valores batem com os dados da MockAPI
-- [ ] Acesso restrito ao Administrador
-- [ ] Funciona em celular e em desktop (responsivo)
-- [ ] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário
+- [x] Valores batem com os dados da MockAPI
+- [x] Acesso restrito ao Administrador
+- [x] Funciona em celular e em desktop (responsivo)
+- [x] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário

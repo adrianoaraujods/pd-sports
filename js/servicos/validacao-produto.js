@@ -3,11 +3,16 @@
  * Função pura: recebe os dados digitados e devolve as mensagens de erro por campo.
  */
 
+import { CATEGORIAS, GENEROS, MAPA_CORES, SEPARADOR_CORES } from "./catalogo.js";
+
 export const LIMITES = {
   NOME_MIN: 3,
   NOME_MAX: 80,
   DESCRICAO_MIN: 10,
   DESCRICAO_MAX: 500,
+  MARCA_MIN: 2,
+  MARCA_MAX: 40,
+  CORES_MAX: 2,
 };
 
 /** Aceita número ou texto digitado (aceita vírgula decimal); devolve NaN se vazio ou inválido. */
@@ -38,9 +43,22 @@ function validarNome(nome, produtosDaModalidade, idAtual) {
   return repetido ? "Já existe um produto com este nome nesta modalidade." : null;
 }
 
+/** `cor` deve ter de 1 a CORES_MAX cores diferentes do MAPA_CORES, separadas por "/". */
+function validarCor(cor) {
+  const cores = String(cor ?? "")
+    .split(SEPARADOR_CORES)
+    .map((c) => c.trim())
+    .filter(Boolean);
+  if (cores.length === 0) return "Selecione a cor do produto.";
+  if (cores.length > LIMITES.CORES_MAX) return `Selecione no máximo ${LIMITES.CORES_MAX} cores.`;
+  if (cores.some((c) => !Object.hasOwn(MAPA_CORES, c))) return "Selecione uma cor da lista.";
+  if (new Set(cores).size !== cores.length) return "As cores devem ser diferentes.";
+  return null;
+}
+
 /**
  * Valida os dados do formulário de Produto.
- * @param {{ nome?: string, descricao?: string, preco?: number|string, imagem?: string, estoque?: number|string }} dados
+ * @param {{ nome?: string, descricao?: string, preco?: number|string, imagem?: string, estoque?: number|string, categoria?: string, genero?: string, marca?: string, cor?: string }} dados
  * @param {{ produtosDaModalidade?: {id: string, nome: string}[], idAtual?: string }} [contexto]
  *   `produtosDaModalidade`: Produtos da Modalidade escolhida (para checar nome único);
  *   `idAtual`: id do Produto em edição (ele não conta como duplicado de si mesmo).
@@ -53,6 +71,7 @@ export function validarProduto(dados, { produtosDaModalidade = [], idAtual } = {
   const imagem = String(dados.imagem ?? "").trim();
   const preco = paraNumero(dados.preco);
   const estoque = paraNumero(dados.estoque);
+  const marca = String(dados.marca ?? "").trim();
 
   const erroNome = validarNome(nome, produtosDaModalidade, idAtual);
   if (erroNome) erros.nome = erroNome;
@@ -73,6 +92,17 @@ export function validarProduto(dados, { produtosDaModalidade = [], idAtual } = {
   if (!Number.isInteger(estoque) || estoque < 0) {
     erros.estoque = "O estoque deve ser um número inteiro maior ou igual a zero.";
   }
+
+  if (!Object.hasOwn(CATEGORIAS, String(dados.categoria ?? ""))) erros.categoria = "Selecione a categoria do produto.";
+
+  if (!Object.hasOwn(GENEROS, String(dados.genero ?? ""))) erros.genero = "Selecione o gênero do produto.";
+
+  if (marca.length < LIMITES.MARCA_MIN || marca.length > LIMITES.MARCA_MAX) {
+    erros.marca = `A marca deve ter entre ${LIMITES.MARCA_MIN} e ${LIMITES.MARCA_MAX} caracteres.`;
+  }
+
+  const erroCor = validarCor(dados.cor);
+  if (erroCor) erros.cor = erroCor;
 
   return erros;
 }

@@ -1,235 +1,466 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PD Sports</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-      integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/navbar.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap"
-    />
-    <link rel="stylesheet" href="./assets/css/card.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <script src="./js/tema.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PD Sports</title>
+  <link rel="icon" type="image/png" href="./assets/imagens/logo.png" />
 
-  <body class="d-flex flex-column min-vh-100">
-    <header id="navbar">
-      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-        <div class="container" id="navbarConteudo">
-          <a href="./index.html" class="navbar-brand">
-            <img src="./assets/imagens/logo.png" alt="logo" class="logo-img" /> PD
-            Sports
-          </a>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"
+    integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/navbar.css" />
+  <link rel="stylesheet" href="./assets/css/footer.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@400&display=swap" />
+  <link rel="stylesheet" href="./assets/css/card.css" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
 
-          <div
-            class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last"
-          >
-            <button
-              class="btn text-white fs-4 lh-1 p-2 d-lg-none"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#buscaNavbar"
-              aria-controls="buscaNavbar"
-              aria-expanded="false"
-              aria-label="Abrir busca"
-            >
-              <i class="bi bi-search" aria-hidden="true"></i>
-            </button>
-            <a
-              href="./paginas/carrinho.html"
-              class="btn text-white fs-4 lh-1 p-2"
-              aria-label="Carrinho"
-              ><i class="bi bi-cart4" aria-hidden="true"></i
-            ></a>
-            <a
-              href="./paginas/login.html"
-              class="btn btn-primary ms-1 d-none d-lg-inline-flex"
-              >Entrar</a
-            >
-            <button
-              class="btn text-white fs-4 lh-1 p-2 d-lg-none"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#menuNavbar"
-              aria-controls="menuNavbar"
-              aria-expanded="false"
-              aria-label="Abrir menu"
-            >
-              <i class="bi bi-list" aria-hidden="true"></i>
-            </button>
-          </div>
+<body class="d-flex flex-column min-vh-100">
+  <header id="navbar">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container" id="navbarConteudo">
+        <a href="./index.html" class="navbar-brand">
+          <img src="./assets/imagens/logo.png" alt="logo" class="logo-img" /> PD
+          Sports
+        </a>
 
-          <div
-            class="collapse navbar-collapse"
-            id="menuNavbar"
-            data-bs-parent="#navbarConteudo"
-          >
-            <ul class="navbar-nav me-lg-auto">
-              <li class="nav-item">
-                <a
-                  href="./index.html"
-                  class="nav-link active"
-                  aria-current="page"
-                  >Início</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="./paginas/catalogo.html" class="nav-link">Produtos</a>
-              </li>
-            </ul>
-            <a
-              href="./paginas/login.html"
-              class="btn btn-primary d-lg-none my-2"
-              >Entrar</a
-            >
-            <form class="d-none d-lg-flex" role="search">
-              <input
-                type="search"
-                name="q"
-                class="form-control"
-                placeholder="Buscar produtos..."
-                aria-label="Buscar produtos"
-              />
-            </form>
-          </div>
-
-          <div
-            class="collapse d-lg-none w-100"
-            id="buscaNavbar"
-            data-bs-parent="#navbarConteudo"
-          >
-            <form class="d-flex gap-2 py-2" role="search">
-              <input
-                type="search"
-                name="q"
-                class="form-control"
-                placeholder="Buscar produtos..."
-                aria-label="Buscar produtos"
-              />
-              <button type="submit" class="btn btn-primary">Buscar</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="container my-5 text-center flex-grow-1">
-      <p class="text-muted">
-        Veja os dados no console: <code>CTRL + SHIFT + I</code> ou
-        <code>F12</code>.
-      </p>
-
-      <section class="">
-        <h2 class="text-start my-3 titulo-secao">Produtos em alta</h2>
-        <p id="status-destaques" role="status"></p>
-        <div class="d-flex">
-          <button class="btn nav-destaques" id="destaques-anterior" aria-label="Produtos anteriores">
-            <i class="bi bi-chevron-left fs-1" aria-hidden="true"></i>
+        <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+          <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false" aria-label="Abrir busca">
+            <i class="bi bi-search" aria-hidden="true"></i>
           </button>
-          <div class="cards-wrapper container d-flex"></div>
 
-          <button class="btn nav-destaques" id="destaques-proximo" aria-label="Próximos produtos">
-            <i class="bi bi-chevron-right fs-1" aria-hidden="true"></i>
+          <button type="button" class="btn text-white" data-alternar-tema aria-label="Alternar tema claro e escuro">
+            <i class="bi bi-circle-half" aria-hidden="true"></i>
+          </button>
+
+          <a href="./paginas/carrinho.html" class="btn text-white fs-4 lh-1 p-2" aria-label="Carrinho"><i
+              class="bi bi-cart4" aria-hidden="true"></i></a>
+          <a href="./paginas/login.html" class="btn btn-primary ms-1 d-none d-lg-inline-flex">Entrar</a>
+          <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
+            <i class="bi bi-list" aria-hidden="true"></i>
           </button>
         </div>
-      </section>
-    </main>
 
-    <footer class="site-footer text-white">
-      <div class="container py-4">
-        <div class="row g-4">
-          <div class="col-12 col-lg-6">
-            <h2 class="h4 fw-medium">PD Sports</h2>
-            <p>Os melhores produtos para atletas</p>
+        <div class="collapse navbar-collapse" id="menuNavbar" data-bs-parent="#navbarConteudo">
+          <ul class="navbar-nav me-lg-auto">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link active" aria-current="page">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="./paginas/catalogo.html" class="nav-link">Produtos</a>
+            </li>
+          </ul>
+          <a href="./paginas/login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
+          <form class="d-none d-lg-flex" role="search" action="./paginas/catalogo.html" method="GET">
+            <div class="input-group">
+              <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+              <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+            </div>
+          </form>
+        </div>
 
-            <div class="d-flex align-items-center gap-3">
-              <a href="#" class="text-white" aria-label="Instagram">
-                <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="text-white" aria-label="X">
-                <i class="bi bi-twitter-x fs-4" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="text-white" aria-label="LinkedIn">
-                <i class="bi bi-linkedin fs-4" aria-hidden="true"></i>
-              </a>
+        <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
+          <form class="py-2" role="search" action="./paginas/catalogo.html" method="GET">
+            <div class="input-group">
+              <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+              <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5 flex-grow-1">
+
+    <section class="container hero mx-auto position-relative">
+      <img src="./assets/imagens/imgheader.png" alt="">
+      <div class="position-absolute top-50 start-0 translate-middle-y
+               text-center text-md-start text-white px-3 px-md-5 col-12 col-md-6">
+        <small class="hero-marca">PD-SPORTS</small>
+
+        <h1 class="mt-2 fs-1">
+          SEU ESPORTE, NOSSA <span class="text-warning fst-italic">PAIXÃO</span>
+        </h1>
+
+        <p class="mb-4 fs-5">
+          Os melhores equipamentos, roupas e acessórios
+          para você ir mais longe em todos os esportes
+        </p>
+
+        <a href="./paginas/catalogo.html" class="btn btn-primary w-50">
+          Ver ofertas
+        </a>
+      </div>
+    </section>
+
+
+    <section class="categorias my-5">
+      <h2 id="titulo-categorias" class="text-start titulo-secao mb-3">
+        Categorias
+      </h2>
+
+      <p id="status-categorias" role="status"></p>
+
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" id="categorias-anterior" class="btn d-none d-md-inline-flex"
+          aria-label="Categorias anteriores" aria-controls="lista-categorias">
+          <i class="bi bi-chevron-left fs-2" aria-hidden="true"></i>
+        </button>
+
+        <div id="lista-categorias" class="d-flex align-items-stretch gap-3 overflow-x-auto pb-3 flex-grow-1"
+          tabindex="0" aria-label="Categorias de esportes">
+        </div>
+
+        <button type="button" id="categorias-proximo" class="btn d-none d-md-inline-flex"
+          aria-label="Próximas categorias" aria-controls="lista-categorias">
+          <i class="bi bi-chevron-right fs-2" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+
+
+    <section class="">
+      <h2 class="text-start my-3 titulo-secao">Produtos em alta</h2>
+      <p id="status-destaques" role="status"></p>
+      <div class="d-flex">
+        <button class="btn nav-destaques" id="destaques-anterior" aria-label="Produtos anteriores">
+          <i class="bi bi-chevron-left fs-1" aria-hidden="true"></i>
+        </button>
+        <div class="cards-wrapper container d-flex"></div>
+
+        <button class="btn nav-destaques" id="destaques-proximo" aria-label="Próximos produtos">
+          <i class="bi bi-chevron-right fs-1" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="text-center my-4">
+        <a href="./paginas/catalogo.html" class="btn btn-primary px-4 py-2">
+          Ver Todos
+        </a>
+      </div>
+    </section>
+
+    <!-- Carrossel de Promoções por Categoria -->
+    <section class="my-5" aria-label="Promoções em destaque">
+      <div
+        id="carrosselPromocoes"
+        class="carousel slide carrossel-promocoes shadow-sm"
+        data-bs-ride="carousel"
+        data-bs-interval="4500"
+      >
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Ofertas especiais"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="1"
+            aria-label="Promoção de Futebol"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="2"
+            aria-label="Promoção de Basquete"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="3"
+            aria-label="Promoção de Corrida"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselPromocoes"
+            data-bs-slide-to="4"
+            aria-label="Promoção de Academia"
+          ></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <!-- Slide 1: Ofertas Gerais -->
+          <div class="carousel-item active">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-ofertas.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Ofertas <span class="text-warning">Especiais</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 40% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Equipamentos, roupas e acessórios com condições exclusivas para impulsionar seus treinos.
+                </p>
+
+                <a href="./paginas/catalogo.html" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Todas as Ofertas <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="col-6 col-lg-3">
-            <h2 class="h6 fw-medium text-uppercase mb-3">Menu</h2>
+          <!-- Slide 2: Futebol -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-futebol.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-              <li>
-                <a href="./index.html" class="text-white"> Início </a>
-              </li>
-              <li>
-                <a href="./paginas/catalogo.html" class="text-white"
-                  >Produtos</a
-                >
-              </li>
-              <li>
-                <a href="./paginas/carrinho.html" class="text-white">Seu carrinho</a>
-              </li>
-            </ul>
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Kit Futebol <span class="text-warning">Profissional</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 50% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Chuteiras, bolas, luvas de goleiro e caneleiras para você entrar em campo para vencer.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=4" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Futebol <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="col-6 col-lg-3">
-            <h2 class="h6 fw-medium text-uppercase mb-3">Informações</h2>
+          <!-- Slide 3: Basquete -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-basquete.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-              <li>
-                <a href="#" class="text-white"> Política de Privacidade </a>
-              </li>
-              <li>
-                <a href="#" class="text-white"> Informações Legais </a>
-              </li>
-            </ul>
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Coleção <span class="text-warning">Basquete</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 40% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Tênis cano alto de alta tração, bolas oficiais e acessórios para brilhar nas quadras.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=9" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Basquete <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Corrida -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-corrida.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Corrida &amp; <span class="text-warning">Performance</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 45% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Tênis com amortecimento responsivo, mochilas de hidratação e relógios para superar seus recordes.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=1" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Corrida <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Academia -->
+          <div class="carousel-item">
+            <div class="banner-promocional position-relative">
+              <img
+                src="./assets/imagens/bg-banner-academia.jpg"
+                alt=""
+                class="banner-promocional-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                aria-hidden="true"
+              />
+              <div class="banner-promocional-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <div class="position-relative z-1 p-3 p-sm-4 p-md-5 col-12 col-md-8 col-lg-6 text-white">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                  <span class="banner-marca text-warning fw-bold fst-italic">PD-SPORTS</span>
+                  <span class="banner-traco"></span>
+                </div>
+
+                <h3 class="banner-titulo fw-bold text-uppercase fst-italic mb-2">
+                  Treino Pesado &amp; <span class="text-warning">Academia</span>
+                </h3>
+
+                <div class="banner-badge d-inline-block px-3 py-1 fw-bold text-uppercase mb-2">
+                  <span>Até 40% OFF</span>
+                </div>
+
+                <p class="banner-descricao mb-3 text-light opacity-75">
+                  Halteres hexagonais, kettlebells, coqueteleiras e luvas para elevar o nível da sua musculação.
+                </p>
+
+                <a href="./paginas/catalogo.html?modalidade=3" class="btn btn-primary fw-semibold px-4 py-2 stretched-link">
+                  Ver Produtos de Academia <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carrosselPromocoes"
+          data-bs-slide="prev"
+          aria-label="Banner anterior"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carrosselPromocoes"
+          data-bs-slide="next"
+          aria-label="Próximo banner"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
       </div>
+    </section>
+  </main>
 
-      <div class="footer-copyright text-center px-3 py-2">
-        <small>© 2026 PD Sports. Todos os direitos reservados.</small>
+  <footer class="site-footer text-white">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <h2 class="h4 fw-medium d-flex align-items-center gap-2"><a href="./index.html" class="footer-brand d-flex align-items-center gap-2 text-white text-decoration-none"><img src="./assets/imagens/logo.png" alt="" class="footer-logo" /> PD Sports</a></h2>
+          <p>Os melhores produtos para atletas</p>
+
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="text-white" aria-label="Instagram">
+              <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-white" aria-label="X">
+              <i class="bi bi-twitter-x fs-4" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-white" aria-label="LinkedIn">
+              <i class="bi bi-linkedin fs-4" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="h6 fw-medium text-uppercase mb-3">Menu</h2>
+
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li>
+              <a href="./index.html" class="text-white"> Início </a>
+            </li>
+            <li>
+              <a href="./paginas/catalogo.html" class="text-white">Produtos</a>
+            </li>
+            <li>
+              <a href="./paginas/carrinho.html" class="text-white">Seu carrinho</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="h6 fw-medium text-uppercase mb-3">Informações</h2>
+
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li>
+              <a href="#" class="text-white"> Política de Privacidade </a>
+            </li>
+            <li>
+              <a href="#" class="text-white"> Informações Legais </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>
+    </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <div class="footer-copyright text-center px-3 py-2">
+      <small>© 2026 PD Sports. Todos os direitos reservados.</small>
+    </div>
+  </footer>
 
-    <script type="module">
-      import { carregarCatalogo } from "./js/servicos/catalogo.js";
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
-      try {
-        const { modalidades, produtos } = await carregarCatalogo();
+  <script type="module" src="./js/componentes/navbar.js"></script>
+  <script type="module" src="./js/componentes/carrossel-destaques.js"></script>
+  <script type="module" src="./js/componentes/categoriasHome.js"></script>
+</body>
 
-        console.log("Modalidades:", modalidades);
-        console.log(`Produtos (${produtos.length}):`, produtos);
-      } catch (erro) {
-        console.error("Falha ao carregar o catálogo:", erro);
-      }
-    </script>
-    <script type="module" src="./js/componentes/navbar.js"></script>
-    <script
-      type="module"
-      src="./js/componentes/carrossel-destaques.js"
-    ></script>
-  </body>
 </html>

@@ -1,6 +1,6 @@
 # 61: Paginação: controles
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 13 (seg 16/11)
 **Estimativa:** 2h
 
@@ -8,5 +8,5 @@
 
 **Bloqueado por:** 28, 31, 62
 
-- [ ] Mostra página atual e navegação
-- [ ] Funciona em celular e em desktop (responsivo)
+- [x] Mostra página atual e navegação
+- [x] Funciona em celular e em desktop (responsivo)

@@ -1,6 +1,6 @@
 # 63: Admin: exclusão de Produto
 
-**Status:** Não iniciado
+**Status:** Concluído
 **Dia:** Dia 13 (seg 16/11)
 **Estimativa:** 2h
 
@@ -8,6 +8,6 @@
 
 **Bloqueado por:** 28, 31, 52
 
-- [ ] Só exclui após confirmação
-- [ ] O Produto é removido do array da Modalidade e salvo na MockAPI
-- [ ] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário
+- [x] Só exclui após confirmação
+- [x] O Produto é removido do array da Modalidade e salvo na MockAPI
+- [x] Falhas de rede e de API tratadas com `try/catch` e com feedback visual ao usuário

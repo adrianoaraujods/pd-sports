@@ -76,13 +76,7 @@ botaoAdicionarCarrinho.addEventListener("click", async () => {
     }
 
     const sessao = obterSessao();
-    if (!sessao) {
-        const destino = window.location.pathname + window.location.search;
-        window.location.assign(`./login.html?redirect=${encodeURIComponent(destino)}`);
-        return;
-    }
-
-    if (sessao.papel === PAPEL_ADMINISTRADOR) {
+    if (sessao?.papel === PAPEL_ADMINISTRADOR) {
         exibirFeedback("Administradores não realizam compras.", "info");
         return;
     }
@@ -95,7 +89,7 @@ botaoAdicionarCarrinho.addEventListener("click", async () => {
     `;
 
     try {
-        await adicionarItem(sessao.id, {
+        await adicionarItem(sessao?.id ?? null, {
             produto_id: produtoAtual.id,
             modalidade_id: produtoAtual.modalidade_id,
             variante: variante || "Único",
@@ -125,7 +119,7 @@ function configurarVariantes(produto) {
     }
 
     varianteSelecionada = null;
-    botaoAdicionarCarrinho.disabled = true;
+    botaoAdicionarCarrinho.disabled = produto.estoque <= 0;
     avisoVariante.textContent = "Selecione uma variante para continuar.";
     avisoVariante.className = "text-muted d-block mt-1";
 
@@ -163,6 +157,11 @@ function preencherProduto(produto) {
 
     document.querySelector("#produto-modalidade").textContent =
         produto.modalidade_nome;
+
+    const breadcrumbModalidade = document.querySelector("#breadcrumb-modalidade");
+    breadcrumbModalidade.textContent = produto.modalidade_nome;
+    breadcrumbModalidade.href = `./catalogo.html?modalidade=${encodeURIComponent(produto.modalidade_id)}`;
+    document.querySelector("#breadcrumb-produto").textContent = produto.nome;
 
     document.querySelector("#produto-preco").textContent =
         moeda.format(produto.preco);

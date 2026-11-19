@@ -27,16 +27,16 @@
 }
 
 .login-card a.link-cadastro {
-    color: var(--base-secondary);
+    color: var(--bs-link-color);
 
     &:hover {
-        color: var(--base-secondary-hover);
+        color: var(--bs-link-hover-color);
     }
 }
 
 .login-card .input-group-text {
-    background-color: var(--base-neutral);
-    color: var(--base-muted-foreground);
+    background-color: var(--pagina-fundo);
+    color: var(--texto-secundario);
 }
 
 .login-card .form-control:focus {

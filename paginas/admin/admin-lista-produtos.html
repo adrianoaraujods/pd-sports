@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="../../js/tema.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin: Lista de Produtos | PD Sports</title>
+    <link rel="icon" type="image/png" href="../../assets/imagens/logo.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -27,6 +29,10 @@
                 </a>
 
                 <div class="d-flex align-items-center gap-1 ms-auto ms-lg-0 order-lg-last">
+                  <button type="button" class="btn text-white" data-alternar-tema
+                      aria-label="Alternar tema claro e escuro">
+                      <i class="bi bi-circle-half" aria-hidden="true"></i>
+                  </button>
                     <button class="btn text-white fs-4 lh-1 p-2 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#buscaNavbar" aria-controls="buscaNavbar" aria-expanded="false"
                         aria-label="Abrir busca">
@@ -46,20 +52,25 @@
                             <a href="./dashboard.html" class="nav-link">Visão Geral</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./admin-lista-produtos.html" class="nav-link active" aria-current="page">Produtos</a>
+                            <a href="./admin-lista-produtos.html" class="nav-link active"
+                                aria-current="page">Produtos</a>
                         </li>
                     </ul>
                     <a href="../login.html" class="btn btn-primary d-lg-none my-2">Entrar</a>
                     <form class="d-none d-lg-flex" role="search" action="../catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..."
-                            aria-label="Buscar produtos">
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
 
                 <div class="collapse d-lg-none w-100" id="buscaNavbar" data-bs-parent="#navbarConteudo">
-                    <form class="d-flex gap-2 py-2" role="search" action="../catalogo.html" method="GET">
-                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos">
-                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    <form class="py-2" role="search" action="../catalogo.html" method="GET">
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-busca" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                        <input type="search" name="q" class="form-control" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+                      </div>
                     </form>
                 </div>
             </div>
@@ -69,20 +80,20 @@
     <main class="flex-grow-1">
         <section class="container my-4">
             <div class="d-flex justify-content-between align-items-center mb-4 title">
-                <h1 class="h3 fw-bold mb-0">Produtos</h1>
+                <h1 class="h3 fw-bold mb-0 titulo-secao">Produtos</h1>
                 <a href="./produto.html" class="btn btn-primary d-inline-flex align-items-center gap-1">
                     <i class="bi bi-plus fs-5"></i> Adicionar Produto
                 </a>
             </div>
 
-            <div class="d-flex w-100 justify-content-between gap-3 my-3 filters-wrapper">
-                <div class="d-flex flex-column">
+            <div class="row g-3 my-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <label for="filtro-modalidade" class="form-label mb-1">Modalidade</label>
                     <select id="filtro-modalidade" name="modalidade" class="inputs form-select">
                         <option value="">Todas as modalidades</option>
                     </select>
                 </div>
-                <div class="d-flex flex-column w-100">
+                <div class="col-12 col-md-8 col-lg-9">
                     <label for="busca-produto" class="form-label mb-1">Pesquisar produto por nome</label>
                     <input type="search" id="busca-produto" class="inputs form-control" name="busca"
                         placeholder="Digite o nome do produto">
@@ -91,7 +102,7 @@
 
             <div class="table-responsive">
                 <table class="table align-middle">
-                    <thead class="table-light">
+                    <thead>
                         <tr>
                             <th scope="col">Imagem</th>
                             <th scope="col">Produto</th>
@@ -105,7 +116,8 @@
                     <tbody id="lista-produtos">
                         <tr>
                             <td>
-                                <img src="../../assets/imagens/logo.png" alt="Imagem ilustrativa" width="60" height="60">
+                                <img src="../../assets/imagens/logo.png" alt="Imagem ilustrativa" width="60"
+                                    height="60">
                             </td>
                             <td>Tênis de corrida</td>
                             <td>Corrida</td>
@@ -130,7 +142,7 @@
         <div class="container py-4">
             <div class="row g-4">
                 <div class="col-12 col-lg-6">
-                    <h2 class="h4 fw-medium">PD Sports</h2>
+                    <h2 class="h4 fw-medium d-flex align-items-center gap-2"><a href="../../index.html" class="footer-brand d-flex align-items-center gap-2 text-white text-decoration-none"><img src="../../assets/imagens/logo.png" alt="" class="footer-logo" /> PD Sports</a></h2>
                     <p>Os melhores produtos para atletas</p>
                     <div class="d-flex align-items-center gap-3">
                         <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
@@ -162,6 +174,53 @@
             <small>© 2026 PD Sports. Todos os direitos reservados.</small>
         </div>
     </footer>
+
+
+
+
+<!-- modal de exclusão -->
+    <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="tituloExcluir" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloExcluir">
+                        Excluir produto
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                        Deseja excluir <strong id="nomeProdutoExcluir"></strong>?
+                        Essa ação não pode ser desfeita.
+                    </p>
+                    <div id="erroExcluir" class="alert alert-danger d-none" role="alert"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="confirmarExclusao">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastExclusao" class="toast text-bg-success border-0" role="status" aria-live="polite"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">Produto excluído com sucesso.</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Fechar"></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
