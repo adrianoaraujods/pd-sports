@@ -73,12 +73,12 @@ As tarefas não têm responsável definido; a atribuição é feita no próprio 
 | 65 | ✅ | [Finalização: esvaziar Carrinho e confirmar](65-finalizacao-esvaziar-carrinho-e-confirmar.md) | Dia 13 (seg 16/11) | 2h | 28, 31, 56 |
 | 66 | ✅ | [Frete na tela do Carrinho](66-frete-na-tela-do-carrinho.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 56, 60 |
 | 67 | ✅ | [Tela de resumo da Finalização da Compra](67-tela-de-resumo-da-finalizacao-da-compra.md) | Dia 14 (ter 17/11) | 2h | 28, 30, 31, 65, 66 |
-| 68 | ⬜ | [Dashboard: cálculo das métricas](68-dashboard-calculo-das-metricas.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 51 |
-| 69 | ⛔ | [Dashboard: tela e gráfico](69-dashboard-tela-e-grafico.md) | Dia 14 (ter 17/11) | 4h | 23, 28, 31, 52, 68 |
+| 68 | ✅ | [Dashboard: cálculo das métricas](68-dashboard-calculo-das-metricas.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 51 |
+| 69 | ✅ | [Dashboard: tela e gráfico](69-dashboard-tela-e-grafico.md) | Dia 14 (ter 17/11) | 4h | 23, 28, 31, 52, 68 |
 | 70 | ✅ | [Carrinho do Visitante em localStorage](70-carrinho-do-visitante-em-localstorage.md) | Dia 14 (ter 17/11) | 2h | 28, 31, 40, 55 |
-| 71 | ⬜ | [Mesclagem do Carrinho no login](71-mesclagem-do-carrinho-no-login.md) | Dia 15 (qua 18/11) | 2h | 28, 31, 41, 70 |
-| 72 | ⬜ | [Dark mode: tokens e alternância](72-dark-mode-tokens-e-alternancia.md) | Dia 15 (qua 18/11) | 2h | 15, 28, 31, 37 |
-| 73 | ⛔ | [Conferência do fluxo de compra](73-conferencia-do-fluxo-de-compra.md) | Dia 16 (qui 19/11) | 1h - cada membro | 61, 67, 71 |
-| 74 | ⬜ | [Conferência em produção: administração](74-conferencia-em-producao-administracao.md) | Dia 16 (qui 19/11) | 1h - cada membro | 28, 31, 58, 63, 69 |
-| 75 | ⛔ | [Correção de bugs e ajustes](75-correcao-de-bugs-e-ajustes.md) | Dia 16 (qui 19/11) | 1h - cada membro | 73, 74 |
-| 76 | ⛔ | [Documentação final](76-documentacao-final.md) | Dia 16 (qui 19/11) | 1h | 75 |
+| 71 | ✅ | [Mesclagem do Carrinho no login](71-mesclagem-do-carrinho-no-login.md) | Dia 15 (qua 18/11) | 2h | 28, 31, 41, 70 |
+| 72 | ✅ | [Dark mode: tokens e alternância](72-dark-mode-tokens-e-alternancia.md) | Dia 15 (qua 18/11) | 2h | 15, 28, 31, 37 |
+| 73 | ✅ | [Conferência do fluxo de compra](73-conferencia-do-fluxo-de-compra.md) | Dia 15 (qua 18/11) | 1h - cada membro | 61, 67, 71 |
+| 74 | ✅ | [Conferência em produção: administração](74-conferencia-em-producao-administracao.md) | Dia 15 (qua 18/11) | 1h - cada membro | 28, 31, 58, 63, 69 |
+| 75 | ✅ | [Correção de bugs e ajustes](75-correcao-de-bugs-e-ajustes.md) | Dia 15 (qua 18/11) | 1h - cada membro | 73, 74 |
+| 76 | ✅ | [Documentação final](76-documentacao-final.md) | Dia 16 (qui 19/11) | 1h | 75 |
