@@ -19,7 +19,7 @@ O **PD-Sports** é uma plataforma de e-commerce de artigos esportivos desenvolvi
 | Recurso | Link de Acesso |
 | :--- | :--- |
 | **Repositório GitHub** | [https://github.com/adrianoaraujods/pd-sports](https://github.com/adrianoaraujods/pd-sports) |
-| **Deploy em Produção (Vercel)** | [https://pd-sports.vercel.app](https://pd-sports.vercel.app) |
+| **Deploy em Produção (Vercel)** | [https://pdcasesports.vercel.app](https://pdcasesports.vercel.app) |
 | **Figma (Design & Protótipo Navegável)** | [Protótipo no Figma](https://www.figma.com/design/qpM6sEynz4M2yYVGruiWMG/PD-Sports?node-id=72-638&t=xVWC65mlzZlpRjRI-1) |
 
 ---
