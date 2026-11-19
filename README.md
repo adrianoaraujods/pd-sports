@@ -1,211 +1,165 @@
-# PD-Sports
+# PD-Sports — E-commerce de Artigos Esportivos 
+
+## 1. Descrição do Projeto
+
+O **PD-Sports** é uma plataforma de e-commerce de artigos esportivos desenvolvida como MVP. O projeto conta com catálogo com 15 modalidades esportivas, fluxo completo de carrinho com cálculo de frete via ViaCEP, área administrativa para gerenciamento de produtos e dashboard com métricas da loja.
+
+---
+
+## 2. Integrantes da Equipe
+
+- [**Adriano Araújo**](https://github.com/adrianoaraujods)
+- [**Ana Clara Souza**](https://github.com/anaclpsouza)
+- [**Matheus Kemuel**](https://github.com/MatheusKemuel)
+
+---
+
+## 3. Links Principais
+
+| Recurso | Link de Acesso |
+| :--- | :--- |
+| **Repositório GitHub** | [https://github.com/adrianoaraujods/pd-sports](https://github.com/adrianoaraujods/pd-sports) |
+| **Deploy em Produção (Vercel)** | [https://pd-sports.vercel.app](https://pd-sports.vercel.app) |
+| **Figma (Design & Protótipo Navegável)** | [Protótipo no Figma](https://www.figma.com/design/qpM6sEynz4M2yYVGruiWMG/PD-Sports?node-id=72-638&t=xVWC65mlzZlpRjRI-1) |
+
+---
+
+## 4. Tecnologias Utilizadas
+
+### Front-end & Interface
+- **HTML5:** Estrutura semântica e acessível (landmarks, roles ARIA, labels descritivas).
+- **CSS3:** Variáveis CSS, Flexbox, CSS Grid, media queries e transições fluidas.
+- **Bootstrap 5.3 & Bootstrap Icons:** Sistema de grid, utilitários, modais, toasts e biblioteca de ícones vetoriais.
+- **Chart.js (CDN):** Renderização dinâmica de gráficos de distribuição de produtos e preço médio no dashboard administrativo.
+
+### Lógica & Comunicação
+- **JavaScript Vanilla (ES6+):** Arquitetura 100% orientada a módulos nativos (`import`/`export`), sem dependência de frameworks ou bundlers.
+- **Fetch API & Async/Await:** Comunicação assíncrona com tratamento robusto de erros e timeouts.
+
+### APIs e Serviços Externos
+- **MockAPI:** Persistência em nuvem dos dados de Modalidades (com produtos embutidos), Usuários e Carrinhos.
+- **ViaCEP:** Integração com a API pública dos Correios para preenchimento de endereço e cálculo dinâmico de frete/prazos.
+
+### Versionamento & Publicação
+- **Git & GitHub:** Governança com GitFlow (`main`, `develop`, `feature/*`) e padrão **Conventional Commits**.
+- **Vercel:** Hospedagem estática com integração contínua (CI/CD).
+
+---
+
+## 5. Arquitetura Adotada
+
+A aplicação foi estruturada segundo o princípio da **separação clara de responsabilidades**, desacoplando requisições de rede, regras de negócio e manipulação da DOM.
+
+```
+pd-sports/
+├── assets/
+│   ├── css/
+│   │   ├── variaveis.css            # Tokens de cor (Claro/Escuro), fontes e espaçamentos
+│   │   ├── index.css                # Estilos da Home, seções de categorias e banners
+│   │   ├── card.css                 # Cards de produtos e crachás
+│   │   ├── catalogo.css             # Filtros, grid e paginação do catálogo
+│   │   ├── carrinho.css             # Tabela de itens, resumo e frete
+│   │   ├── dashboard.css            # Métricas, cards e gráficos gerenciais
+│   │   ├── navbar.css & footer.css  # Componentes globais de layout
+│   │   └── admin-lista-produtos.css # Tabela administrativa e ações rápidas
+│   └── imagens/
+│       ├── categorias/              # Imagens otimizadas das 15 modalidades esportivas
+│       └── ...                      # Banners promocionais e hero
+├── dados/                           # JSONs versionados para inicialização (seed)
+│   ├── modalidades.json             # 15 modalidades com seus respectivos produtos
+│   ├── usuarios.json                # Contas de administradores e clientes de teste
+│   └── carrinhos.json               # Carrinhos iniciais
+├── docs/                            # Documentação técnica, especificações e ADRs
+│   ├── adr/
+│   │   └── 0001-produtos-embutidos-em-modalidades.md # Decisão de aninhamento
+│   ├── tarefas/                     # Backlog completo de implementação (tickets)
+│   ├── ESPECIFICAÇÃO.md             # Histórias de usuário e critérios de aceite
+│   └── PLANEJAMENTO.md              # Cronograma de desenvolvimento
+├── js/
+│   ├── api/
+│   │   ├── config.js                # URLs das APIs, parâmetros de frete e constantes
+│   │   └── cliente-http.js          # Wrapper de Fetch com interceptação e ErroApi
+│   ├── servicos/
+│   │   ├── catalogo.js              # Carregamento e cache em memória das modalidades
+│   │   ├── carrinho.js              # Regras do carrinho, mesclagem e persistência
+│   │   ├── sessao.js                # Autenticação, token/sessão e papéis de usuário
+│   │   ├── frete.js                 # Integração ViaCEP, tabela de frete e prazos
+│   │   ├── produtos-admin.js        # Operações de CRUD para a retaguarda
+│   │   ├── cadastro.js              # Validações de criação de conta
+│   │   └── metricas-dashboard.js    # Consolidação das métricas gerenciais
+│   ├── componentes/
+│   │   ├── navbar.js                # Barra de navegação com contador do carrinho
+│   │   ├── card-produto.js          # Renderizador modular do card da vitrine
+│   │   ├── categoriasHome.js        # Carrossel de modalidades na página inicial
+│   │   ├── carrossel-destaques.js   # Vitrine de produtos em alta
+│   │   └── notificacao.js           # Toasts visuais para feedback de usuário
+│   └── paginas/
+│       ├── catalogo.js              # Busca, filtros, ordenação e sincronização com a URL
+│       ├── carrinho.js              # Interações de quantidade, exclusão e frete
+│       ├── detalhes-produto.js      # Seleção de variantes, fotos e estoque
+│       ├── dashboard.js             # Gráficos Chart.js e escuta de tema
+│       ├── admin-lista-produtos.js  # Listagem e exclusão com modal
+│       ├── admin-produto.js         # Formulário de criação/edição com preview
+│       ├── login.js & cadastro.js   # Fluxos de autenticação
+│       └── finalizacao.js           # Confirmação de pedido e limpeza do carrinho
+├── paginas/
+│   ├── admin/                       # Área restrita da administração
+│   │   ├── dashboard.html
+│   │   ├── admin-lista-produtos.html
+│   │   └── produto.html
+│   ├── catalogo.html
+│   ├── detalhes-produto.html
+│   ├── carrinho.html
+│   ├── finalizacao.html
+│   ├── login.html
+│   └── cadastro.html
+├── scripts/
+│   └── seed.js                      # Script de seed da MockAPI
+├── index.html                       # Página inicial da plataforma
+└── README.md
+```
+
+---
+
+## 6. Endpoints Utilizados
+
+### MockAPI (Persistência Principal)
+Conforme deliberado na [ADR 0001](docs/adr/0001-produtos-embutidos-em-modalidades.md), a entidade de produtos é embutida dentro de modalidades para otimizar os limites de requisições da MockAPI gratuita:
+
+| Entidade | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| **Modalidades** | `https://6aee279ba677fe0fc14fc855.mockapi.io/modalidades` | Armazena as 15 modalidades esportivas e os produtos vinculados em cada uma |
+| **Usuários** | `https://6aea0de93d3dd3d37be61408.mockapi.io/usuarios` | Gerenciamento de clientes e administradores cadastrados |
+| **Carrinhos** | `https://6aea0de93d3dd3d37be61408.mockapi.io/carrinhos` | Persistência dos carrinhos de clientes autenticados |
+
+### API Pública Externa (ViaCEP)
+- **URL Base:** `https://viacep.com.br/ws/{cep}/json/`
+- **Utilidade:** Consulta de logradouro, bairro, localidade e UF a partir do CEP informado, utilizada no cálculo dinâmico de prazos e valores de frete no carrinho.
+
+---
+
+## 7. Credenciais para Acesso e Testes
+
+Para facilitar a homologação e avaliação das funcionalidades, utilize as credenciais pré-semeadas na base:
+
+| Perfil | E-mail | Senha | Acesso / Permissão |
+| :--- | :--- | :--- | :--- |
+| **Administrador** | `admin@pdsports.com` | `admin123` | Acesso completo à área restrita (`/paginas/admin/`) e catálogo |
+| **Cliente Teste** | `cliente@gmail.com` | `123456` | Acesso à vitrine, carrinho na nuvem e finalização de compras |
+
+---
+
+## 8. Como Executar o Projeto Localmente
+
+A aplicação é **100% estática em HTML, CSS e JavaScript Vanilla**, sem necessidade de instalação de dependências ou ambientes de execução como Node.js.
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/adrianoaraujods/pd-sports.git
+   cd pd-sports
+   ```
+
+2. **Abra com o Live Server:**
+   - No VS Code, com a extensão **Live Server** instalada, clique com o botão direito no arquivo `index.html` e selecione **Open with Live Server**.
+   - A aplicação será aberta diretamente no seu navegador.
 
-## DESENVOLVIMENTO DE MVP – E-COMMERCE ESPORTIVO
-
-## 1 - OBJETO
-
-Contratação de equipe de desenvolvimento para criação do MVP (Minimum Viable Product) de uma plataforma de e-commerce especializada em artigos esportivos.
-
-O projeto deverá contemplar arquitetura front-end modular, integração com APIs externas, persistência de dados via API simulada e deploy em ambiente de produção.
-
-## 2. ESCOPO FUNCIONAL
-
-A solução deverá contemplar obrigatoriamente:
-
-### 2.1 Catálogo de Produtos
-
-Mínimo de 15 modalidades esportivas
-
-Mínimo de 9 produtos por modalidade
-
-Sistema de categorização
-
-Produtos em destaque
-
-### 2.2 Funcionalidades do Usuário Final
-
-O sistema deverá conter:
-
-Listagem dinâmica de produtos
-
-Filtro por modalidade
-
-Busca por nome
-
-Ordenação por preço
-
-Página de detalhes do produto
-
-Carrinho funcional com:
-
-Alteração de quantidade
-
-Remoção de item
-
-Cálculo automático de total
-
-Persistência de dados
-
-Simulação de frete ou funcionalidade complementar integrada a API externa
-
-### 2.3 Área Administrativa
-
-Deverá existir uma área restrita que permita:
-
-Cadastro de produtos
-
-Edição de produtos
-
-Exclusão de produtos
-
-Listagem administrativa
-
-Validação de dados de entrada
-
-Feedback visual de ações
-
-Persistência obrigatória via MockAPI.
-
-## 3. REQUISITOS TÉCNICOS OBRIGATÓRIOS
-
-### 3.1 Tecnologias
-
-HTML5
-
-CSS3
-
-Bootstrap
-
-JavaScript
-
-Fetch API
-
-MockAPI
-
-Git
-
-GitHub
-
-Vercel
-
-### 3.2 Padrões de Código
-
-Uso obrigatório de async/await
-
-Tratamento de exceções
-
-Separação clara de responsabilidades
-
-Organização modular do JavaScript
-
-Responsividade obrigatória
-
-Estrutura de pastas organizada
-
-### 3.3 Integração com APIs
-
-Obrigatório utilizar:
-
-MockAPI para persistência
-
-Pelo menos 1 API pública externa integrada de forma funcional
-
-A API externa deve agregar valor real ao sistema.
-
-## 4. GOVERNANÇA DE VERSIONAMENTO
-
-### 4.1 Fluxo Git Obrigatório
-
-Branches obrigatórias:
-
-main
-
-develop
-
-feature/\*
-
-Pull Requests são obrigatórios.
-
-Merge direto na main será penalizado.
-
-## 5. PADRÃO DE COMMITS (OBRIGATÓRIO)
-
-Padrão: Conventional Commits
-
-Estrutura:
-
-tipo(escopo): descrição objetiva
-
-Tipos permitidos:
-
-feat
-
-fix
-
-docs
-
-## 6. DOCUMENTAÇÃO OBRIGATÓRIA
-
-O repositório e o teams devem conter:
-
-README estruturado
-
-Descrição do projeto
-
-Integrantes
-
-Tecnologias utilizadas
-
-Arquitetura adotada
-
-Endpoints utilizados
-
-Link do Figma
-
-Link do Deploy
-
-Link do Repositório
-
-## 7. DESIGN E PROTOTIPAÇÃO
-
-Antes da implementação, deverá ser entregue:
-
-Fluxograma do site
-
-Wireframe
-
-Protótipo navegável no Figma
-
-Definição de cores e tipografia
-
-O layout final deve respeitar o protótipo aprovado.
-
-## 8. DEPLOY
-
-O sistema deverá estar publicado na plataforma:
-
-Vercel
-
-A aplicação deverá estar funcional em ambiente público.
-
-## 9. DIFERENCIAL COMPETITIVO (BONUS)
-
-Serão considerados diferenciais:
-
-Sistema de autenticação
-
-Dashboard administrativo com métricas
-
-Paginação real
-
-Dark mode
-
-## 9. DISPOSIÇÕES FINAIS
-
-Todos os integrantes devem possuir commits registrados.
-
-O projeto deve ser funcional e executável.
-
-A equipe é responsável pela divisão interna de tarefas.
-
-Todos os membros da equipe precisam trabalhar com html, CSS e figma.
